@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structsize__and__time" kind="struct" prot="public">
+    <compoundname>size_and_time</compoundname>
+    <includes refid="ftdi_8h" local="no">ftdi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsize__and__time_1aabc8d7998efabbe4b2807fe47c3320cf" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t size_and_time::totalBytes</definition>
+        <argsstring></argsstring>
+        <name>totalBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="428" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="428" bodyend="-1"/>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" prot="public" static="no" mutable="no">
+        <type>struct timeval</type>
+        <definition>struct timeval size_and_time::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="428" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="429" bodyend="-1"/>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Progress Info for streaming read. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="427" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="426" bodyend="430"/>
+    <listofallmembers>
+      <member refid="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" prot="public" virt="non-virtual"><scope>size_and_time</scope><name>time</name></member>
+      <member refid="structsize__and__time_1aabc8d7998efabbe4b2807fe47c3320cf" prot="public" virt="non-virtual"><scope>size_and_time</scope><name>totalBytes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

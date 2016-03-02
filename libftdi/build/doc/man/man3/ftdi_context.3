@@ -1,0 +1,219 @@
+.TH "ftdi_context" 3 "Wed Dec 2 2015" "Version 1.2" "libftdi1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ftdi_context \- 
+.PP
+Main context structure for all libftdi functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ftdi\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "struct libusb_context * \fBusb_ctx\fP"
+.br
+.ti -1c
+.RI "struct libusb_device_handle * \fBusb_dev\fP"
+.br
+.ti -1c
+.RI "int \fBusb_read_timeout\fP"
+.br
+.ti -1c
+.RI "int \fBusb_write_timeout\fP"
+.br
+.ti -1c
+.RI "enum \fBftdi_chip_type\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "int \fBbaudrate\fP"
+.br
+.ti -1c
+.RI "unsigned char \fBbitbang_enabled\fP"
+.br
+.ti -1c
+.RI "unsigned char * \fBreadbuffer\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBreadbuffer_offset\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBreadbuffer_remaining\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBreadbuffer_chunksize\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBwritebuffer_chunksize\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBmax_packet_size\fP"
+.br
+.ti -1c
+.RI "int \fBinterface\fP"
+.br
+.ti -1c
+.RI "int \fBindex\fP"
+.br
+.ti -1c
+.RI "int \fBin_ep\fP"
+.br
+.ti -1c
+.RI "int \fBout_ep\fP"
+.br
+.ti -1c
+.RI "unsigned char \fBbitbang_mode\fP"
+.br
+.ti -1c
+.RI "struct \fBftdi_eeprom\fP * \fBeeprom\fP"
+.br
+.ti -1c
+.RI "char * \fBerror_str\fP"
+.br
+.ti -1c
+.RI "enum \fBftdi_module_detach_mode\fP \fBmodule_detach_mode\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Main context structure for all libftdi functions\&. 
+
+Do not access directly if possible\&. 
+.PP
+Definition at line 219 of file ftdi\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "struct libusb_context* ftdi_context::usb_ctx"
+libusb's context 
+.PP
+Definition at line 223 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_deinit(), ftdi_init(), ftdi_readstream(), ftdi_transfer_data_done(), ftdi_usb_find_all(), ftdi_usb_open_desc_index(), and ftdi_usb_open_string()\&.
+.SS "struct libusb_device_handle* ftdi_context::usb_dev"
+libusb's usb_dev_handle 
+.PP
+Definition at line 225 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_disable_bitbang(), ftdi_eeprom_initdefaults(), ftdi_eeprom_set_strings(), ftdi_erase_eeprom(), ftdi_get_latency_timer(), ftdi_init(), ftdi_poll_modem_status(), ftdi_read_chipid(), ftdi_read_data(), ftdi_read_data_submit(), ftdi_read_eeprom(), ftdi_read_eeprom_location(), ftdi_read_pins(), ftdi_readstream(), ftdi_set_baudrate(), ftdi_set_bitmode(), ftdi_set_error_char(), ftdi_set_event_char(), ftdi_set_interface(), ftdi_set_latency_timer(), ftdi_set_line_property2(), ftdi_set_usbdev(), ftdi_setdtr(), ftdi_setdtr_rts(), ftdi_setflowctrl(), ftdi_setrts(), ftdi_usb_close(), ftdi_usb_get_strings(), ftdi_usb_open_desc_index(), ftdi_usb_open_dev(), ftdi_usb_purge_buffers(), ftdi_usb_purge_rx_buffer(), ftdi_usb_purge_tx_buffer(), ftdi_usb_reset(), ftdi_write_data(), ftdi_write_data_submit(), ftdi_write_eeprom(), and ftdi_write_eeprom_location()\&.
+.SS "int ftdi_context::usb_read_timeout"
+usb read timeout 
+.PP
+Definition at line 227 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_get_latency_timer(), ftdi_init(), ftdi_poll_modem_status(), ftdi_read_chipid(), ftdi_read_data(), ftdi_read_data_submit(), ftdi_read_eeprom(), ftdi_read_eeprom_location(), ftdi_read_pins(), and ftdi_readstream()\&.
+.SS "int ftdi_context::usb_write_timeout"
+usb write timeout 
+.PP
+Definition at line 229 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_disable_bitbang(), ftdi_erase_eeprom(), ftdi_init(), ftdi_set_baudrate(), ftdi_set_bitmode(), ftdi_set_error_char(), ftdi_set_event_char(), ftdi_set_latency_timer(), ftdi_set_line_property2(), ftdi_setdtr(), ftdi_setdtr_rts(), ftdi_setflowctrl(), ftdi_setrts(), ftdi_usb_purge_rx_buffer(), ftdi_usb_purge_tx_buffer(), ftdi_usb_reset(), ftdi_write_data(), ftdi_write_data_submit(), ftdi_write_eeprom(), and ftdi_write_eeprom_location()\&.
+.SS "enum \fBftdi_chip_type\fP ftdi_context::type"
+FTDI chip type 
+.PP
+Definition at line 233 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_erase_eeprom(), ftdi_init(), ftdi_read_eeprom(), ftdi_readstream(), ftdi_usb_open_dev(), ftdi_write_eeprom(), and ftdi_write_eeprom_location()\&.
+.SS "int ftdi_context::baudrate"
+baudrate 
+.PP
+Definition at line 235 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_init(), and ftdi_set_baudrate()\&.
+.SS "unsigned char ftdi_context::bitbang_enabled"
+bitbang mode state 
+.PP
+Definition at line 237 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_disable_bitbang(), ftdi_init(), ftdi_set_baudrate(), and ftdi_set_bitmode()\&.
+.SS "unsigned char* ftdi_context::readbuffer"
+pointer to read buffer for ftdi_read_data 
+.PP
+Definition at line 239 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_deinit(), ftdi_init(), ftdi_read_data(), ftdi_read_data_set_chunksize(), and ftdi_read_data_submit()\&.
+.SS "unsigned int ftdi_context::readbuffer_offset"
+read buffer offset 
+.PP
+Definition at line 241 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_init(), ftdi_read_data(), ftdi_read_data_set_chunksize(), ftdi_read_data_submit(), ftdi_usb_purge_rx_buffer(), and ftdi_usb_reset()\&.
+.SS "unsigned int ftdi_context::readbuffer_remaining"
+number of remaining data in internal read buffer 
+.PP
+Definition at line 243 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_init(), ftdi_read_data(), ftdi_read_data_set_chunksize(), ftdi_read_data_submit(), ftdi_usb_purge_rx_buffer(), and ftdi_usb_reset()\&.
+.SS "unsigned int ftdi_context::readbuffer_chunksize"
+read buffer chunk size 
+.PP
+Definition at line 245 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_read_data(), ftdi_read_data_get_chunksize(), ftdi_read_data_set_chunksize(), and ftdi_read_data_submit()\&.
+.SS "unsigned int ftdi_context::writebuffer_chunksize"
+write buffer chunk size 
+.PP
+Definition at line 247 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_init(), ftdi_write_data(), ftdi_write_data_get_chunksize(), ftdi_write_data_set_chunksize(), and ftdi_write_data_submit()\&.
+.SS "unsigned int ftdi_context::max_packet_size"
+maximum packet size\&. Needed for filtering modem status bytes every n packets\&. 
+.PP
+Definition at line 249 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_init(), ftdi_read_data(), ftdi_readstream(), and ftdi_usb_open_dev()\&.
+.SS "int ftdi_context::interface"
+FT2232C interface number: 0 or 1 
+.PP
+Definition at line 253 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_set_interface(), ftdi_usb_close(), and ftdi_usb_open_dev()\&.
+.SS "int ftdi_context::index"
+FT2232C index number: 1 or 2 
+.PP
+Definition at line 255 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_disable_bitbang(), ftdi_get_latency_timer(), ftdi_poll_modem_status(), ftdi_read_pins(), ftdi_set_bitmode(), ftdi_set_error_char(), ftdi_set_event_char(), ftdi_set_interface(), ftdi_set_latency_timer(), ftdi_set_line_property2(), ftdi_setdtr(), ftdi_setdtr_rts(), ftdi_setflowctrl(), ftdi_setrts(), ftdi_usb_purge_rx_buffer(), ftdi_usb_purge_tx_buffer(), and ftdi_usb_reset()\&.
+.SS "int ftdi_context::in_ep"
+FT2232C end points: 1 or 2 
+.PP
+Definition at line 258 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_set_interface(), ftdi_write_data(), and ftdi_write_data_submit()\&.
+.SS "int ftdi_context::out_ep"
+
+.PP
+Definition at line 259 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_read_data(), ftdi_read_data_submit(), ftdi_readstream(), and ftdi_set_interface()\&.
+.SS "unsigned char ftdi_context::bitbang_mode"
+Bitbang mode\&. 1: (default) Normal bitbang mode, 2: FT2232C SPI bitbang mode 
+.PP
+Definition at line 262 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_init(), and ftdi_set_bitmode()\&.
+.SS "struct \fBftdi_eeprom\fP* ftdi_context::eeprom"
+Decoded eeprom structure 
+.PP
+Definition at line 265 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_deinit(), ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_eeprom_set_strings(), ftdi_erase_eeprom(), ftdi_get_eeprom_buf(), ftdi_get_eeprom_value(), ftdi_init(), ftdi_read_eeprom(), ftdi_set_eeprom_buf(), ftdi_set_eeprom_user_data(), ftdi_set_eeprom_value(), and ftdi_write_eeprom()\&.
+.SS "char* ftdi_context::error_str"
+String representation of last error 
+.PP
+Definition at line 268 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_get_error_string(), and ftdi_init()\&.
+.SS "enum \fBftdi_module_detach_mode\fP ftdi_context::module_detach_mode"
+Defines behavior in case a kernel module is already attached to the device 
+.PP
+Definition at line 271 of file ftdi\&.h\&.
+.PP
+Referenced by ftdi_init(), and ftdi_usb_open_dev()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libftdi1 from the source code\&.

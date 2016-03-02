@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structftdi__context" kind="struct" prot="public">
+    <compoundname>ftdi_context</compoundname>
+    <includes refid="ftdi_8h" local="no">ftdi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structftdi__context_1a05bd064e6608ee91b641eff379455e9f" prot="public" static="no" mutable="no">
+        <type>struct libusb_context *</type>
+        <definition>struct libusb_context* ftdi_context::usb_ctx</definition>
+        <argsstring></argsstring>
+        <name>usb_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>libusb&apos;s context </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="223" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="223" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72838200be98d88737d532f9eee1e7be" compoundref="ftdi_8c" startline="210" endline="249">ftdi_deinit</referencedby>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+        <referencedby refid="group__libftdi_1gaf580b6263d15746d1f5d3759f9c3ac02" compoundref="ftdi_8c" startline="1662" endline="1696">ftdi_transfer_data_done</referencedby>
+        <referencedby refid="group__libftdi_1ga2845a0c63809747c9c7b1ea404453bc4" compoundref="ftdi_8c" startline="310" endline="351">ftdi_usb_find_all</referencedby>
+        <referencedby refid="group__libftdi_1ga3c5ccb0678b0e268b4081ea978e8eb78" compoundref="ftdi_8c" startline="692" endline="762">ftdi_usb_open_desc_index</referencedby>
+        <referencedby refid="group__libftdi_1gaae805b82251a61dae46b98345cd84d5c" compoundref="ftdi_8c" startline="790" endline="872">ftdi_usb_open_string</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a1ea9e9fd3211a568779022befc0b3af8" prot="public" static="no" mutable="no">
+        <type>struct libusb_device_handle *</type>
+        <definition>struct libusb_device_handle* ftdi_context::usb_dev</definition>
+        <argsstring></argsstring>
+        <name>usb_dev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>libusb&apos;s usb_dev_handle </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="225" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="225" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga42b4776b91c6b14d2d1008b160b78efa" compoundref="ftdi_8c" startline="1959" endline="1969">ftdi_disable_bitbang</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga9a8f94ad689a47dc3aa24c564d7731d3" compoundref="ftdi_8c" startline="2442" endline="2488">ftdi_eeprom_set_strings</referencedby>
+        <referencedby refid="group__libftdi_1ga25eb9a83a925065b6c3b61b8f0565951" compoundref="ftdi_8c" startline="4306" endline="4359">ftdi_erase_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1gacf7b6dcc4de33db2263ce8a421e18bfc" compoundref="ftdi_8c" startline="2035" endline="2047">ftdi_get_latency_timer</referencedby>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1ga396c3bf1435fb3317755868e28c47414" compoundref="ftdi_8c" startline="2089" endline="2102">ftdi_poll_modem_status</referencedby>
+        <referencedby refid="group__libftdi_1gab978a76c2cc0dbfbc1fd6350db848300" compoundref="ftdi_8c" startline="4157" endline="4179">ftdi_read_chipid</referencedby>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1gac157786fdf2e9c6b51dd9b4ddbb34d5f" compoundref="ftdi_8c" startline="4098" endline="4128">ftdi_read_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga650df1dc49ec78f0ee58b1c4f2644fd9" compoundref="ftdi_8c" startline="4078" endline="4087">ftdi_read_eeprom_location</referencedby>
+        <referencedby refid="group__libftdi_1gab823dd90f2359612b1546ef0ceebdc0e" compoundref="ftdi_8c" startline="1982" endline="1991">ftdi_read_pins</referencedby>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+        <referencedby refid="group__libftdi_1gae80f1dc38f5c80946a56ec34a329e7f5" compoundref="ftdi_8c" startline="1238" endline="1269">ftdi_set_baudrate</referencedby>
+        <referencedby refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" compoundref="ftdi_8c" startline="1933" endline="1948">ftdi_set_bitmode</referencedby>
+        <referencedby refid="group__libftdi_1gaeb9510a61f6648eb1bd57f0f99a390e1" compoundref="ftdi_8c" startline="2264" endline="2280">ftdi_set_error_char</referencedby>
+        <referencedby refid="group__libftdi_1ga71eeabe2ee5474d5c0ceddc2e08766cd" compoundref="ftdi_8c" startline="2235" endline="2251">ftdi_set_event_char</referencedby>
+        <referencedby refid="group__libftdi_1ga6dc886d709eced377a33dc975fa6e771" compoundref="ftdi_8c" startline="157" endline="203">ftdi_set_interface</referencedby>
+        <referencedby refid="group__libftdi_1ga3e0227b0c7aa859d2d2afb5ffa4c8466" compoundref="ftdi_8c" startline="2008" endline="2023">ftdi_set_latency_timer</referencedby>
+        <referencedby refid="group__libftdi_1ga481d055a35dd9042c1c23e2214d2655c" compoundref="ftdi_8c" startline="1303" endline="1360">ftdi_set_line_property2</referencedby>
+        <referencedby refid="group__libftdi_1ga1eb46e0bb208b64f88169b5452cf6e94" compoundref="ftdi_8c" startline="268" endline="274">ftdi_set_usbdev</referencedby>
+        <referencedby refid="group__libftdi_1ga47761f16762363288c55f5fff24620d5" compoundref="ftdi_8c" startline="2138" endline="2156">ftdi_setdtr</referencedby>
+        <referencedby refid="group__libftdi_1ga5a8f23c2e77c8b58c1f44a11e2f52aa9" compoundref="ftdi_8c" startline="2199" endline="2222">ftdi_setdtr_rts</referencedby>
+        <referencedby refid="group__libftdi_1gac3b3d2cc69edf567e653340f434c91e0" compoundref="ftdi_8c" startline="2115" endline="2126">ftdi_setflowctrl</referencedby>
+        <referencedby refid="group__libftdi_1ga5713ba73288b3e1ac1d45096c917c1ab" compoundref="ftdi_8c" startline="2168" endline="2186">ftdi_setrts</referencedby>
+        <referencedby refid="group__libftdi_1ga9536eff48c7ae9313b2a97320743ee3b" compoundref="ftdi_8c" startline="987" endline="1001">ftdi_usb_close</referencedby>
+        <referencedby refid="group__libftdi_1ga17e8eae09e58bd3bfeeab8decfce7fd9" compoundref="ftdi_8c" startline="409" endline="453">ftdi_usb_get_strings</referencedby>
+        <referencedby refid="group__libftdi_1ga3c5ccb0678b0e268b4081ea978e8eb78" compoundref="ftdi_8c" startline="692" endline="762">ftdi_usb_open_desc_index</referencedby>
+        <referencedby refid="group__libftdi_1ga07d90df83e677ad08fe551de17fd7a41" compoundref="ftdi_8c" startline="523" endline="625">ftdi_usb_open_dev</referencedby>
+        <referencedby refid="group__libftdi_1ga3089d7ceafad896c007111b8e5c02906" compoundref="ftdi_8c" startline="958" endline="974">ftdi_usb_purge_buffers</referencedby>
+        <referencedby refid="group__libftdi_1ga25a6d4766e30bd47602ed0c0ecf53476" compoundref="ftdi_8c" startline="909" endline="924">ftdi_usb_purge_rx_buffer</referencedby>
+        <referencedby refid="group__libftdi_1ga1eab1dfd17068c46775a86496fee8bec" compoundref="ftdi_8c" startline="935" endline="946">ftdi_usb_purge_tx_buffer</referencedby>
+        <referencedby refid="group__libftdi_1ga266ccc351ea31289022063a8ae29edf4" compoundref="ftdi_8c" startline="883" endline="898">ftdi_usb_reset</referencedby>
+        <referencedby refid="group__libftdi_1ga01199788c36ba93352f155a79ea295e8" compoundref="ftdi_8c" startline="1373" endline="1395">ftdi_write_data</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1ga8cc9811660d1adfb4b30157c5ab26d5a" compoundref="ftdi_8c" startline="4251" endline="4289">ftdi_write_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga5f2f678fc05cb8f92708fb1e5eb75100" compoundref="ftdi_8c" startline="4195" endline="4239">ftdi_write_eeprom_location</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1afa159483bb1153259ee7ceb3b45a2c9f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_context::usb_read_timeout</definition>
+        <argsstring></argsstring>
+        <name>usb_read_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>usb read timeout </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="227" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="227" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gacf7b6dcc4de33db2263ce8a421e18bfc" compoundref="ftdi_8c" startline="2035" endline="2047">ftdi_get_latency_timer</referencedby>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1ga396c3bf1435fb3317755868e28c47414" compoundref="ftdi_8c" startline="2089" endline="2102">ftdi_poll_modem_status</referencedby>
+        <referencedby refid="group__libftdi_1gab978a76c2cc0dbfbc1fd6350db848300" compoundref="ftdi_8c" startline="4157" endline="4179">ftdi_read_chipid</referencedby>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1gac157786fdf2e9c6b51dd9b4ddbb34d5f" compoundref="ftdi_8c" startline="4098" endline="4128">ftdi_read_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga650df1dc49ec78f0ee58b1c4f2644fd9" compoundref="ftdi_8c" startline="4078" endline="4087">ftdi_read_eeprom_location</referencedby>
+        <referencedby refid="group__libftdi_1gab823dd90f2359612b1546ef0ceebdc0e" compoundref="ftdi_8c" startline="1982" endline="1991">ftdi_read_pins</referencedby>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1ae98125557fc25c90953053a9992767cb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_context::usb_write_timeout</definition>
+        <argsstring></argsstring>
+        <name>usb_write_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>usb write timeout </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="229" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="229" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga42b4776b91c6b14d2d1008b160b78efa" compoundref="ftdi_8c" startline="1959" endline="1969">ftdi_disable_bitbang</referencedby>
+        <referencedby refid="group__libftdi_1ga25eb9a83a925065b6c3b61b8f0565951" compoundref="ftdi_8c" startline="4306" endline="4359">ftdi_erase_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1gae80f1dc38f5c80946a56ec34a329e7f5" compoundref="ftdi_8c" startline="1238" endline="1269">ftdi_set_baudrate</referencedby>
+        <referencedby refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" compoundref="ftdi_8c" startline="1933" endline="1948">ftdi_set_bitmode</referencedby>
+        <referencedby refid="group__libftdi_1gaeb9510a61f6648eb1bd57f0f99a390e1" compoundref="ftdi_8c" startline="2264" endline="2280">ftdi_set_error_char</referencedby>
+        <referencedby refid="group__libftdi_1ga71eeabe2ee5474d5c0ceddc2e08766cd" compoundref="ftdi_8c" startline="2235" endline="2251">ftdi_set_event_char</referencedby>
+        <referencedby refid="group__libftdi_1ga3e0227b0c7aa859d2d2afb5ffa4c8466" compoundref="ftdi_8c" startline="2008" endline="2023">ftdi_set_latency_timer</referencedby>
+        <referencedby refid="group__libftdi_1ga481d055a35dd9042c1c23e2214d2655c" compoundref="ftdi_8c" startline="1303" endline="1360">ftdi_set_line_property2</referencedby>
+        <referencedby refid="group__libftdi_1ga47761f16762363288c55f5fff24620d5" compoundref="ftdi_8c" startline="2138" endline="2156">ftdi_setdtr</referencedby>
+        <referencedby refid="group__libftdi_1ga5a8f23c2e77c8b58c1f44a11e2f52aa9" compoundref="ftdi_8c" startline="2199" endline="2222">ftdi_setdtr_rts</referencedby>
+        <referencedby refid="group__libftdi_1gac3b3d2cc69edf567e653340f434c91e0" compoundref="ftdi_8c" startline="2115" endline="2126">ftdi_setflowctrl</referencedby>
+        <referencedby refid="group__libftdi_1ga5713ba73288b3e1ac1d45096c917c1ab" compoundref="ftdi_8c" startline="2168" endline="2186">ftdi_setrts</referencedby>
+        <referencedby refid="group__libftdi_1ga25a6d4766e30bd47602ed0c0ecf53476" compoundref="ftdi_8c" startline="909" endline="924">ftdi_usb_purge_rx_buffer</referencedby>
+        <referencedby refid="group__libftdi_1ga1eab1dfd17068c46775a86496fee8bec" compoundref="ftdi_8c" startline="935" endline="946">ftdi_usb_purge_tx_buffer</referencedby>
+        <referencedby refid="group__libftdi_1ga266ccc351ea31289022063a8ae29edf4" compoundref="ftdi_8c" startline="883" endline="898">ftdi_usb_reset</referencedby>
+        <referencedby refid="group__libftdi_1ga01199788c36ba93352f155a79ea295e8" compoundref="ftdi_8c" startline="1373" endline="1395">ftdi_write_data</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1ga8cc9811660d1adfb4b30157c5ab26d5a" compoundref="ftdi_8c" startline="4251" endline="4289">ftdi_write_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga5f2f678fc05cb8f92708fb1e5eb75100" compoundref="ftdi_8c" startline="4195" endline="4239">ftdi_write_eeprom_location</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a2e565f92e6a559d75cf4828ed46d0109" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="ftdi_8h_1a026dc3f26fbc7f5ef67c75f0739385ce" kindref="member">ftdi_chip_type</ref></type>
+        <definition>enum ftdi_chip_type ftdi_context::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FTDI chip type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="229" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="233" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga25eb9a83a925065b6c3b61b8f0565951" compoundref="ftdi_8c" startline="4306" endline="4359">ftdi_erase_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1gac157786fdf2e9c6b51dd9b4ddbb34d5f" compoundref="ftdi_8c" startline="4098" endline="4128">ftdi_read_eeprom</referencedby>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+        <referencedby refid="group__libftdi_1ga07d90df83e677ad08fe551de17fd7a41" compoundref="ftdi_8c" startline="523" endline="625">ftdi_usb_open_dev</referencedby>
+        <referencedby refid="group__libftdi_1ga8cc9811660d1adfb4b30157c5ab26d5a" compoundref="ftdi_8c" startline="4251" endline="4289">ftdi_write_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga5f2f678fc05cb8f92708fb1e5eb75100" compoundref="ftdi_8c" startline="4195" endline="4239">ftdi_write_eeprom_location</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1aa688eb2312af3a9fb6b56a8c59178e34" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_context::baudrate</definition>
+        <argsstring></argsstring>
+        <name>baudrate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>baudrate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="235" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="235" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1gae80f1dc38f5c80946a56ec34a329e7f5" compoundref="ftdi_8c" startline="1238" endline="1269">ftdi_set_baudrate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a164c17ee7bddaa0d76da8da7138f602f" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char ftdi_context::bitbang_enabled</definition>
+        <argsstring></argsstring>
+        <name>bitbang_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bitbang mode state </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="237" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="237" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga42b4776b91c6b14d2d1008b160b78efa" compoundref="ftdi_8c" startline="1959" endline="1969">ftdi_disable_bitbang</referencedby>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1gae80f1dc38f5c80946a56ec34a329e7f5" compoundref="ftdi_8c" startline="1238" endline="1269">ftdi_set_baudrate</referencedby>
+        <referencedby refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" compoundref="ftdi_8c" startline="1933" endline="1948">ftdi_set_bitmode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a891754b08145eee8669598ab28c985a4" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ftdi_context::readbuffer</definition>
+        <argsstring></argsstring>
+        <name>readbuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to read buffer for ftdi_read_data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="239" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="239" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72838200be98d88737d532f9eee1e7be" compoundref="ftdi_8c" startline="210" endline="249">ftdi_deinit</referencedby>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="group__libftdi_1ga65783703baf0828d519ef597bb2855c1" compoundref="ftdi_8c" startline="1875" endline="1901">ftdi_read_data_set_chunksize</referencedby>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1aca6046c8ee0175acf84334afab5a3392" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ftdi_context::readbuffer_offset</definition>
+        <argsstring></argsstring>
+        <name>readbuffer_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>read buffer offset </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="241" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="241" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="group__libftdi_1ga65783703baf0828d519ef597bb2855c1" compoundref="ftdi_8c" startline="1875" endline="1901">ftdi_read_data_set_chunksize</referencedby>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1ga25a6d4766e30bd47602ed0c0ecf53476" compoundref="ftdi_8c" startline="909" endline="924">ftdi_usb_purge_rx_buffer</referencedby>
+        <referencedby refid="group__libftdi_1ga266ccc351ea31289022063a8ae29edf4" compoundref="ftdi_8c" startline="883" endline="898">ftdi_usb_reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1aad05935e91af93e8dbe36781217632bf" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ftdi_context::readbuffer_remaining</definition>
+        <argsstring></argsstring>
+        <name>readbuffer_remaining</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of remaining data in internal read buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="243" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="243" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="group__libftdi_1ga65783703baf0828d519ef597bb2855c1" compoundref="ftdi_8c" startline="1875" endline="1901">ftdi_read_data_set_chunksize</referencedby>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1ga25a6d4766e30bd47602ed0c0ecf53476" compoundref="ftdi_8c" startline="909" endline="924">ftdi_usb_purge_rx_buffer</referencedby>
+        <referencedby refid="group__libftdi_1ga266ccc351ea31289022063a8ae29edf4" compoundref="ftdi_8c" startline="883" endline="898">ftdi_usb_reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a8bd3ab7267621b4a8ec3f08ae18b1c00" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ftdi_context::readbuffer_chunksize</definition>
+        <argsstring></argsstring>
+        <name>readbuffer_chunksize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>read buffer chunk size </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="245" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="245" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="group__libftdi_1gab42b05f26b6a6545ae3ae1b4edc28e5c" compoundref="ftdi_8c" startline="1912" endline="1919">ftdi_read_data_get_chunksize</referencedby>
+        <referencedby refid="group__libftdi_1ga65783703baf0828d519ef597bb2855c1" compoundref="ftdi_8c" startline="1875" endline="1901">ftdi_read_data_set_chunksize</referencedby>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a127d66a8b7602bd767fb01ce90e2a6be" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ftdi_context::writebuffer_chunksize</definition>
+        <argsstring></argsstring>
+        <name>writebuffer_chunksize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>write buffer chunk size </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="247" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="247" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1ga01199788c36ba93352f155a79ea295e8" compoundref="ftdi_8c" startline="1373" endline="1395">ftdi_write_data</referencedby>
+        <referencedby refid="group__libftdi_1ga5944f14ffd11faa113515ff29dc769ed" compoundref="ftdi_8c" startline="1726" endline="1733">ftdi_write_data_get_chunksize</referencedby>
+        <referencedby refid="group__libftdi_1ga85e22717c3315a09219b03a1862c0c46" compoundref="ftdi_8c" startline="1708" endline="1715">ftdi_write_data_set_chunksize</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a7ca2f7e68cd28e1c3079d029fd6129c0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ftdi_context::max_packet_size</definition>
+        <argsstring></argsstring>
+        <name>max_packet_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>maximum packet size. Needed for filtering modem status bytes every n packets. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="249" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="249" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+        <referencedby refid="group__libftdi_1ga07d90df83e677ad08fe551de17fd7a41" compoundref="ftdi_8c" startline="523" endline="625">ftdi_usb_open_dev</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1ab67b17bd137b3b010544cdc3e6149aa7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_context::interface</definition>
+        <argsstring></argsstring>
+        <name>interface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FT2232C interface number: 0 or 1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="253" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="253" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga6dc886d709eced377a33dc975fa6e771" compoundref="ftdi_8c" startline="157" endline="203">ftdi_set_interface</referencedby>
+        <referencedby refid="group__libftdi_1ga9536eff48c7ae9313b2a97320743ee3b" compoundref="ftdi_8c" startline="987" endline="1001">ftdi_usb_close</referencedby>
+        <referencedby refid="group__libftdi_1ga07d90df83e677ad08fe551de17fd7a41" compoundref="ftdi_8c" startline="523" endline="625">ftdi_usb_open_dev</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1aa38ced8c782ed6844895cd4d685def64" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_context::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FT2232C index number: 1 or 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="255" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="255" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga42b4776b91c6b14d2d1008b160b78efa" compoundref="ftdi_8c" startline="1959" endline="1969">ftdi_disable_bitbang</referencedby>
+        <referencedby refid="group__libftdi_1gacf7b6dcc4de33db2263ce8a421e18bfc" compoundref="ftdi_8c" startline="2035" endline="2047">ftdi_get_latency_timer</referencedby>
+        <referencedby refid="group__libftdi_1ga396c3bf1435fb3317755868e28c47414" compoundref="ftdi_8c" startline="2089" endline="2102">ftdi_poll_modem_status</referencedby>
+        <referencedby refid="group__libftdi_1gab823dd90f2359612b1546ef0ceebdc0e" compoundref="ftdi_8c" startline="1982" endline="1991">ftdi_read_pins</referencedby>
+        <referencedby refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" compoundref="ftdi_8c" startline="1933" endline="1948">ftdi_set_bitmode</referencedby>
+        <referencedby refid="group__libftdi_1gaeb9510a61f6648eb1bd57f0f99a390e1" compoundref="ftdi_8c" startline="2264" endline="2280">ftdi_set_error_char</referencedby>
+        <referencedby refid="group__libftdi_1ga71eeabe2ee5474d5c0ceddc2e08766cd" compoundref="ftdi_8c" startline="2235" endline="2251">ftdi_set_event_char</referencedby>
+        <referencedby refid="group__libftdi_1ga6dc886d709eced377a33dc975fa6e771" compoundref="ftdi_8c" startline="157" endline="203">ftdi_set_interface</referencedby>
+        <referencedby refid="group__libftdi_1ga3e0227b0c7aa859d2d2afb5ffa4c8466" compoundref="ftdi_8c" startline="2008" endline="2023">ftdi_set_latency_timer</referencedby>
+        <referencedby refid="group__libftdi_1ga481d055a35dd9042c1c23e2214d2655c" compoundref="ftdi_8c" startline="1303" endline="1360">ftdi_set_line_property2</referencedby>
+        <referencedby refid="group__libftdi_1ga47761f16762363288c55f5fff24620d5" compoundref="ftdi_8c" startline="2138" endline="2156">ftdi_setdtr</referencedby>
+        <referencedby refid="group__libftdi_1ga5a8f23c2e77c8b58c1f44a11e2f52aa9" compoundref="ftdi_8c" startline="2199" endline="2222">ftdi_setdtr_rts</referencedby>
+        <referencedby refid="group__libftdi_1gac3b3d2cc69edf567e653340f434c91e0" compoundref="ftdi_8c" startline="2115" endline="2126">ftdi_setflowctrl</referencedby>
+        <referencedby refid="group__libftdi_1ga5713ba73288b3e1ac1d45096c917c1ab" compoundref="ftdi_8c" startline="2168" endline="2186">ftdi_setrts</referencedby>
+        <referencedby refid="group__libftdi_1ga25a6d4766e30bd47602ed0c0ecf53476" compoundref="ftdi_8c" startline="909" endline="924">ftdi_usb_purge_rx_buffer</referencedby>
+        <referencedby refid="group__libftdi_1ga1eab1dfd17068c46775a86496fee8bec" compoundref="ftdi_8c" startline="935" endline="946">ftdi_usb_purge_tx_buffer</referencedby>
+        <referencedby refid="group__libftdi_1ga266ccc351ea31289022063a8ae29edf4" compoundref="ftdi_8c" startline="883" endline="898">ftdi_usb_reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a9b6cfd3763a3ca80c76bc52c89dad968" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_context::in_ep</definition>
+        <argsstring></argsstring>
+        <name>in_ep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FT2232C end points: 1 or 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="258" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="258" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga6dc886d709eced377a33dc975fa6e771" compoundref="ftdi_8c" startline="157" endline="203">ftdi_set_interface</referencedby>
+        <referencedby refid="group__libftdi_1ga01199788c36ba93352f155a79ea295e8" compoundref="ftdi_8c" startline="1373" endline="1395">ftdi_write_data</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a079427d8f2c09102bcadb9118e60c0ec" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_context::out_ep</definition>
+        <argsstring></argsstring>
+        <name>out_ep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="259" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="259" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+        <referencedby refid="group__libftdi_1ga6dc886d709eced377a33dc975fa6e771" compoundref="ftdi_8c" startline="157" endline="203">ftdi_set_interface</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a017557435f4377c2353d9d3b7fbcff01" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char ftdi_context::bitbang_mode</definition>
+        <argsstring></argsstring>
+        <name>bitbang_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bitbang mode. 1: (default) Normal bitbang mode, 2: FT2232C SPI bitbang mode </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="262" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="262" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" compoundref="ftdi_8c" startline="1933" endline="1948">ftdi_set_bitmode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a0389f5e2d92fcba8d7ae5beffbf33a1b" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structftdi__eeprom" kindref="compound">ftdi_eeprom</ref> *</type>
+        <definition>struct ftdi_eeprom* ftdi_context::eeprom</definition>
+        <argsstring></argsstring>
+        <name>eeprom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Decoded eeprom structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="265" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="265" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72838200be98d88737d532f9eee1e7be" compoundref="ftdi_8c" startline="210" endline="249">ftdi_deinit</referencedby>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga9a8f94ad689a47dc3aa24c564d7731d3" compoundref="ftdi_8c" startline="2442" endline="2488">ftdi_eeprom_set_strings</referencedby>
+        <referencedby refid="group__libftdi_1ga25eb9a83a925065b6c3b61b8f0565951" compoundref="ftdi_8c" startline="4306" endline="4359">ftdi_erase_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga92a449af4a1becc70e80e49f3c937bbd" compoundref="ftdi_8c" startline="4008" endline="4023">ftdi_get_eeprom_buf</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1gac157786fdf2e9c6b51dd9b4ddbb34d5f" compoundref="ftdi_8c" startline="4098" endline="4128">ftdi_read_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1gaad29bea74f6ae02ed757d2a39c060969" compoundref="ftdi_8c" startline="4034" endline="4046">ftdi_set_eeprom_buf</referencedby>
+        <referencedby refid="group__libftdi_1ga1af4ea94a0cbe4d4b6364675eee0b4ef" compoundref="ftdi_8c" startline="4057" endline="4065">ftdi_set_eeprom_user_data</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8cc9811660d1adfb4b30157c5ab26d5a" compoundref="ftdi_8c" startline="4251" endline="4289">ftdi_write_eeprom</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1accc4dc90cea120d545faf82c6034d445" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* ftdi_context::error_str</definition>
+        <argsstring></argsstring>
+        <name>error_str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String representation of last error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="268" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="268" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga28c84d963760d7396e5a2992e63a9354" compoundref="ftdi_8c" startline="4368" endline="4374">ftdi_get_error_string</referencedby>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__context_1a06072f2484298ae90fcffe450a133250" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="ftdi_8h_1adb5c9021fa85791df4a0b9dac671109a" kindref="member">ftdi_module_detach_mode</ref></type>
+        <definition>enum ftdi_module_detach_mode ftdi_context::module_detach_mode</definition>
+        <argsstring></argsstring>
+        <name>module_detach_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines behavior in case a kernel module is already attached to the device </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="268" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="271" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga21e2ed53cad4fa8242022afe1e12d2ee" compoundref="ftdi_8c" startline="88" endline="121">ftdi_init</referencedby>
+        <referencedby refid="group__libftdi_1ga07d90df83e677ad08fe551de17fd7a41" compoundref="ftdi_8c" startline="523" endline="625">ftdi_usb_open_dev</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Main context structure for all libftdi functions. </para>    </briefdescription>
+    <detaileddescription>
+<para>Do not access directly if possible. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>ftdi_context</label>
+        <link refid="structftdi__context"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>eeprom</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ftdi_eeprom</label>
+        <link refid="structftdi__eeprom"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="220" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="219" bodyend="272"/>
+    <listofallmembers>
+      <member refid="structftdi__context_1aa688eb2312af3a9fb6b56a8c59178e34" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>baudrate</name></member>
+      <member refid="structftdi__context_1a164c17ee7bddaa0d76da8da7138f602f" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>bitbang_enabled</name></member>
+      <member refid="structftdi__context_1a017557435f4377c2353d9d3b7fbcff01" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>bitbang_mode</name></member>
+      <member refid="structftdi__context_1a0389f5e2d92fcba8d7ae5beffbf33a1b" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>eeprom</name></member>
+      <member refid="structftdi__context_1accc4dc90cea120d545faf82c6034d445" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>error_str</name></member>
+      <member refid="structftdi__context_1a9b6cfd3763a3ca80c76bc52c89dad968" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>in_ep</name></member>
+      <member refid="structftdi__context_1aa38ced8c782ed6844895cd4d685def64" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>index</name></member>
+      <member refid="structftdi__context_1ab67b17bd137b3b010544cdc3e6149aa7" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>interface</name></member>
+      <member refid="structftdi__context_1a7ca2f7e68cd28e1c3079d029fd6129c0" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>max_packet_size</name></member>
+      <member refid="structftdi__context_1a06072f2484298ae90fcffe450a133250" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>module_detach_mode</name></member>
+      <member refid="structftdi__context_1a079427d8f2c09102bcadb9118e60c0ec" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>out_ep</name></member>
+      <member refid="structftdi__context_1a891754b08145eee8669598ab28c985a4" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>readbuffer</name></member>
+      <member refid="structftdi__context_1a8bd3ab7267621b4a8ec3f08ae18b1c00" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>readbuffer_chunksize</name></member>
+      <member refid="structftdi__context_1aca6046c8ee0175acf84334afab5a3392" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>readbuffer_offset</name></member>
+      <member refid="structftdi__context_1aad05935e91af93e8dbe36781217632bf" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>readbuffer_remaining</name></member>
+      <member refid="structftdi__context_1a2e565f92e6a559d75cf4828ed46d0109" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>type</name></member>
+      <member refid="structftdi__context_1a05bd064e6608ee91b641eff379455e9f" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>usb_ctx</name></member>
+      <member refid="structftdi__context_1a1ea9e9fd3211a568779022befc0b3af8" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>usb_dev</name></member>
+      <member refid="structftdi__context_1afa159483bb1153259ee7ceb3b45a2c9f" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>usb_read_timeout</name></member>
+      <member refid="structftdi__context_1ae98125557fc25c90953053a9992767cb" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>usb_write_timeout</name></member>
+      <member refid="structftdi__context_1a127d66a8b7602bd767fb01ce90e2a6be" prot="public" virt="non-virtual"><scope>ftdi_context</scope><name>writebuffer_chunksize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

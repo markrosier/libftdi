@@ -1,0 +1,7 @@
+echo Remember to use sudo ./error1
+while true; do
+./FTDI-low;
+sleep 0.25;
+./FTDI-high;
+sleep 2.25;
+done

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>libftdi API documentation</title>
+    <detaileddescription>
+<para>Library to talk to FTDI chips. You find the latest versions of libftdi at <ulink url="http://www.intra2net.com/en/developer/libftdi/">http://www.intra2net.com/en/developer/libftdi/</ulink></para><para>The library is easy to use. Have a look at this short example: <programlisting><codeline><highlight class="comment">/*<sp/>simple.c</highlight></codeline>
+<codeline><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/>Simple<sp/>libftdi<sp/>usage<sp/>example</highlight></codeline>
+<codeline><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>under<sp/>the<sp/>GPL,<sp/>version<sp/>2</highlight></codeline>
+<codeline><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ftdi_8h" kindref="compound">ftdi.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structftdi__context" kindref="compound">ftdi_context</ref><sp/>*ftdi;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structftdi__version__info" kindref="compound">ftdi_version_info</ref><sp/>version;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ftdi<sp/>=<sp/><ref refid="group__libftdi_1gafd46c6784367fd95c5f852d3b38949a8" kindref="member">ftdi_new</ref>())<sp/>==<sp/>0)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;ftdi_new<sp/>failed\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>version<sp/>=<sp/><ref refid="group__libftdi_1gaf4b4d11e33d946568efc64851ee8c7e5" kindref="member">ftdi_get_library_version</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Initialized<sp/>libftdi<sp/>%s<sp/>(major:<sp/>%d,<sp/>minor:<sp/>%d,<sp/>micro:<sp/>%d,<sp/>snapshot<sp/>ver:<sp/>%s)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>version.version_str,<sp/>version.major,<sp/>version.minor,<sp/>version.micro,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>version.snapshot_str);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ret<sp/>=<sp/><ref refid="group__libftdi_1ga95d4689db18fc1fd70011f6504ab8c40" kindref="member">ftdi_usb_open</ref>(ftdi,<sp/>0x0403,<sp/>0x6001))<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;unable<sp/>to<sp/>open<sp/>ftdi<sp/>device:<sp/>%d<sp/>(%s)\n&quot;</highlight><highlight class="normal">,<sp/>ret,<sp/><ref refid="group__libftdi_1ga28c84d963760d7396e5a2992e63a9354" kindref="member">ftdi_get_error_string</ref>(ftdi));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga3cc28e5b7f1f50246861fcb39e7dd291" kindref="member">ftdi_free</ref>(ftdi);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>out<sp/>FTDIChip-ID<sp/>of<sp/>R<sp/>type<sp/>chips</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ftdi-&gt;<ref refid="structftdi__context_1a2e565f92e6a559d75cf4828ed46d0109" kindref="member">type</ref><sp/>==<sp/><ref refid="ftdi_8h_1a026dc3f26fbc7f5ef67c75f0739385cea60949f421ca5df446c9fb4322093bc8a" kindref="member">TYPE_R</ref>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>chipid;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ftdi_read_chipid:<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="group__libftdi_1gab978a76c2cc0dbfbc1fd6350db848300" kindref="member">ftdi_read_chipid</ref>(ftdi,<sp/>&amp;chipid));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;FTDI<sp/>chipid:<sp/>%X\n&quot;</highlight><highlight class="normal">,<sp/>chipid);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ret<sp/>=<sp/><ref refid="group__libftdi_1ga9536eff48c7ae9313b2a97320743ee3b" kindref="member">ftdi_usb_close</ref>(ftdi))<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;unable<sp/>to<sp/>close<sp/>ftdi<sp/>device:<sp/>%d<sp/>(%s)\n&quot;</highlight><highlight class="normal">,<sp/>ret,<sp/><ref refid="group__libftdi_1ga28c84d963760d7396e5a2992e63a9354" kindref="member">ftdi_get_error_string</ref>(ftdi));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga3cc28e5b7f1f50246861fcb39e7dd291" kindref="member">ftdi_free</ref>(ftdi);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga3cc28e5b7f1f50246861fcb39e7dd291" kindref="member">ftdi_free</ref>(ftdi);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>More examples can be found in the &quot;examples&quot; directory. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

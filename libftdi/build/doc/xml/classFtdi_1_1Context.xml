@@ -1,0 +1,1030 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classFtdi_1_1Context" kind="class" prot="public">
+    <compoundname>Ftdi::Context</compoundname>
+    <includes refid="ftdi_8hpp" local="no">ftdi.hpp</includes>
+    <innerclass refid="classFtdi_1_1Context_1_1Private" prot="public">Ftdi::Context::Private</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9" prot="public" static="no">
+        <name>Direction</name>
+        <enumvalue id="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a087f9b8fee592efb3929c382e0804404" prot="public">
+          <name>Input</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a5c3962c84bf153b1837ca2ca8ac97886" prot="public">
+          <name>Output</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Direction flags for <ref refid="classFtdi_1_1Context_1a36cf5e632dcc34f4ccd37a02eeedcb8d" kindref="member">flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="57" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="enum" id="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1" prot="public" static="no">
+        <name>ModemCtl</name>
+        <enumvalue id="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a0ed23ea2a691e4398908cb7442377e37" prot="public">
+          <name>Dtr</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a7dda31debfdeaf64b64734b881afe109" prot="public">
+          <name>Rts</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Modem control flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="65" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="64" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classFtdi_1_1Context_1a473938987b94c05a6ac5c45fb65eb12a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Eeprom</definition>
+        <argsstring></argsstring>
+        <name>Eeprom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="50" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classFtdi_1_1Context_1a8cee552d09eaeb60a09d95309a87b498" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class List</definition>
+        <argsstring></argsstring>
+        <name>List</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="51" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFtdi_1_1Context_1a08619c0972a8ccbe79630cf8bb02057c" prot="private" static="no" mutable="no">
+        <type>boost::shared_ptr&lt; <ref refid="classFtdi_1_1Context_1_1Private" kindref="compound">Private</ref> &gt;</type>
+        <definition>boost::shared_ptr&lt;Private&gt; Ftdi::Context::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="147" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFtdi_1_1Context_1a06bd23d6d2d16489cb5abf792f368b8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::Context::Context</definition>
+        <argsstring>()</argsstring>
+        <name>Context</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="71" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ad12a84ca44914ae7c90404881c99503e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::Context::~Context</definition>
+        <argsstring>()</argsstring>
+        <name>~Context</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="72" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a374535a96a9c2144215da6779f700315" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1Eeprom" kindref="compound">Eeprom</ref> *</type>
+        <definition>Eeprom* Ftdi::Context::eeprom</definition>
+        <argsstring>()</argsstring>
+        <name>eeprom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ab1ef11b1851c8234f5305fdfc7421887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Ftdi::Context::vendor</definition>
+        <argsstring>()</argsstring>
+        <name>vendor</name>
+        <briefdescription>
+<para>Device strings properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="76" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="363" bodyend="366"/>
+        <referencedby refid="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" compoundref="ftdi_8cpp" startline="322" endline="337">get_strings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a1851e8cffbb77e7f7ef7adb8fa833962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Ftdi::Context::description</definition>
+        <argsstring>()</argsstring>
+        <name>description</name>
+        <briefdescription>
+<para>Device strings properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="77" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a3d4035444e2f78ff8d7aa37c26236df8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Ftdi::Context::serial</definition>
+        <argsstring>()</argsstring>
+        <name>serial</name>
+        <briefdescription>
+<para>Device strings properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="78" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="377" bodyend="380"/>
+        <referencedby refid="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" compoundref="ftdi_8cpp" startline="322" endline="337">get_strings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a3a222cbc0ac54ea699474aa48b8d27cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Ftdi::Context::is_open</definition>
+        <argsstring>()</argsstring>
+        <name>is_open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="81" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a71f952d1778914a33b151d0e0db3f1d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::open</definition>
+        <argsstring>(struct libusb_device *dev=0)</argsstring>
+        <name>open</name>
+        <param>
+          <type>struct libusb_device *</type>
+          <declname>dev</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="82" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="122" bodyend="131"/>
+        <references refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" compoundref="ftdi_8cpp" startline="339" endline="359">get_strings_and_reopen</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a2669ea3eac16289990cd46cd777e295a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::open</definition>
+        <argsstring>(int vendor, int product)</argsstring>
+        <name>open</name>
+        <param>
+          <type>int</type>
+          <declname>vendor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>product</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="83" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="82" bodyend="91"/>
+        <references refid="group__libftdi_1ga95d4689db18fc1fd70011f6504ab8c40" compoundref="ftdi_8c" startline="636" endline="639">ftdi_usb_open</references>
+        <references refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" compoundref="ftdi_8cpp" startline="339" endline="359">get_strings_and_reopen</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1af6c6f42c9f6c10ff960e5163f0a052c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::open</definition>
+        <argsstring>(int vendor, int product, const std::string &amp;description, const std::string &amp;serial=std::string(), unsigned int index=0)</argsstring>
+        <name>open</name>
+        <param>
+          <type>int</type>
+          <declname>vendor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>product</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>serial</declname>
+          <defval>std::string()</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="84" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="93" bodyend="110"/>
+        <references refid="group__libftdi_1ga3c5ccb0678b0e268b4081ea978e8eb78" compoundref="ftdi_8c" startline="692" endline="762">ftdi_usb_open_desc_index</references>
+        <references refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" compoundref="ftdi_8cpp" startline="339" endline="359">get_strings_and_reopen</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a6dc5ad42a05d03cbf5b43365b79a3b62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::open</definition>
+        <argsstring>(const std::string &amp;description)</argsstring>
+        <name>open</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="85" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="112" bodyend="120"/>
+        <references refid="group__libftdi_1gaae805b82251a61dae46b98345cd84d5c" compoundref="ftdi_8c" startline="790" endline="872">ftdi_usb_open_string</references>
+        <references refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" compoundref="ftdi_8cpp" startline="339" endline="359">get_strings_and_reopen</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1aad96d64cfe28b6085e384acdbcfe43fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="86" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="133" bodyend="138"/>
+        <references refid="group__libftdi_1ga9536eff48c7ae9313b2a97320743ee3b" compoundref="ftdi_8c" startline="987" endline="1001">ftdi_usb_close</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a3d318e752b00f0822d6e2c417420afde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="87" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="140" bodyend="143"/>
+        <references refid="group__libftdi_1ga266ccc351ea31289022063a8ae29edf4" compoundref="ftdi_8c" startline="883" endline="898">ftdi_usb_reset</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a36cf5e632dcc34f4ccd37a02eeedcb8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::flush</definition>
+        <argsstring>(int mask=Input|Output)</argsstring>
+        <name>flush</name>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+          <defval><ref refid="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a087f9b8fee592efb3929c382e0804404" kindref="member">Input</ref>|<ref refid="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a5c3962c84bf153b1837ca2ca8ac97886" kindref="member">Output</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="88" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="145" bodyend="155"/>
+        <references refid="group__libftdi_1ga25a6d4766e30bd47602ed0c0ecf53476" compoundref="ftdi_8c" startline="909" endline="924">ftdi_usb_purge_rx_buffer</references>
+        <references refid="group__libftdi_1ga1eab1dfd17068c46775a86496fee8bec" compoundref="ftdi_8c" startline="935" endline="946">ftdi_usb_purge_tx_buffer</references>
+        <references refid="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a087f9b8fee592efb3929c382e0804404" compoundref="ftdi_8hpp" startline="58">Input</references>
+        <references refid="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a5c3962c84bf153b1837ca2ca8ac97886" compoundref="ftdi_8hpp" startline="59">Output</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a9baf46935760b09ba2f06cd978d83a41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_interface</definition>
+        <argsstring>(enum ftdi_interface interface)</argsstring>
+        <name>set_interface</name>
+        <param>
+          <type>enum <ref refid="ftdi_8h_1a9c55e66c45a0e4ec5548ee7d6e1a9265" kindref="member">ftdi_interface</ref></type>
+          <declname>interface</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="89" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="157" bodyend="160"/>
+        <references refid="group__libftdi_1ga6dc886d709eced377a33dc975fa6e771" compoundref="ftdi_8c" startline="157" endline="203">ftdi_set_interface</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a3eb0536f23dbd7e2df286ee01ccc03ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ftdi::Context::set_usb_device</definition>
+        <argsstring>(struct libusb_device_handle *dev)</argsstring>
+        <name>set_usb_device</name>
+        <param>
+          <type>struct libusb_device_handle *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="90" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="162" bodyend="166"/>
+        <references refid="group__libftdi_1ga1eb46e0bb208b64f88169b5452cf6e94" compoundref="ftdi_8c" startline="268" endline="274">ftdi_set_usbdev</references>
+        <referencedby refid="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" compoundref="ftdi_8cpp" startline="476" endline="490">Ftdi::List::List</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a12d1736e590aefe7a4a3880d01961a20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_baud_rate</definition>
+        <argsstring>(int baudrate)</argsstring>
+        <name>set_baud_rate</name>
+        <param>
+          <type>int</type>
+          <declname>baudrate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="93" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="168" bodyend="171"/>
+        <references refid="group__libftdi_1gae80f1dc38f5c80946a56ec34a329e7f5" compoundref="ftdi_8c" startline="1238" endline="1269">ftdi_set_baudrate</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1acaf9f3ab2dde7b231e26cd35db4a962c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_line_property</definition>
+        <argsstring>(enum ftdi_bits_type bits, enum ftdi_stopbits_type sbit, enum ftdi_parity_type parity)</argsstring>
+        <name>set_line_property</name>
+        <param>
+          <type>enum <ref refid="ftdi_8h_1a8007a7d5e37b76307c341051769e5c6f" kindref="member">ftdi_bits_type</ref></type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="ftdi_8h_1a3977a883c99069e02f97e99d059dc8b8" kindref="member">ftdi_stopbits_type</ref></type>
+          <declname>sbit</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="ftdi_8h_1ab0a93b5355c5155dd4fbd5beaf5d5e1d" kindref="member">ftdi_parity_type</ref></type>
+          <declname>parity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="94" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="173" bodyend="176"/>
+        <references refid="group__libftdi_1ga044fdde91eaa3f557b545172622ee460" compoundref="ftdi_8c" startline="1284" endline="1288">ftdi_set_line_property</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a2ba24f72d62c853538f0844259a98c4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_line_property</definition>
+        <argsstring>(enum ftdi_bits_type bits, enum ftdi_stopbits_type sbit, enum ftdi_parity_type parity, enum ftdi_break_type break_type)</argsstring>
+        <name>set_line_property</name>
+        <param>
+          <type>enum <ref refid="ftdi_8h_1a8007a7d5e37b76307c341051769e5c6f" kindref="member">ftdi_bits_type</ref></type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="ftdi_8h_1a3977a883c99069e02f97e99d059dc8b8" kindref="member">ftdi_stopbits_type</ref></type>
+          <declname>sbit</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="ftdi_8h_1ab0a93b5355c5155dd4fbd5beaf5d5e1d" kindref="member">ftdi_parity_type</ref></type>
+          <declname>parity</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="ftdi_8h_1ae1ca6c6246df33380443c4ba6f192025" kindref="member">ftdi_break_type</ref></type>
+          <declname>break_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="95" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="178" bodyend="181"/>
+        <references refid="group__libftdi_1ga481d055a35dd9042c1c23e2214d2655c" compoundref="ftdi_8c" startline="1303" endline="1360">ftdi_set_line_property2</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1aa2ea2e266c81621ee7403e8f08a0f957" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::get_usb_read_timeout</definition>
+        <argsstring>() const </argsstring>
+        <name>get_usb_read_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="96" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ab4d7ad20fb8862ae6aefefc91b92e987" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ftdi::Context::set_usb_read_timeout</definition>
+        <argsstring>(int usb_read_timeout)</argsstring>
+        <name>set_usb_read_timeout</name>
+        <param>
+          <type>int</type>
+          <declname>usb_read_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="97" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a6174ba6d14b967fa5dcad7f3a94fbf12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::get_usb_write_timeout</definition>
+        <argsstring>() const </argsstring>
+        <name>get_usb_write_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="98" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a3f298649f0f9a13262b0ebaf4293a352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ftdi::Context::set_usb_write_timeout</definition>
+        <argsstring>(int usb_write_timeout)</argsstring>
+        <name>set_usb_write_timeout</name>
+        <param>
+          <type>int</type>
+          <declname>usb_write_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="99" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="198" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a1858062c4dacda2ab8271cd51550b7ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::read</definition>
+        <argsstring>(unsigned char *buf, int size)</argsstring>
+        <name>read</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="102" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="203" bodyend="206"/>
+        <references refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a5cb1b4266a68f3bd9133e52178042ddf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::write</definition>
+        <argsstring>(unsigned char *buf, int size)</argsstring>
+        <name>write</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="103" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="222" bodyend="225"/>
+        <references refid="group__libftdi_1ga01199788c36ba93352f155a79ea295e8" compoundref="ftdi_8c" startline="1373" endline="1395">ftdi_write_data</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a6e4b4df1cd2c0786b94620b4e5b2f80f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_read_chunk_size</definition>
+        <argsstring>(unsigned int chunksize)</argsstring>
+        <name>set_read_chunk_size</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>chunksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="104" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="208" bodyend="211"/>
+        <references refid="group__libftdi_1ga65783703baf0828d519ef597bb2855c1" compoundref="ftdi_8c" startline="1875" endline="1901">ftdi_read_data_set_chunksize</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a54859d31d5177488aefa95067c8d4666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_write_chunk_size</definition>
+        <argsstring>(unsigned int chunksize)</argsstring>
+        <name>set_write_chunk_size</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>chunksize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="105" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="227" bodyend="230"/>
+        <references refid="group__libftdi_1ga85e22717c3315a09219b03a1862c0c46" compoundref="ftdi_8c" startline="1708" endline="1715">ftdi_write_data_set_chunksize</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a4c482b031ffe04b12087e573e91e4b79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::read_chunk_size</definition>
+        <argsstring>()</argsstring>
+        <name>read_chunk_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="106" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="213" bodyend="220"/>
+        <references refid="group__libftdi_1gab42b05f26b6a6545ae3ae1b4edc28e5c" compoundref="ftdi_8c" startline="1912" endline="1919">ftdi_read_data_get_chunksize</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ad4500d40d2bd07f383724968ffa945a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::write_chunk_size</definition>
+        <argsstring>()</argsstring>
+        <name>write_chunk_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="107" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="232" bodyend="239"/>
+        <references refid="group__libftdi_1ga5944f14ffd11faa113515ff29dc769ed" compoundref="ftdi_8c" startline="1726" endline="1733">ftdi_write_data_get_chunksize</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a7471fc6635a9ff2f98d30c5830eb7593" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_event_char</definition>
+        <argsstring>(unsigned char eventch, unsigned char enable)</argsstring>
+        <name>set_event_char</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>eventch</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="116" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="287" bodyend="290"/>
+        <references refid="group__libftdi_1ga71eeabe2ee5474d5c0ceddc2e08766cd" compoundref="ftdi_8c" startline="2235" endline="2251">ftdi_set_event_char</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a5b846e30bb38c78fd772281be7fc342b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_error_char</definition>
+        <argsstring>(unsigned char errorch, unsigned char enable)</argsstring>
+        <name>set_error_char</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>errorch</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="117" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="292" bodyend="295"/>
+        <references refid="group__libftdi_1gaeb9510a61f6648eb1bd57f0f99a390e1" compoundref="ftdi_8c" startline="2264" endline="2280">ftdi_set_error_char</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a0c29fde1904335a1213ce1e1982adc24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_flow_control</definition>
+        <argsstring>(int flowctrl)</argsstring>
+        <name>set_flow_control</name>
+        <param>
+          <type>int</type>
+          <declname>flowctrl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="118" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="241" bodyend="244"/>
+        <references refid="group__libftdi_1gac3b3d2cc69edf567e653340f434c91e0" compoundref="ftdi_8c" startline="2115" endline="2126">ftdi_setflowctrl</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ad1968faa8b41f6c49c70a55872a6bdbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_modem_control</definition>
+        <argsstring>(int mask=Dtr|Rts)</argsstring>
+        <name>set_modem_control</name>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+          <defval><ref refid="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a0ed23ea2a691e4398908cb7442377e37" kindref="member">Dtr</ref>|<ref refid="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a7dda31debfdeaf64b64734b881afe109" kindref="member">Rts</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="119" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="246" bodyend="256"/>
+        <references refid="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a0ed23ea2a691e4398908cb7442377e37" compoundref="ftdi_8hpp" startline="66">Dtr</references>
+        <references refid="group__libftdi_1ga5a8f23c2e77c8b58c1f44a11e2f52aa9" compoundref="ftdi_8c" startline="2199" endline="2222">ftdi_setdtr_rts</references>
+        <references refid="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a7dda31debfdeaf64b64734b881afe109" compoundref="ftdi_8hpp" startline="67">Rts</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a60ebdaac48d273b925ff35c510f3c19a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_latency</definition>
+        <argsstring>(unsigned char latency)</argsstring>
+        <name>set_latency</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>latency</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="120" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="268" bodyend="271"/>
+        <references refid="group__libftdi_1ga3e0227b0c7aa859d2d2afb5ffa4c8466" compoundref="ftdi_8c" startline="2008" endline="2023">ftdi_set_latency_timer</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a5f05bf405868e37d2efe50afaf377706" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_dtr</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>set_dtr</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="121" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="258" bodyend="261"/>
+        <references refid="group__libftdi_1ga47761f16762363288c55f5fff24620d5" compoundref="ftdi_8c" startline="2138" endline="2156">ftdi_setdtr</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ae5e60eb0188ba8039ee7b50329779cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_rts</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>set_rts</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="122" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="263" bodyend="266"/>
+        <references refid="group__libftdi_1ga5713ba73288b3e1ac1d45096c917c1ab" compoundref="ftdi_8c" startline="2168" endline="2186">ftdi_setrts</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a9204d8315dd586286535da2a68917dad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short Ftdi::Context::poll_modem_status</definition>
+        <argsstring>()</argsstring>
+        <name>poll_modem_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="124" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="280" bodyend="285"/>
+        <references refid="group__libftdi_1ga396c3bf1435fb3317755868e28c47414" compoundref="ftdi_8c" startline="2089" endline="2102">ftdi_poll_modem_status</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a7e87873dc7c2987cd588f4f4d72e7732" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned Ftdi::Context::latency</definition>
+        <argsstring>()</argsstring>
+        <name>latency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="125" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="273" bodyend="278"/>
+        <references refid="group__libftdi_1gacf7b6dcc4de33db2263ce8a421e18bfc" compoundref="ftdi_8c" startline="2035" endline="2047">ftdi_get_latency_timer</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ad8a0a54d23eb0f6b8b3c77155c1b4487" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_bitmode</definition>
+        <argsstring>(unsigned char bitmask, unsigned char mode)</argsstring>
+        <name>set_bitmode</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>bitmask</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="128" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="297" bodyend="300"/>
+        <references refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" compoundref="ftdi_8c" startline="1933" endline="1948">ftdi_set_bitmode</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ab419f56aee86647a9d4bbc7e348960cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::set_bitmode</definition>
+        <argsstring>(unsigned char bitmask, enum ftdi_mpsse_mode mode)</argsstring>
+        <name>set_bitmode</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>bitmask</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="ftdi_8h_1a2250f7812c87a96ada7fd4f19b82f666" kindref="member">ftdi_mpsse_mode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="129" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="302" bodyend="305"/>
+        <references refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" compoundref="ftdi_8c" startline="1933" endline="1948">ftdi_set_bitmode</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ace0a0738c511bf041a456b94ca096ec9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::bitbang_disable</definition>
+        <argsstring>()</argsstring>
+        <name>bitbang_disable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="130" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="307" bodyend="310"/>
+        <references refid="group__libftdi_1ga42b4776b91c6b14d2d1008b160b78efa" compoundref="ftdi_8c" startline="1959" endline="1969">ftdi_disable_bitbang</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1aa41e612799358ce70b4a5003ebcfe9ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::read_pins</definition>
+        <argsstring>(unsigned char *pins)</argsstring>
+        <name>read_pins</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>pins</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="131" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="312" bodyend="315"/>
+        <references refid="group__libftdi_1gab823dd90f2359612b1546ef0ceebdc0e" compoundref="ftdi_8c" startline="1982" endline="1991">ftdi_read_pins</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ab4e06e0e4bf156c0c5421ec0bbb4cdd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * Ftdi::Context::error_string</definition>
+        <argsstring>()</argsstring>
+        <name>error_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="134" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="317" bodyend="320"/>
+        <references refid="group__libftdi_1ga28c84d963760d7396e5a2992e63a9354" compoundref="ftdi_8c" startline="4368" endline="4374">ftdi_get_error_string</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::get_strings</definition>
+        <argsstring>()</argsstring>
+        <name>get_strings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="137" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="322" bodyend="337"/>
+        <references refid="group__libftdi_1ga17e8eae09e58bd3bfeeab8decfce7fd9" compoundref="ftdi_8c" startline="409" endline="453">ftdi_usb_get_strings</references>
+        <references refid="classFtdi_1_1Context_1a3d4035444e2f78ff8d7aa37c26236df8" compoundref="ftdi_8cpp" startline="377" endline="380">serial</references>
+        <references refid="classFtdi_1_1Context_1ab1ef11b1851c8234f5305fdfc7421887" compoundref="ftdi_8cpp" startline="363" endline="366">vendor</references>
+        <referencedby refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" compoundref="ftdi_8cpp" startline="339" endline="359">get_strings_and_reopen</referencedby>
+        <referencedby refid="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" compoundref="ftdi_8cpp" startline="476" endline="490">Ftdi::List::List</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Context::get_strings_and_reopen</definition>
+        <argsstring>()</argsstring>
+        <name>get_strings_and_reopen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="138" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="339" bodyend="359"/>
+        <references refid="group__libftdi_1ga07d90df83e677ad08fe551de17fd7a41" compoundref="ftdi_8c" startline="523" endline="625">ftdi_usb_open_dev</references>
+        <references refid="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" compoundref="ftdi_8cpp" startline="322" endline="337">get_strings</references>
+        <referencedby refid="classFtdi_1_1Context_1a2669ea3eac16289990cd46cd777e295a" compoundref="ftdi_8cpp" startline="82" endline="91">open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structftdi__context" kindref="compound">ftdi_context</ref> *</type>
+        <definition>struct ftdi_context * Ftdi::Context::context</definition>
+        <argsstring>()</argsstring>
+        <name>context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="141" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="393" bodyend="396"/>
+        <referencedby refid="classFtdi_1_1Eeprom_1a7ecd3ee3bb235d7d9c32b5287f509edc" compoundref="ftdi_8cpp" startline="409" endline="413">Ftdi::Eeprom::Eeprom</referencedby>
+        <referencedby refid="classFtdi_1_1List_1ab7f76e262b065f3b1d36a51c20fa0feb" compoundref="ftdi_8cpp" startline="643" endline="648">Ftdi::List::find_all</referencedby>
+        <referencedby refid="classFtdi_1_1Context_1aaac96a16870d29bb7f59353a36524a39" compoundref="ftdi_8cpp" startline="382" endline="386">set_context</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1aaac96a16870d29bb7f59353a36524a39" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ftdi::Context::set_context</definition>
+        <argsstring>(struct ftdi_context *context)</argsstring>
+        <name>set_context</name>
+        <param>
+          <type>struct <ref refid="structftdi__context" kindref="compound">ftdi_context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="142" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="382" bodyend="386"/>
+        <references refid="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" compoundref="ftdi_8cpp" startline="393" endline="396">context</references>
+        <references refid="group__libftdi_1ga3cc28e5b7f1f50246861fcb39e7dd291" compoundref="ftdi_8c" startline="256" endline="260">ftdi_free</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1a09b387aa509195f40e0cd62ea626ebec" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ftdi::Context::set_usb_device</definition>
+        <argsstring>(struct libusb_device *dev)</argsstring>
+        <name>set_usb_device</name>
+        <param>
+          <type>struct libusb_device *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="143" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="388" bodyend="391"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>FTDI device context. Represents single FTDI device context. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="48" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="47" bodyend="148"/>
+    <listofallmembers>
+      <member refid="classFtdi_1_1Context_1ace0a0738c511bf041a456b94ca096ec9" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>bitbang_disable</name></member>
+      <member refid="classFtdi_1_1Context_1aad96d64cfe28b6085e384acdbcfe43fa" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>close</name></member>
+      <member refid="classFtdi_1_1Context_1a06bd23d6d2d16489cb5abf792f368b8e" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>Context</name></member>
+      <member refid="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" prot="protected" virt="non-virtual"><scope>Ftdi::Context</scope><name>context</name></member>
+      <member refid="classFtdi_1_1Context_1a08619c0972a8ccbe79630cf8bb02057c" prot="private" virt="non-virtual"><scope>Ftdi::Context</scope><name>d</name></member>
+      <member refid="classFtdi_1_1Context_1a1851e8cffbb77e7f7ef7adb8fa833962" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>description</name></member>
+      <member refid="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>Direction</name></member>
+      <member refid="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a0ed23ea2a691e4398908cb7442377e37" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>Dtr</name></member>
+      <member refid="classFtdi_1_1Context_1a374535a96a9c2144215da6779f700315" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>eeprom</name></member>
+      <member refid="classFtdi_1_1Context_1a473938987b94c05a6ac5c45fb65eb12a" prot="private" virt="non-virtual"><scope>Ftdi::Context</scope><name>Eeprom</name></member>
+      <member refid="classFtdi_1_1Context_1ab4e06e0e4bf156c0c5421ec0bbb4cdd1" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>error_string</name></member>
+      <member refid="classFtdi_1_1Context_1a36cf5e632dcc34f4ccd37a02eeedcb8d" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>flush</name></member>
+      <member refid="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" prot="protected" virt="non-virtual"><scope>Ftdi::Context</scope><name>get_strings</name></member>
+      <member refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" prot="protected" virt="non-virtual"><scope>Ftdi::Context</scope><name>get_strings_and_reopen</name></member>
+      <member refid="classFtdi_1_1Context_1aa2ea2e266c81621ee7403e8f08a0f957" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>get_usb_read_timeout</name></member>
+      <member refid="classFtdi_1_1Context_1a6174ba6d14b967fa5dcad7f3a94fbf12" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>get_usb_write_timeout</name></member>
+      <member refid="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a087f9b8fee592efb3929c382e0804404" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>Input</name></member>
+      <member refid="classFtdi_1_1Context_1a3a222cbc0ac54ea699474aa48b8d27cd" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>is_open</name></member>
+      <member refid="classFtdi_1_1Context_1a7e87873dc7c2987cd588f4f4d72e7732" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>latency</name></member>
+      <member refid="classFtdi_1_1Context_1a8cee552d09eaeb60a09d95309a87b498" prot="private" virt="non-virtual"><scope>Ftdi::Context</scope><name>List</name></member>
+      <member refid="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>ModemCtl</name></member>
+      <member refid="classFtdi_1_1Context_1a71f952d1778914a33b151d0e0db3f1d6" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>open</name></member>
+      <member refid="classFtdi_1_1Context_1a2669ea3eac16289990cd46cd777e295a" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>open</name></member>
+      <member refid="classFtdi_1_1Context_1af6c6f42c9f6c10ff960e5163f0a052c6" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>open</name></member>
+      <member refid="classFtdi_1_1Context_1a6dc5ad42a05d03cbf5b43365b79a3b62" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>open</name></member>
+      <member refid="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a5c3962c84bf153b1837ca2ca8ac97886" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>Output</name></member>
+      <member refid="classFtdi_1_1Context_1a9204d8315dd586286535da2a68917dad" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>poll_modem_status</name></member>
+      <member refid="classFtdi_1_1Context_1a1858062c4dacda2ab8271cd51550b7ee" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>read</name></member>
+      <member refid="classFtdi_1_1Context_1a4c482b031ffe04b12087e573e91e4b79" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>read_chunk_size</name></member>
+      <member refid="classFtdi_1_1Context_1aa41e612799358ce70b4a5003ebcfe9ec" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>read_pins</name></member>
+      <member refid="classFtdi_1_1Context_1a3d318e752b00f0822d6e2c417420afde" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>reset</name></member>
+      <member refid="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a7dda31debfdeaf64b64734b881afe109" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>Rts</name></member>
+      <member refid="classFtdi_1_1Context_1a3d4035444e2f78ff8d7aa37c26236df8" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>serial</name></member>
+      <member refid="classFtdi_1_1Context_1a12d1736e590aefe7a4a3880d01961a20" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_baud_rate</name></member>
+      <member refid="classFtdi_1_1Context_1ad8a0a54d23eb0f6b8b3c77155c1b4487" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_bitmode</name></member>
+      <member refid="classFtdi_1_1Context_1ab419f56aee86647a9d4bbc7e348960cf" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_bitmode</name></member>
+      <member refid="classFtdi_1_1Context_1aaac96a16870d29bb7f59353a36524a39" prot="protected" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_context</name></member>
+      <member refid="classFtdi_1_1Context_1a5f05bf405868e37d2efe50afaf377706" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_dtr</name></member>
+      <member refid="classFtdi_1_1Context_1a5b846e30bb38c78fd772281be7fc342b" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_error_char</name></member>
+      <member refid="classFtdi_1_1Context_1a7471fc6635a9ff2f98d30c5830eb7593" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_event_char</name></member>
+      <member refid="classFtdi_1_1Context_1a0c29fde1904335a1213ce1e1982adc24" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_flow_control</name></member>
+      <member refid="classFtdi_1_1Context_1a9baf46935760b09ba2f06cd978d83a41" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_interface</name></member>
+      <member refid="classFtdi_1_1Context_1a60ebdaac48d273b925ff35c510f3c19a" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_latency</name></member>
+      <member refid="classFtdi_1_1Context_1acaf9f3ab2dde7b231e26cd35db4a962c" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_line_property</name></member>
+      <member refid="classFtdi_1_1Context_1a2ba24f72d62c853538f0844259a98c4f" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_line_property</name></member>
+      <member refid="classFtdi_1_1Context_1ad1968faa8b41f6c49c70a55872a6bdbc" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_modem_control</name></member>
+      <member refid="classFtdi_1_1Context_1a6e4b4df1cd2c0786b94620b4e5b2f80f" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_read_chunk_size</name></member>
+      <member refid="classFtdi_1_1Context_1ae5e60eb0188ba8039ee7b50329779cb0" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_rts</name></member>
+      <member refid="classFtdi_1_1Context_1a3eb0536f23dbd7e2df286ee01ccc03ad" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_usb_device</name></member>
+      <member refid="classFtdi_1_1Context_1a09b387aa509195f40e0cd62ea626ebec" prot="protected" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_usb_device</name></member>
+      <member refid="classFtdi_1_1Context_1ab4d7ad20fb8862ae6aefefc91b92e987" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_usb_read_timeout</name></member>
+      <member refid="classFtdi_1_1Context_1a3f298649f0f9a13262b0ebaf4293a352" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_usb_write_timeout</name></member>
+      <member refid="classFtdi_1_1Context_1a54859d31d5177488aefa95067c8d4666" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>set_write_chunk_size</name></member>
+      <member refid="classFtdi_1_1Context_1ab1ef11b1851c8234f5305fdfc7421887" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>vendor</name></member>
+      <member refid="classFtdi_1_1Context_1a5cb1b4266a68f3bd9133e52178042ddf" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>write</name></member>
+      <member refid="classFtdi_1_1Context_1ad4500d40d2bd07f383724968ffa945a2" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>write_chunk_size</name></member>
+      <member refid="classFtdi_1_1Context_1ad12a84ca44914ae7c90404881c99503e" prot="public" virt="non-virtual"><scope>Ftdi::Context</scope><name>~Context</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

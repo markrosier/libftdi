@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespaceFtdi" kind="namespace">
+    <compoundname>Ftdi</compoundname>
+    <innerclass refid="classFtdi_1_1Context" prot="public">Ftdi::Context</innerclass>
+    <innerclass refid="classFtdi_1_1Eeprom" prot="public">Ftdi::Eeprom</innerclass>
+    <innerclass refid="classFtdi_1_1List" prot="public">Ftdi::List</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="35" column="1"/>
+  </compounddef>
+</doxygen>

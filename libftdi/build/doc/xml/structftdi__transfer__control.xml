@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structftdi__transfer__control" kind="struct" prot="public">
+    <compoundname>ftdi_transfer_control</compoundname>
+    <includes refid="ftdi_8h" local="no">ftdi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structftdi__transfer__control_1af904524e85aed9f5f04e386c3cee3724" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_transfer_control::completed</definition>
+        <argsstring></argsstring>
+        <name>completed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="206" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="206" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1gaf580b6263d15746d1f5d3759f9c3ac02" compoundref="ftdi_8c" startline="1662" endline="1696">ftdi_transfer_data_done</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__transfer__control_1a2667c871dacd0a472f778e4d08c5dfe5" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ftdi_transfer_control::buf</definition>
+        <argsstring></argsstring>
+        <name>buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="207" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="207" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__transfer__control_1a019bd69018bb3c15dd75b258e6928af2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_transfer_control::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="208" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="208" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__transfer__control_1a26a718dd0866c73947f173886d462a8a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_transfer_control::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="209" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="209" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" compoundref="ftdi_8c" startline="1750" endline="1861">ftdi_read_data</referencedby>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1gaf580b6263d15746d1f5d3759f9c3ac02" compoundref="ftdi_8c" startline="1662" endline="1696">ftdi_transfer_data_done</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__transfer__control_1a2df8400982dc8214f00852dec0f5f4a0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structftdi__context" kindref="compound">ftdi_context</ref> *</type>
+        <definition>struct ftdi_context* ftdi_transfer_control::ftdi</definition>
+        <argsstring></argsstring>
+        <name>ftdi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="210" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="210" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1gaf580b6263d15746d1f5d3759f9c3ac02" compoundref="ftdi_8c" startline="1662" endline="1696">ftdi_transfer_data_done</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__transfer__control_1a1619679c2e823f10b12f5b63e49c0b7c" prot="public" static="no" mutable="no">
+        <type>struct libusb_transfer *</type>
+        <definition>struct libusb_transfer* ftdi_transfer_control::transfer</definition>
+        <argsstring></argsstring>
+        <name>transfer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="211" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="211" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gab4dd69a3332c544dfdcbf4da85bd8801" compoundref="ftdi_8c" startline="1583" endline="1649">ftdi_read_data_submit</referencedby>
+        <referencedby refid="group__libftdi_1gaf580b6263d15746d1f5d3759f9c3ac02" compoundref="ftdi_8c" startline="1662" endline="1696">ftdi_transfer_data_done</referencedby>
+        <referencedby refid="group__libftdi_1ga90c2133a195fc7ebf229205c2755fc67" compoundref="ftdi_8c" startline="1521" endline="1567">ftdi_write_data_submit</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12">
+        <label>ftdi_transfer_control</label>
+        <link refid="structftdi__transfer__control"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>ftdi</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ftdi_context</label>
+        <link refid="structftdi__context"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>eeprom</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ftdi_eeprom</label>
+        <link refid="structftdi__eeprom"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="205" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="204" bodyend="212"/>
+    <listofallmembers>
+      <member refid="structftdi__transfer__control_1a2667c871dacd0a472f778e4d08c5dfe5" prot="public" virt="non-virtual"><scope>ftdi_transfer_control</scope><name>buf</name></member>
+      <member refid="structftdi__transfer__control_1af904524e85aed9f5f04e386c3cee3724" prot="public" virt="non-virtual"><scope>ftdi_transfer_control</scope><name>completed</name></member>
+      <member refid="structftdi__transfer__control_1a2df8400982dc8214f00852dec0f5f4a0" prot="public" virt="non-virtual"><scope>ftdi_transfer_control</scope><name>ftdi</name></member>
+      <member refid="structftdi__transfer__control_1a26a718dd0866c73947f173886d462a8a" prot="public" virt="non-virtual"><scope>ftdi_transfer_control</scope><name>offset</name></member>
+      <member refid="structftdi__transfer__control_1a019bd69018bb3c15dd75b258e6928af2" prot="public" virt="non-virtual"><scope>ftdi_transfer_control</scope><name>size</name></member>
+      <member refid="structftdi__transfer__control_1a1619679c2e823f10b12f5b63e49c0b7c" prot="public" virt="non-virtual"><scope>ftdi_transfer_control</scope><name>transfer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classFtdi_1_1Context_1_1Private" kind="class" prot="public">
+    <compoundname>Ftdi::Context::Private</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classFtdi_1_1Context_1_1Private_1aa5fa397d6e6021093a4f4b39e32523aa" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ftdi::Context::Private::open</definition>
+        <argsstring></argsstring>
+        <name>open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="54" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classFtdi_1_1Context_1_1Private_1ac6914d23ec3542ea32c8d2b2ec525e96" compoundref="ftdi_8cpp" startline="46" endline="52">~Private</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structftdi__context" kindref="compound">ftdi_context</ref> *</type>
+        <definition>struct ftdi_context* Ftdi::Context::Private::ftdi</definition>
+        <argsstring></argsstring>
+        <name>ftdi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="56" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classFtdi_1_1Context_1_1Private_1a04d13cee8be6a93d1990d4519426e05d" compoundref="ftdi_8cpp" startline="40" endline="44">Private</referencedby>
+        <referencedby refid="classFtdi_1_1Context_1_1Private_1ac6914d23ec3542ea32c8d2b2ec525e96" compoundref="ftdi_8cpp" startline="46" endline="52">~Private</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classFtdi_1_1Context_1_1Private_1adc445c0f495138d9b38950df3ff9d2cf" prot="public" static="no" mutable="no">
+        <type>struct libusb_device *</type>
+        <definition>struct libusb_device* Ftdi::Context::Private::dev</definition>
+        <argsstring></argsstring>
+        <name>dev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="57" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFtdi_1_1Context_1_1Private_1a0b0fb0d19d6e4a2f9552211e195f73c9" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Ftdi::Context::Private::vendor</definition>
+        <argsstring></argsstring>
+        <name>vendor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="59" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFtdi_1_1Context_1_1Private_1a6c042b17b2e52d060502ad2dc2d786da" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Ftdi::Context::Private::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="60" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFtdi_1_1Context_1_1Private_1a6efce3ed52f70fb07f7b789ecc412ebe" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Ftdi::Context::Private::serial</definition>
+        <argsstring></argsstring>
+        <name>serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="61" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFtdi_1_1Context_1_1Private_1a04d13cee8be6a93d1990d4519426e05d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::Context::Private::Private</definition>
+        <argsstring>()</argsstring>
+        <name>Private</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="40" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="40" bodyend="44"/>
+        <references refid="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" compoundref="ftdi_8cpp" startline="56">ftdi</references>
+        <references refid="group__libftdi_1gafd46c6784367fd95c5f852d3b38949a8" compoundref="ftdi_8c" startline="128" endline="144">ftdi_new</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Context_1_1Private_1ac6914d23ec3542ea32c8d2b2ec525e96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::Context::Private::~Private</definition>
+        <argsstring>()</argsstring>
+        <name>~Private</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="46" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="46" bodyend="52"/>
+        <references refid="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" compoundref="ftdi_8cpp" startline="56">ftdi</references>
+        <references refid="group__libftdi_1ga3cc28e5b7f1f50246861fcb39e7dd291" compoundref="ftdi_8c" startline="256" endline="260">ftdi_free</references>
+        <references refid="group__libftdi_1ga9536eff48c7ae9313b2a97320743ee3b" compoundref="ftdi_8c" startline="987" endline="1001">ftdi_usb_close</references>
+        <references refid="classFtdi_1_1Context_1_1Private_1aa5fa397d6e6021093a4f4b39e32523aa" compoundref="ftdi_8cpp" startline="54">open</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="32">
+        <label>ftdi_context</label>
+        <link refid="structftdi__context"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>eeprom</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>ftdi_eeprom</label>
+        <link refid="structftdi__eeprom"/>
+      </node>
+      <node id="31">
+        <label>Ftdi::Context::Private</label>
+        <link refid="classFtdi_1_1Context_1_1Private"/>
+        <childnode refid="32" relation="usage">
+          <edgelabel>ftdi</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="38" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="37" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classFtdi_1_1Context_1_1Private_1a6c042b17b2e52d060502ad2dc2d786da" prot="public" virt="non-virtual"><scope>Ftdi::Context::Private</scope><name>description</name></member>
+      <member refid="classFtdi_1_1Context_1_1Private_1adc445c0f495138d9b38950df3ff9d2cf" prot="public" virt="non-virtual"><scope>Ftdi::Context::Private</scope><name>dev</name></member>
+      <member refid="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" prot="public" virt="non-virtual"><scope>Ftdi::Context::Private</scope><name>ftdi</name></member>
+      <member refid="classFtdi_1_1Context_1_1Private_1aa5fa397d6e6021093a4f4b39e32523aa" prot="public" virt="non-virtual"><scope>Ftdi::Context::Private</scope><name>open</name></member>
+      <member refid="classFtdi_1_1Context_1_1Private_1a04d13cee8be6a93d1990d4519426e05d" prot="public" virt="non-virtual"><scope>Ftdi::Context::Private</scope><name>Private</name></member>
+      <member refid="classFtdi_1_1Context_1_1Private_1a6efce3ed52f70fb07f7b789ecc412ebe" prot="public" virt="non-virtual"><scope>Ftdi::Context::Private</scope><name>serial</name></member>
+      <member refid="classFtdi_1_1Context_1_1Private_1a0b0fb0d19d6e4a2f9552211e195f73c9" prot="public" virt="non-virtual"><scope>Ftdi::Context::Private</scope><name>vendor</name></member>
+      <member refid="classFtdi_1_1Context_1_1Private_1ac6914d23ec3542ea32c8d2b2ec525e96" prot="public" virt="non-virtual"><scope>Ftdi::Context::Private</scope><name>~Private</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

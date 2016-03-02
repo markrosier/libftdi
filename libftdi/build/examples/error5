@@ -1,0 +1,19 @@
+echo Remember to use sudo ./error5
+while true; do
+./FTDI-low;
+sleep 0.5;
+./FTDI-high;
+sleep 0.5;
+./FTDI-low;
+sleep 0.5;
+./FTDI-high;
+sleep 0.5;
+./FTDI-low;
+sleep 0.5;
+./FTDI-high;
+sleep 0.5;
+./FTDI-low;
+sleep 0.5;
+./FTDI-high;
+sleep 2.5;
+done

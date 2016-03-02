@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classFtdi_1_1Eeprom" kind="class" prot="public">
+    <compoundname>Ftdi::Eeprom</compoundname>
+    <includes refid="ftdi_8hpp" local="no">ftdi.hpp</includes>
+    <innerclass refid="classFtdi_1_1Eeprom_1_1Private" prot="public">Ftdi::Eeprom::Private</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFtdi_1_1Eeprom_1abba18b122d2706e8f9fb89e1c707a5f1" prot="private" static="no" mutable="no">
+        <type>boost::shared_ptr&lt; <ref refid="classFtdi_1_1Eeprom_1_1Private" kindref="compound">Private</ref> &gt;</type>
+        <definition>boost::shared_ptr&lt;Private&gt; Ftdi::Eeprom::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="170" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1a7ecd3ee3bb235d7d9c32b5287f509edc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::Eeprom::Eeprom</definition>
+        <argsstring>(Context *parent)</argsstring>
+        <name>Eeprom</name>
+        <param>
+          <type><ref refid="classFtdi_1_1Context" kindref="compound">Context</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="155" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="409" bodyend="413"/>
+        <references refid="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" compoundref="ftdi_8cpp" startline="393" endline="396">Ftdi::Context::context</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1ae7945809c4ff06b8bd386472eed26b1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::Eeprom::~Eeprom</definition>
+        <argsstring>()</argsstring>
+        <name>~Eeprom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="156" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="415" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1a6ebc4425bfe250c61cd303078ad92881" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Eeprom::init_defaults</definition>
+        <argsstring>(char *manufacturer, char *product, char *serial)</argsstring>
+        <name>init_defaults</name>
+        <param>
+          <type>char *</type>
+          <declname>manufacturer</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>product</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="158" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="419" bodyend="422"/>
+        <references refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1af7ab5af427de9c7464f11f1ec784c4da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Eeprom::chip_id</definition>
+        <argsstring>(unsigned int *chipid)</argsstring>
+        <name>chip_id</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>chipid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="159" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="424" bodyend="427"/>
+        <references refid="group__libftdi_1gab978a76c2cc0dbfbc1fd6350db848300" compoundref="ftdi_8c" startline="4157" endline="4179">ftdi_read_chipid</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1abddb318d9df2c626fffa09047d5ab549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Eeprom::build</definition>
+        <argsstring>(unsigned char *output)</argsstring>
+        <name>build</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="160" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="429" bodyend="432"/>
+        <references refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1a59ef82e22828370274fa7de627eff2e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Eeprom::read</definition>
+        <argsstring>(unsigned char *eeprom)</argsstring>
+        <name>read</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>eeprom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="162" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="434" bodyend="437"/>
+        <references refid="group__libftdi_1gac157786fdf2e9c6b51dd9b4ddbb34d5f" compoundref="ftdi_8c" startline="4098" endline="4128">ftdi_read_eeprom</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1ac6fb73bd70749209c46bdd9529344392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Eeprom::write</definition>
+        <argsstring>(unsigned char *eeprom)</argsstring>
+        <name>write</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>eeprom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="163" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="439" bodyend="442"/>
+        <references refid="group__libftdi_1ga8cc9811660d1adfb4b30157c5ab26d5a" compoundref="ftdi_8c" startline="4251" endline="4289">ftdi_write_eeprom</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1aacdb0d74cceaeae77b754232c8b68f9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Eeprom::read_location</definition>
+        <argsstring>(int eeprom_addr, unsigned short *eeprom_val)</argsstring>
+        <name>read_location</name>
+        <param>
+          <type>int</type>
+          <declname>eeprom_addr</declname>
+        </param>
+        <param>
+          <type>unsigned short *</type>
+          <declname>eeprom_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="164" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="444" bodyend="447"/>
+        <references refid="group__libftdi_1ga650df1dc49ec78f0ee58b1c4f2644fd9" compoundref="ftdi_8c" startline="4078" endline="4087">ftdi_read_eeprom_location</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1aaa79973c9fa5c44e041ad416860fa1b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Eeprom::write_location</definition>
+        <argsstring>(int eeprom_addr, unsigned short eeprom_val)</argsstring>
+        <name>write_location</name>
+        <param>
+          <type>int</type>
+          <declname>eeprom_addr</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>eeprom_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="165" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="449" bodyend="452"/>
+        <references refid="group__libftdi_1ga5f2f678fc05cb8f92708fb1e5eb75100" compoundref="ftdi_8c" startline="4195" endline="4239">ftdi_write_eeprom_location</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1a3044b5cd481ebbefd3c64e4653e8d6f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ftdi::Eeprom::erase</definition>
+        <argsstring>()</argsstring>
+        <name>erase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="166" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="454" bodyend="457"/>
+        <references refid="group__libftdi_1ga25eb9a83a925065b6c3b61b8f0565951" compoundref="ftdi_8c" startline="4306" endline="4359">ftdi_erase_eeprom</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Device EEPROM. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="153" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="152" bodyend="171"/>
+    <listofallmembers>
+      <member refid="classFtdi_1_1Eeprom_1abddb318d9df2c626fffa09047d5ab549" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>build</name></member>
+      <member refid="classFtdi_1_1Eeprom_1af7ab5af427de9c7464f11f1ec784c4da" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>chip_id</name></member>
+      <member refid="classFtdi_1_1Eeprom_1abba18b122d2706e8f9fb89e1c707a5f1" prot="private" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>d</name></member>
+      <member refid="classFtdi_1_1Eeprom_1a7ecd3ee3bb235d7d9c32b5287f509edc" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>Eeprom</name></member>
+      <member refid="classFtdi_1_1Eeprom_1a3044b5cd481ebbefd3c64e4653e8d6f3" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>erase</name></member>
+      <member refid="classFtdi_1_1Eeprom_1a6ebc4425bfe250c61cd303078ad92881" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>init_defaults</name></member>
+      <member refid="classFtdi_1_1Eeprom_1a59ef82e22828370274fa7de627eff2e4" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>read</name></member>
+      <member refid="classFtdi_1_1Eeprom_1aacdb0d74cceaeae77b754232c8b68f9e" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>read_location</name></member>
+      <member refid="classFtdi_1_1Eeprom_1ac6fb73bd70749209c46bdd9529344392" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>write</name></member>
+      <member refid="classFtdi_1_1Eeprom_1aaa79973c9fa5c44e041ad416860fa1b8" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>write_location</name></member>
+      <member refid="classFtdi_1_1Eeprom_1ae7945809c4ff06b8bd386472eed26b1e" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom</scope><name>~Eeprom</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

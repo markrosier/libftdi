@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classFtdi_1_1Eeprom_1_1Private" kind="class" prot="public">
+    <compoundname>Ftdi::Eeprom::Private</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classFtdi_1_1Eeprom_1_1Private_1a9c23d26cb036d09954a824526b65777e" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structftdi__eeprom" kindref="compound">ftdi_eeprom</ref></type>
+        <definition>struct ftdi_eeprom Ftdi::Eeprom::Private::eeprom</definition>
+        <argsstring></argsstring>
+        <name>eeprom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="401" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFtdi_1_1Eeprom_1_1Private_1a32698304e80aca69bc1412f1a24812ca" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structftdi__context" kindref="compound">ftdi_context</ref> *</type>
+        <definition>struct ftdi_context* Ftdi::Eeprom::Private::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="406" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFtdi_1_1Eeprom_1_1Private_1a63564082f5d1703b9c00f261b0e47499" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::Eeprom::Private::Private</definition>
+        <argsstring>()</argsstring>
+        <name>Private</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="401" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="401" bodyend="403"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="29">
+        <label>ftdi_context</label>
+        <link refid="structftdi__context"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>eeprom</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>ftdi_eeprom</label>
+        <link refid="structftdi__eeprom"/>
+      </node>
+      <node id="27">
+        <label>Ftdi::Eeprom::Private</label>
+        <link refid="classFtdi_1_1Eeprom_1_1Private"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>eeprom</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="399" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="398" bodyend="407"/>
+    <listofallmembers>
+      <member refid="classFtdi_1_1Eeprom_1_1Private_1a32698304e80aca69bc1412f1a24812ca" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom::Private</scope><name>context</name></member>
+      <member refid="classFtdi_1_1Eeprom_1_1Private_1a9c23d26cb036d09954a824526b65777e" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom::Private</scope><name>eeprom</name></member>
+      <member refid="classFtdi_1_1Eeprom_1_1Private_1a63564082f5d1703b9c00f261b0e47499" prot="public" virt="non-virtual"><scope>Ftdi::Eeprom::Private</scope><name>Private</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ftdi__i_8h" kind="file">
+    <compoundname>ftdi_i.h</compoundname>
+    <includedby refid="ftdi_8c" local="yes">ftdi.c</includedby>
+    <includedby refid="ftdi_8cpp" local="yes">ftdi.cpp</includedby>
+    <invincdepgraph>
+      <node id="42">
+        <label>ftdi.c</label>
+        <link refid="ftdi_8c"/>
+      </node>
+      <node id="43">
+        <label>ftdi.cpp</label>
+        <link refid="ftdi_8cpp"/>
+      </node>
+      <node id="41">
+        <label>ftdi_i.h</label>
+        <link refid="ftdi_i.h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structftdi__eeprom" prot="public">ftdi_eeprom</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ftdi__i_8h_1a0c61fd6cfc8b3ec904d270a7980e8f37" prot="public" static="no">
+        <name>FTDI_MAX_EEPROM_SIZE</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="22" column="9" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1ga92a449af4a1becc70e80e49f3c937bbd" compoundref="ftdi_8c" startline="4008" endline="4023">ftdi_get_eeprom_buf</referencedby>
+        <referencedby refid="group__libftdi_1gac157786fdf2e9c6b51dd9b4ddbb34d5f" compoundref="ftdi_8c" startline="4098" endline="4128">ftdi_read_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1gaad29bea74f6ae02ed757d2a39c060969" compoundref="ftdi_8c" startline="4034" endline="4046">ftdi_set_eeprom_buf</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ftdi__i_8h_1ad4d084064eecf35f2bcaeae257f9d517" prot="public" static="no">
+        <name>MAX_POWER_MILLIAMP_PER_UNIT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Max Power adjustment factor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="25" column="9" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftdi_i.h<sp/><sp/>-<sp/><sp/>description</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-------------------</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/>begin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Don<sp/>Sep<sp/>9<sp/>2011</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>copyright<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>(C)<sp/>2003-2014<sp/>by<sp/>Intra2net<sp/>AG<sp/>and<sp/>the<sp/>libftdi<sp/>developers</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>email<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>opensource@intra2net.com</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/>version<sp/>2.1<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>***************************************************************************</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>Non<sp/>public<sp/>definitions<sp/>here</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Even<sp/>on<sp/>93xx66<sp/>at<sp/>max<sp/>256<sp/>bytes<sp/>are<sp/>used<sp/>(AN_121)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="ftdi__i_8h_1a0c61fd6cfc8b3ec904d270a7980e8f37" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FTDI_MAX_EEPROM_SIZE<sp/>256</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="25" refid="ftdi__i_8h_1ad4d084064eecf35f2bcaeae257f9d517" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_POWER_MILLIAMP_PER_UNIT<sp/>2</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="30" refid="structftdi__eeprom" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structftdi__eeprom" kindref="compound">ftdi_eeprom</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33" refid="structftdi__eeprom_1af591e992b9bd12a484ea9d4d36e92251" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1af591e992b9bd12a484ea9d4d36e92251" kindref="member">vendor_id</ref>;</highlight></codeline>
+<codeline lineno="35" refid="structftdi__eeprom_1ab273d6fe056b3871824486ad0bfa3a90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ab273d6fe056b3871824486ad0bfa3a90" kindref="member">product_id</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structftdi__eeprom_1a7a44fb7a64c3114f33561aa6214e5182" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a7a44fb7a64c3114f33561aa6214e5182" kindref="member">initialized_for_connected_device</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structftdi__eeprom_1a055d6bef2328557e6ac4d2909e42d21b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a055d6bef2328557e6ac4d2909e42d21b" kindref="member">self_powered</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structftdi__eeprom_1a9b82f88497b432bebfa4dd92c304cb02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a9b82f88497b432bebfa4dd92c304cb02" kindref="member">remote_wakeup</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structftdi__eeprom_1a30dad8c71143befc6f947bcf04e63aa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a30dad8c71143befc6f947bcf04e63aa2" kindref="member">is_not_pnp</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Suspend<sp/>on<sp/>DBUS7<sp/>Low<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structftdi__eeprom_1afc46f39449462d10f9b8992523214136" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1afc46f39449462d10f9b8992523214136" kindref="member">suspend_dbus7</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structftdi__eeprom_1a5117b50c00668aff73b5df385b0fc5f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a5117b50c00668aff73b5df385b0fc5f8" kindref="member">in_is_isochronous</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structftdi__eeprom_1ab9885ee665c318a8d19c28a9c75b999a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ab9885ee665c318a8d19c28a9c75b999a" kindref="member">out_is_isochronous</ref>;</highlight></codeline>
+<codeline lineno="56" refid="structftdi__eeprom_1a722a630d370318cefa94de1365f98786" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a722a630d370318cefa94de1365f98786" kindref="member">suspend_pull_downs</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="structftdi__eeprom_1abe250275595d020fd8de3aa61d093d38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1abe250275595d020fd8de3aa61d093d38" kindref="member">use_serial</ref>;</highlight></codeline>
+<codeline lineno="61" refid="structftdi__eeprom_1a7c0093a9bfbdf7a3c89e18228fcaba84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a7c0093a9bfbdf7a3c89e18228fcaba84" kindref="member">usb_version</ref>;</highlight></codeline>
+<codeline lineno="63" refid="structftdi__eeprom_1a54772c4686e082384adee26eeaa68005" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a54772c4686e082384adee26eeaa68005" kindref="member">use_usb_version</ref>;</highlight></codeline>
+<codeline lineno="65" refid="structftdi__eeprom_1a8aa39af43a6ac5c05b8682d8b3904e3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a8aa39af43a6ac5c05b8682d8b3904e3c" kindref="member">max_power</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structftdi__eeprom_1ac4656922906039cab49d4c3c52d2916b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structftdi__eeprom_1ac4656922906039cab49d4c3c52d2916b" kindref="member">manufacturer</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structftdi__eeprom_1aa24461721904d41198603dda94e0e8ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structftdi__eeprom_1aa24461721904d41198603dda94e0e8ec" kindref="member">product</ref>;</highlight></codeline>
+<codeline lineno="72" refid="structftdi__eeprom_1aadcbc36d5b0569821b66dc0e0b0c61d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structftdi__eeprom_1aadcbc36d5b0569821b66dc0e0b0c61d1" kindref="member">serial</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>2232D/H<sp/>specific<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Hardware<sp/>type,<sp/>0<sp/>=<sp/>RS232<sp/>Uart,<sp/>1<sp/>=<sp/>245<sp/>FIFO,<sp/>2<sp/>=<sp/>CPU<sp/>FIFO,</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4<sp/>=<sp/>OPTO<sp/>Isolate<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="structftdi__eeprom_1ae29685074e87375b8d78580f28a06b5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ae29685074e87375b8d78580f28a06b5e" kindref="member">channel_a_type</ref>;</highlight></codeline>
+<codeline lineno="78" refid="structftdi__eeprom_1a2da524307ba5904880ba6e2456adc4c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a2da524307ba5904880ba6e2456adc4c1" kindref="member">channel_b_type</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>Driver<sp/>Type,<sp/>1<sp/>=<sp/>VCP<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="structftdi__eeprom_1a67da21be4bf17ee3e0b12a92c3587bb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a67da21be4bf17ee3e0b12a92c3587bb0" kindref="member">channel_a_driver</ref>;</highlight></codeline>
+<codeline lineno="81" refid="structftdi__eeprom_1a128def5dc4387fdcdaddaa7c9f460637" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a128def5dc4387fdcdaddaa7c9f460637" kindref="member">channel_b_driver</ref>;</highlight></codeline>
+<codeline lineno="82" refid="structftdi__eeprom_1ae08edaf6d0e878a3f9e08e428ac1612d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ae08edaf6d0e878a3f9e08e428ac1612d" kindref="member">channel_c_driver</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structftdi__eeprom_1aea0a7b1821735930d82f24f5f0b6a006" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1aea0a7b1821735930d82f24f5f0b6a006" kindref="member">channel_d_driver</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>4232H<sp/>specific<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="structftdi__eeprom_1ac26b22453035924c2149689b07f8fae8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ac26b22453035924c2149689b07f8fae8" kindref="member">channel_a_rs485enable</ref>;</highlight></codeline>
+<codeline lineno="86" refid="structftdi__eeprom_1aec61d454c0f8bc1c810aa5682e9fe12a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1aec61d454c0f8bc1c810aa5682e9fe12a" kindref="member">channel_b_rs485enable</ref>;</highlight></codeline>
+<codeline lineno="87" refid="structftdi__eeprom_1a2c8f96a24402a0f8b8a4e9b34f137142" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a2c8f96a24402a0f8b8a4e9b34f137142" kindref="member">channel_c_rs485enable</ref>;</highlight></codeline>
+<codeline lineno="88" refid="structftdi__eeprom_1a6b073acb642e6053c74ec2238942adb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a6b073acb642e6053c74ec2238942adb4" kindref="member">channel_d_rs485enable</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Special<sp/>function<sp/>of<sp/>FT232R/FT232H<sp/>devices<sp/>(and<sp/>possibly<sp/>others<sp/>as<sp/>well)<sp/>*/</highlight></codeline>
+<codeline lineno="92" refid="structftdi__eeprom_1ab32eecde1bd636a290c7f03eb4489b4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ab32eecde1bd636a290c7f03eb4489b4d" kindref="member">cbus_function</ref>[10];</highlight></codeline>
+<codeline lineno="94" refid="structftdi__eeprom_1ad377261e985c768c2ca5731e9690efd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ad377261e985c768c2ca5731e9690efd9" kindref="member">high_current</ref>;</highlight></codeline>
+<codeline lineno="96" refid="structftdi__eeprom_1a4bf7b50ec4259aa83623bc9ed789c429" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a4bf7b50ec4259aa83623bc9ed789c429" kindref="member">high_current_a</ref>;</highlight></codeline>
+<codeline lineno="98" refid="structftdi__eeprom_1a5016f08e6af06307abe71c15165d24ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a5016f08e6af06307abe71c15165d24ab" kindref="member">high_current_b</ref>;</highlight></codeline>
+<codeline lineno="100" refid="structftdi__eeprom_1a4876d3d01242d7c3b2961b1a42b35509" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a4876d3d01242d7c3b2961b1a42b35509" kindref="member">invert</ref>;</highlight></codeline>
+<codeline lineno="102" refid="structftdi__eeprom_1a295d4ef374b36c7441ce9952faa2e036" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a295d4ef374b36c7441ce9952faa2e036" kindref="member">external_oscillator</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*2232H/4432H<sp/>Group<sp/>specific<sp/>values<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Group0<sp/>is<sp/>AL<sp/>on<sp/>2322H<sp/>and<sp/>A<sp/>on<sp/>4232H</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Group1<sp/>is<sp/>AH<sp/>on<sp/>2232H<sp/>and<sp/>B<sp/>on<sp/>4232H</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Group2<sp/>is<sp/>BL<sp/>on<sp/>2322H<sp/>and<sp/>C<sp/>on<sp/>4232H</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Group3<sp/>is<sp/>BH<sp/>on<sp/>2232H<sp/>and<sp/>C<sp/>on<sp/>4232H*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="structftdi__eeprom_1abb17ef38c4e3b37b404ab2d165c47571" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1abb17ef38c4e3b37b404ab2d165c47571" kindref="member">group0_drive</ref>;</highlight></codeline>
+<codeline lineno="110" refid="structftdi__eeprom_1a385c1dc1b3d4a0ca20009a6d86c4ee3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a385c1dc1b3d4a0ca20009a6d86c4ee3f" kindref="member">group0_schmitt</ref>;</highlight></codeline>
+<codeline lineno="111" refid="structftdi__eeprom_1ab796b679fceb9add14021713b0b7b331" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ab796b679fceb9add14021713b0b7b331" kindref="member">group0_slew</ref>;</highlight></codeline>
+<codeline lineno="112" refid="structftdi__eeprom_1a638460da4cad2d7ad472a623e47c53b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a638460da4cad2d7ad472a623e47c53b8" kindref="member">group1_drive</ref>;</highlight></codeline>
+<codeline lineno="113" refid="structftdi__eeprom_1ac1b64d7825d1072468beb430129423ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ac1b64d7825d1072468beb430129423ca" kindref="member">group1_schmitt</ref>;</highlight></codeline>
+<codeline lineno="114" refid="structftdi__eeprom_1a8f219130bd0ee17c79a8d1ecadae2079" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a8f219130bd0ee17c79a8d1ecadae2079" kindref="member">group1_slew</ref>;</highlight></codeline>
+<codeline lineno="115" refid="structftdi__eeprom_1a58cb0545a65f6f0bf431e186f1b44f71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a58cb0545a65f6f0bf431e186f1b44f71" kindref="member">group2_drive</ref>;</highlight></codeline>
+<codeline lineno="116" refid="structftdi__eeprom_1aa6c5c7b16e649d70e358b021ad0c469e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1aa6c5c7b16e649d70e358b021ad0c469e" kindref="member">group2_schmitt</ref>;</highlight></codeline>
+<codeline lineno="117" refid="structftdi__eeprom_1ab69800fef64ca3d55449eab4322e5090" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ab69800fef64ca3d55449eab4322e5090" kindref="member">group2_slew</ref>;</highlight></codeline>
+<codeline lineno="118" refid="structftdi__eeprom_1ae5c54d334e18338296557572deee7433" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ae5c54d334e18338296557572deee7433" kindref="member">group3_drive</ref>;</highlight></codeline>
+<codeline lineno="119" refid="structftdi__eeprom_1a7afc69623874f8b64614f2688f08033e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a7afc69623874f8b64614f2688f08033e" kindref="member">group3_schmitt</ref>;</highlight></codeline>
+<codeline lineno="120" refid="structftdi__eeprom_1a13e5b314e0a2c1e0a67f6bb31ac07f5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a13e5b314e0a2c1e0a67f6bb31ac07f5a" kindref="member">group3_slew</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="structftdi__eeprom_1acbaa0dac427977d4f8fcd735a34bf2c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1acbaa0dac427977d4f8fcd735a34bf2c3" kindref="member">powersave</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="structftdi__eeprom_1a55c072e8789a611a3842296ca1ac5171" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a55c072e8789a611a3842296ca1ac5171" kindref="member">clock_polarity</ref>;</highlight></codeline>
+<codeline lineno="125" refid="structftdi__eeprom_1a8a1f5de674bbd131e42e924ead65c617" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a8a1f5de674bbd131e42e924ead65c617" kindref="member">data_order</ref>;</highlight></codeline>
+<codeline lineno="126" refid="structftdi__eeprom_1a85d03dc6aa088d929eea3c7b6b7c5741" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a85d03dc6aa088d929eea3c7b6b7c5741" kindref="member">flow_control</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="structftdi__eeprom_1a00b75b1e06473d2e755509758cf5f3a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a00b75b1e06473d2e755509758cf5f3a9" kindref="member">user_data_addr</ref>;</highlight></codeline>
+<codeline lineno="130" refid="structftdi__eeprom_1a0849034c662e9cd43b8fec1d1b192162" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a0849034c662e9cd43b8fec1d1b192162" kindref="member">user_data_size</ref>;</highlight></codeline>
+<codeline lineno="131" refid="structftdi__eeprom_1a68805e2829edda7ed84211c4342d1d59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structftdi__eeprom_1a68805e2829edda7ed84211c4342d1d59" kindref="member">user_data</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="structftdi__eeprom_1a6d45e714bee4069f7f44e184d6f5ce60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a6d45e714bee4069f7f44e184d6f5ce60" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>EEPROM<sp/>Type<sp/>0x46<sp/>for<sp/>93xx46,<sp/>0x56<sp/>for<sp/>93xx56<sp/>and<sp/>0x66<sp/>for<sp/>93xx66*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="structftdi__eeprom_1a6f88bd208558f9900298fb59fd0ffa39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a6f88bd208558f9900298fb59fd0ffa39" kindref="member">chip</ref>;</highlight></codeline>
+<codeline lineno="138" refid="structftdi__eeprom_1a0b1c39033f225c7a2eb2f36b35f1f5d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1a0b1c39033f225c7a2eb2f36b35f1f5d1" kindref="member">buf</ref>[<ref refid="ftdi__i_8h_1a0c61fd6cfc8b3ec904d270a7980e8f37" kindref="member">FTDI_MAX_EEPROM_SIZE</ref>];</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structftdi__eeprom_1ab1c76bcb3a04e270b2c710da567de7d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structftdi__eeprom_1ab1c76bcb3a04e270b2c710da567de7d8" kindref="member">release_number</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h"/>
+  </compounddef>
+</doxygen>

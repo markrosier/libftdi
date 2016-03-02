@@ -1,0 +1,1 @@
+/usr/bin/cc  -O2 -g -DNDEBUG    CMakeFiles/find_all.dir/find_all.c.o  -o find_all -rdynamic ../src/libftdi1.so.2.2.0 -lusb-1.0 -Wl,-rpath,/home/mark/testcode/FTDI/libftdi/libftdi/build/src 

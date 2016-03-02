@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structFTDIProgressInfo" kind="struct" prot="public">
+    <compoundname>FTDIProgressInfo</compoundname>
+    <includes refid="ftdi_8h" local="no">ftdi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFTDIProgressInfo_1a8f6fb0a969b2e347555cb543dfb25df6" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsize__and__time" kindref="compound">size_and_time</ref></type>
+        <definition>struct size_and_time FTDIProgressInfo::first</definition>
+        <argsstring></argsstring>
+        <name>first</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="428" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="434" bodyend="-1"/>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structFTDIProgressInfo_1aa52b1270a1672175823f96841cbfa90b" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsize__and__time" kindref="compound">size_and_time</ref></type>
+        <definition>struct size_and_time FTDIProgressInfo::prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="428" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="435" bodyend="-1"/>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsize__and__time" kindref="compound">size_and_time</ref></type>
+        <definition>struct size_and_time FTDIProgressInfo::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="428" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="436" bodyend="-1"/>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structFTDIProgressInfo_1a95057afd13aaa69e72e14dd00c810e9d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTDIProgressInfo::totalTime</definition>
+        <argsstring></argsstring>
+        <name>totalTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="437" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="437" bodyend="-1"/>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structFTDIProgressInfo_1a93d286aab4f3eb6ebe74607e4ff7ffb2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTDIProgressInfo::totalRate</definition>
+        <argsstring></argsstring>
+        <name>totalRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="438" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="438" bodyend="-1"/>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structFTDIProgressInfo_1a9bd1dfc76038bd295a1b470150c6a4a7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double FTDIProgressInfo::currentRate</definition>
+        <argsstring></argsstring>
+        <name>currentRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="439" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="439" bodyend="-1"/>
+        <referencedby refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" compoundref="ftdi__stream_8c" startline="147" endline="298">ftdi_readstream</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="18">
+        <label>FTDIProgressInfo</label>
+        <link refid="structFTDIProgressInfo"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>prev</edgelabel>
+          <edgelabel>first</edgelabel>
+          <edgelabel>current</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>size_and_time</label>
+        <link refid="structsize__and__time"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="433" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="432" bodyend="440"/>
+    <listofallmembers>
+      <member refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" prot="public" virt="non-virtual"><scope>FTDIProgressInfo</scope><name>current</name></member>
+      <member refid="structFTDIProgressInfo_1a9bd1dfc76038bd295a1b470150c6a4a7" prot="public" virt="non-virtual"><scope>FTDIProgressInfo</scope><name>currentRate</name></member>
+      <member refid="structFTDIProgressInfo_1a8f6fb0a969b2e347555cb543dfb25df6" prot="public" virt="non-virtual"><scope>FTDIProgressInfo</scope><name>first</name></member>
+      <member refid="structFTDIProgressInfo_1aa52b1270a1672175823f96841cbfa90b" prot="public" virt="non-virtual"><scope>FTDIProgressInfo</scope><name>prev</name></member>
+      <member refid="structFTDIProgressInfo_1a93d286aab4f3eb6ebe74607e4ff7ffb2" prot="public" virt="non-virtual"><scope>FTDIProgressInfo</scope><name>totalRate</name></member>
+      <member refid="structFTDIProgressInfo_1a95057afd13aaa69e72e14dd00c810e9d" prot="public" virt="non-virtual"><scope>FTDIProgressInfo</scope><name>totalTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

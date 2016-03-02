@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classFtdi_1_1List" kind="class" prot="public">
+    <compoundname>Ftdi::List</compoundname>
+    <includes refid="ftdi_8hpp" local="no">ftdi.hpp</includes>
+    <innerclass refid="classFtdi_1_1List_1_1Private" prot="public">Ftdi::List::Private</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classFtdi_1_1List_1a0f7f7fad56e8d14e0b96f9b985a433ad" prot="public" static="no">
+        <type>std::list&lt; <ref refid="classFtdi_1_1Context" kindref="compound">Context</ref> &gt;</type>
+        <definition>typedef std::list&lt;Context&gt; Ftdi::List::ListType</definition>
+        <argsstring></argsstring>
+        <name>ListType</name>
+        <briefdescription>
+<para><ref refid="classFtdi_1_1List" kindref="compound">List</ref> type storing &quot;Context&quot; objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="184" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" prot="public" static="no">
+        <type>ListType::iterator</type>
+        <definition>typedef ListType::iterator Ftdi::List::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+<para>Iterator type for the container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="186" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classFtdi_1_1List_1a89f81377906bec5c14d262a959ac4bb0" prot="public" static="no">
+        <type>ListType::const_iterator</type>
+        <definition>typedef ListType::const_iterator Ftdi::List::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <briefdescription>
+<para>Const iterator type for the container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="188" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classFtdi_1_1List_1a5031c32928ad47f6a8c9b425a557c998" prot="public" static="no">
+        <type>ListType::reverse_iterator</type>
+        <definition>typedef ListType::reverse_iterator Ftdi::List::reverse_iterator</definition>
+        <argsstring></argsstring>
+        <name>reverse_iterator</name>
+        <briefdescription>
+<para>Reverse iterator type for the container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="190" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classFtdi_1_1List_1a40ba96ede36bc45a2b22e0a9ceba9cc0" prot="public" static="no">
+        <type>ListType::const_reverse_iterator</type>
+        <definition>typedef ListType::const_reverse_iterator Ftdi::List::const_reverse_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_reverse_iterator</name>
+        <briefdescription>
+<para>Const reverse iterator type for the container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="192" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFtdi_1_1List_1a8b5617df8e30f8eeb25befaf71b5cd3e" prot="private" static="no" mutable="no">
+        <type>boost::shared_ptr&lt; <ref refid="classFtdi_1_1List_1_1Private" kindref="compound">Private</ref> &gt;</type>
+        <definition>boost::shared_ptr&lt;Private&gt; Ftdi::List::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="216" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::List::List</definition>
+        <argsstring>(struct ftdi_device_list *devlist=0)</argsstring>
+        <name>List</name>
+        <param>
+          <type>struct <ref refid="structftdi__device__list" kindref="compound">ftdi_device_list</ref> *</type>
+          <declname>devlist</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="178" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="476" bodyend="490"/>
+        <references refid="structftdi__device__list_1aa8d986c61599a7f52a4d2fa1da434a37" compoundref="ftdi_8h" startline="347">ftdi_device_list::dev</references>
+        <references refid="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" compoundref="ftdi_8cpp" startline="322" endline="337">Ftdi::Context::get_strings</references>
+        <references refid="structftdi__device__list_1aa80d0234b1a36e0e9a91605a7c74df37" compoundref="ftdi_8h" startline="345">ftdi_device_list::next</references>
+        <references refid="classFtdi_1_1Context_1a3eb0536f23dbd7e2df286ee01ccc03ad" compoundref="ftdi_8cpp" startline="162" endline="166">Ftdi::Context::set_usb_device</references>
+        <referencedby refid="classFtdi_1_1List_1ab7f76e262b065f3b1d36a51c20fa0feb" compoundref="ftdi_8cpp" startline="643" endline="648">find_all</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a0d6814256d82692d46483733c71037d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::List::~List</definition>
+        <argsstring>()</argsstring>
+        <name>~List</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="179" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="492" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a420ec5202f3c6a12de1b76c4842df42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref></type>
+        <definition>List::iterator Ftdi::List::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return begin iterator for accessing the contained list elements <simplesect kind="return"><para>Iterator </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="194" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="500" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1aabc5f6a4b69536ca68b7f364ba58d336" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref></type>
+        <definition>List::iterator Ftdi::List::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return end iterator for accessing the contained list elements <simplesect kind="return"><para>Iterator </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="195" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="509" bodyend="512"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a44324c9283431e517015f8dcaf79c671" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a89f81377906bec5c14d262a959ac4bb0" kindref="member">const_iterator</ref></type>
+        <definition>List::const_iterator Ftdi::List::begin</definition>
+        <argsstring>() const </argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return begin iterator for accessing the contained list elements <simplesect kind="return"><para>Const iterator </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="196" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="518" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a2b9d18da515254078ae0757a568bcbe0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a89f81377906bec5c14d262a959ac4bb0" kindref="member">const_iterator</ref></type>
+        <definition>List::const_iterator Ftdi::List::end</definition>
+        <argsstring>() const </argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return end iterator for accessing the contained list elements <simplesect kind="return"><para>Const iterator </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="197" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="527" bodyend="530"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a691d51ae1d7e04cc7100241fda7226b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a5031c32928ad47f6a8c9b425a557c998" kindref="member">reverse_iterator</ref></type>
+        <definition>List::reverse_iterator Ftdi::List::rbegin</definition>
+        <argsstring>()</argsstring>
+        <name>rbegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return begin reverse iterator for accessing the contained list elements <simplesect kind="return"><para>Reverse iterator </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="199" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="536" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1aaeae5fdd0a1595cfbca8c558b89d90df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a5031c32928ad47f6a8c9b425a557c998" kindref="member">reverse_iterator</ref></type>
+        <definition>List::reverse_iterator Ftdi::List::rend</definition>
+        <argsstring>()</argsstring>
+        <name>rend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return end reverse iterator for accessing the contained list elements <simplesect kind="return"><para>Reverse iterator </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="200" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="545" bodyend="548"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a800f8c1061eda755de332f61d53c474d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a40ba96ede36bc45a2b22e0a9ceba9cc0" kindref="member">const_reverse_iterator</ref></type>
+        <definition>List::const_reverse_iterator Ftdi::List::rbegin</definition>
+        <argsstring>() const </argsstring>
+        <name>rbegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return begin reverse iterator for accessing the contained list elements <simplesect kind="return"><para>Const reverse iterator </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="201" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="554" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a80e0fdf70716da822af2c55e93a855fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a40ba96ede36bc45a2b22e0a9ceba9cc0" kindref="member">const_reverse_iterator</ref></type>
+        <definition>List::const_reverse_iterator Ftdi::List::rend</definition>
+        <argsstring>() const </argsstring>
+        <name>rend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return end reverse iterator for accessing the contained list elements <simplesect kind="return"><para>Const reverse iterator </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="202" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="563" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a2d76af7ee18d62d11f8048df95f05a69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>ListType::size_type</type>
+        <definition>List::ListType::size_type Ftdi::List::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get number of elements stored in the list <simplesect kind="return"><para>Number of elements </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="204" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="573" bodyend="576"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a1d7362506f1d331d5ffafb8d68868d07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Ftdi::List::empty</definition>
+        <argsstring>() const </argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if list is empty <simplesect kind="return"><para>True if empty, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="205" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="582" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a3e518597e7e1d8cce072fbf0c75a9d32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ftdi::List::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes all elements. Invalidates all iterators. Do it in a non-throwing way and also make sure we really free the allocated memory. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="206" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="592" bodyend="602"/>
+        <references refid="group__libftdi_1ga35358ea578644aa309300db782415c9f" compoundref="ftdi_8c" startline="358" endline="371">ftdi_list_free</references>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a280cb7466bcdc7afbcf27893f6bba4df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ftdi::List::push_back</definition>
+        <argsstring>(const Context &amp;element)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>const <ref refid="classFtdi_1_1Context" kindref="compound">Context</ref> &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Appends a copy of the element as the new last element. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to copy and append </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="208" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="608" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1ae5bbd5d4b9c5c8c159a50a4f25a4c896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ftdi::List::push_front</definition>
+        <argsstring>(const Context &amp;element)</argsstring>
+        <name>push_front</name>
+        <param>
+          <type>const <ref refid="classFtdi_1_1Context" kindref="compound">Context</ref> &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a copy of the element as the new first element. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to copy and add </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="209" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="617" bodyend="620"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a608e4633a7bac3a39ac51fd67f190a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref></type>
+        <definition>List::iterator Ftdi::List::erase</definition>
+        <argsstring>(iterator pos)</argsstring>
+        <name>erase</name>
+        <param>
+          <type><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erase one element pointed by iterator <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Element to erase </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position of the following element (or <ref refid="classFtdi_1_1List_1aabc5f6a4b69536ca68b7f364ba58d336" kindref="member">end()</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="211" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="627" bodyend="630"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1a318bc7283fa5ae8ad4c102a4aec7af27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref></type>
+        <definition>List::iterator Ftdi::List::erase</definition>
+        <argsstring>(iterator beg, iterator end)</argsstring>
+        <name>erase</name>
+        <param>
+          <type><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref></type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref></type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erase a range of elements <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>beg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Begin of range </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of range </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position of the element after the erased range (or <ref refid="classFtdi_1_1List_1aabc5f6a4b69536ca68b7f364ba58d336" kindref="member">end()</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="212" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="638" bodyend="641"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classFtdi_1_1List_1ab7f76e262b065f3b1d36a51c20fa0feb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classFtdi_1_1List" kindref="compound">List</ref> *</type>
+        <definition>List * Ftdi::List::find_all</definition>
+        <argsstring>(Context &amp;context, int vendor, int product)</argsstring>
+        <name>find_all</name>
+        <param>
+          <type><ref refid="classFtdi_1_1Context" kindref="compound">Context</ref> &amp;</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vendor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>product</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="181" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="643" bodyend="648"/>
+        <references refid="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" compoundref="ftdi_8cpp" startline="393" endline="396">Ftdi::Context::context</references>
+        <references refid="group__libftdi_1ga2845a0c63809747c9c7b1ea404453bc4" compoundref="ftdi_8c" startline="310" endline="351">ftdi_usb_find_all</references>
+        <references refid="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" compoundref="ftdi_8cpp" startline="476" endline="490">List</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Device list. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" line="176" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.hpp" bodystart="175" bodyend="217"/>
+    <listofallmembers>
+      <member refid="classFtdi_1_1List_1a420ec5202f3c6a12de1b76c4842df42e" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>begin</name></member>
+      <member refid="classFtdi_1_1List_1a44324c9283431e517015f8dcaf79c671" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>begin</name></member>
+      <member refid="classFtdi_1_1List_1a3e518597e7e1d8cce072fbf0c75a9d32" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>clear</name></member>
+      <member refid="classFtdi_1_1List_1a89f81377906bec5c14d262a959ac4bb0" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>const_iterator</name></member>
+      <member refid="classFtdi_1_1List_1a40ba96ede36bc45a2b22e0a9ceba9cc0" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>const_reverse_iterator</name></member>
+      <member refid="classFtdi_1_1List_1a8b5617df8e30f8eeb25befaf71b5cd3e" prot="private" virt="non-virtual"><scope>Ftdi::List</scope><name>d</name></member>
+      <member refid="classFtdi_1_1List_1a1d7362506f1d331d5ffafb8d68868d07" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>empty</name></member>
+      <member refid="classFtdi_1_1List_1aabc5f6a4b69536ca68b7f364ba58d336" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>end</name></member>
+      <member refid="classFtdi_1_1List_1a2b9d18da515254078ae0757a568bcbe0" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>end</name></member>
+      <member refid="classFtdi_1_1List_1a608e4633a7bac3a39ac51fd67f190a89" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>erase</name></member>
+      <member refid="classFtdi_1_1List_1a318bc7283fa5ae8ad4c102a4aec7af27" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>erase</name></member>
+      <member refid="classFtdi_1_1List_1ab7f76e262b065f3b1d36a51c20fa0feb" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>find_all</name></member>
+      <member refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>iterator</name></member>
+      <member refid="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>List</name></member>
+      <member refid="classFtdi_1_1List_1a0f7f7fad56e8d14e0b96f9b985a433ad" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>ListType</name></member>
+      <member refid="classFtdi_1_1List_1a280cb7466bcdc7afbcf27893f6bba4df" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>push_back</name></member>
+      <member refid="classFtdi_1_1List_1ae5bbd5d4b9c5c8c159a50a4f25a4c896" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>push_front</name></member>
+      <member refid="classFtdi_1_1List_1a691d51ae1d7e04cc7100241fda7226b9" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>rbegin</name></member>
+      <member refid="classFtdi_1_1List_1a800f8c1061eda755de332f61d53c474d" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>rbegin</name></member>
+      <member refid="classFtdi_1_1List_1aaeae5fdd0a1595cfbca8c558b89d90df" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>rend</name></member>
+      <member refid="classFtdi_1_1List_1a80e0fdf70716da822af2c55e93a855fd" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>rend</name></member>
+      <member refid="classFtdi_1_1List_1a5031c32928ad47f6a8c9b425a557c998" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>reverse_iterator</name></member>
+      <member refid="classFtdi_1_1List_1a2d76af7ee18d62d11f8048df95f05a69" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>size</name></member>
+      <member refid="classFtdi_1_1List_1a0d6814256d82692d46483733c71037d7" prot="public" virt="non-virtual"><scope>Ftdi::List</scope><name>~List</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

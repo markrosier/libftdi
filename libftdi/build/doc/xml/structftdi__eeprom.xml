@@ -1,0 +1,1036 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structftdi__eeprom" kind="struct" prot="public">
+    <compoundname>ftdi_eeprom</compoundname>
+    <includes refid="ftdi__i_8h" local="no">ftdi_i.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structftdi__eeprom_1af591e992b9bd12a484ea9d4d36e92251" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::vendor_id</definition>
+        <argsstring></argsstring>
+        <name>vendor_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vendor id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="33" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ab273d6fe056b3871824486ad0bfa3a90" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::product_id</definition>
+        <argsstring></argsstring>
+        <name>product_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>product id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="35" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a7a44fb7a64c3114f33561aa6214e5182" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::initialized_for_connected_device</definition>
+        <argsstring></argsstring>
+        <name>initialized_for_connected_device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Was the eeprom structure initialized for the actual connected device? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="39" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8cc9811660d1adfb4b30157c5ab26d5a" compoundref="ftdi_8c" startline="4251" endline="4289">ftdi_write_eeprom</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a055d6bef2328557e6ac4d2909e42d21b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::self_powered</definition>
+        <argsstring></argsstring>
+        <name>self_powered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>self powered </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="42" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a9b82f88497b432bebfa4dd92c304cb02" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::remote_wakeup</definition>
+        <argsstring></argsstring>
+        <name>remote_wakeup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>remote wakeup </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="44" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a30dad8c71143befc6f947bcf04e63aa2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::is_not_pnp</definition>
+        <argsstring></argsstring>
+        <name>is_not_pnp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="46" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1afc46f39449462d10f9b8992523214136" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::suspend_dbus7</definition>
+        <argsstring></argsstring>
+        <name>suspend_dbus7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="49" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a5117b50c00668aff73b5df385b0fc5f8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::in_is_isochronous</definition>
+        <argsstring></argsstring>
+        <name>in_is_isochronous</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>input in isochronous transfer mode </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="52" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ab9885ee665c318a8d19c28a9c75b999a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::out_is_isochronous</definition>
+        <argsstring></argsstring>
+        <name>out_is_isochronous</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>output in isochronous transfer mode </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="54" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a722a630d370318cefa94de1365f98786" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::suspend_pull_downs</definition>
+        <argsstring></argsstring>
+        <name>suspend_pull_downs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>suspend pull downs </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="56" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1abe250275595d020fd8de3aa61d093d38" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::use_serial</definition>
+        <argsstring></argsstring>
+        <name>use_serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>use serial </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="59" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga9a8f94ad689a47dc3aa24c564d7731d3" compoundref="ftdi_8c" startline="2442" endline="2488">ftdi_eeprom_set_strings</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a7c0093a9bfbdf7a3c89e18228fcaba84" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::usb_version</definition>
+        <argsstring></argsstring>
+        <name>usb_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>usb version </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="61" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a54772c4686e082384adee26eeaa68005" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::use_usb_version</definition>
+        <argsstring></argsstring>
+        <name>use_usb_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use usb version on FT2232 devices </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="63" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a8aa39af43a6ac5c05b8682d8b3904e3c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::max_power</definition>
+        <argsstring></argsstring>
+        <name>max_power</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>maximum power </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="65" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ac4656922906039cab49d4c3c52d2916b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* ftdi_eeprom::manufacturer</definition>
+        <argsstring></argsstring>
+        <name>manufacturer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>manufacturer name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="68" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72838200be98d88737d532f9eee1e7be" compoundref="ftdi_8c" startline="210" endline="249">ftdi_deinit</referencedby>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga9a8f94ad689a47dc3aa24c564d7731d3" compoundref="ftdi_8c" startline="2442" endline="2488">ftdi_eeprom_set_strings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1aa24461721904d41198603dda94e0e8ec" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* ftdi_eeprom::product</definition>
+        <argsstring></argsstring>
+        <name>product</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>product name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="70" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72838200be98d88737d532f9eee1e7be" compoundref="ftdi_8c" startline="210" endline="249">ftdi_deinit</referencedby>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga9a8f94ad689a47dc3aa24c564d7731d3" compoundref="ftdi_8c" startline="2442" endline="2488">ftdi_eeprom_set_strings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1aadcbc36d5b0569821b66dc0e0b0c61d1" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* ftdi_eeprom::serial</definition>
+        <argsstring></argsstring>
+        <name>serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>serial number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="72" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga72838200be98d88737d532f9eee1e7be" compoundref="ftdi_8c" startline="210" endline="249">ftdi_deinit</referencedby>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga9a8f94ad689a47dc3aa24c564d7731d3" compoundref="ftdi_8c" startline="2442" endline="2488">ftdi_eeprom_set_strings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ae29685074e87375b8d78580f28a06b5e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_a_type</definition>
+        <argsstring></argsstring>
+        <name>channel_a_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="77" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a2da524307ba5904880ba6e2456adc4c1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_b_type</definition>
+        <argsstring></argsstring>
+        <name>channel_b_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="78" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a67da21be4bf17ee3e0b12a92c3587bb0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_a_driver</definition>
+        <argsstring></argsstring>
+        <name>channel_a_driver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="80" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a128def5dc4387fdcdaddaa7c9f460637" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_b_driver</definition>
+        <argsstring></argsstring>
+        <name>channel_b_driver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="81" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ae08edaf6d0e878a3f9e08e428ac1612d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_c_driver</definition>
+        <argsstring></argsstring>
+        <name>channel_c_driver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="82" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1aea0a7b1821735930d82f24f5f0b6a006" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_d_driver</definition>
+        <argsstring></argsstring>
+        <name>channel_d_driver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="83" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ac26b22453035924c2149689b07f8fae8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_a_rs485enable</definition>
+        <argsstring></argsstring>
+        <name>channel_a_rs485enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="85" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1aec61d454c0f8bc1c810aa5682e9fe12a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_b_rs485enable</definition>
+        <argsstring></argsstring>
+        <name>channel_b_rs485enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="86" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a2c8f96a24402a0f8b8a4e9b34f137142" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_c_rs485enable</definition>
+        <argsstring></argsstring>
+        <name>channel_c_rs485enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="87" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a6b073acb642e6053c74ec2238942adb4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::channel_d_rs485enable</definition>
+        <argsstring></argsstring>
+        <name>channel_d_rs485enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="88" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ab32eecde1bd636a290c7f03eb4489b4d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::cbus_function[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>cbus_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CBUS pin function. See CBUS_xxx defines. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="92" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga4c5f8b615c0db9ed6deefaf57563e3f5" compoundref="ftdi_8c" startline="2492" endline="2509">set_ft232h_cbus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ad377261e985c768c2ca5731e9690efd9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::high_current</definition>
+        <argsstring></argsstring>
+        <name>high_current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Select hight current drive on R devices. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="94" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a4bf7b50ec4259aa83623bc9ed789c429" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::high_current_a</definition>
+        <argsstring></argsstring>
+        <name>high_current_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Select hight current drive on A channel (2232C </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="96" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a5016f08e6af06307abe71c15165d24ab" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::high_current_b</definition>
+        <argsstring></argsstring>
+        <name>high_current_b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Select hight current drive on B channel (2232C). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="98" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a4876d3d01242d7c3b2961b1a42b35509" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::invert</definition>
+        <argsstring></argsstring>
+        <name>invert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Select inversion of data lines (bitmask). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="100" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a295d4ef374b36c7441ce9952faa2e036" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::external_oscillator</definition>
+        <argsstring></argsstring>
+        <name>external_oscillator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable external oscillator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="102" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1abb17ef38c4e3b37b404ab2d165c47571" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group0_drive</definition>
+        <argsstring></argsstring>
+        <name>group0_drive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="109" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a385c1dc1b3d4a0ca20009a6d86c4ee3f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group0_schmitt</definition>
+        <argsstring></argsstring>
+        <name>group0_schmitt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="110" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ab796b679fceb9add14021713b0b7b331" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group0_slew</definition>
+        <argsstring></argsstring>
+        <name>group0_slew</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="111" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="111" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a638460da4cad2d7ad472a623e47c53b8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group1_drive</definition>
+        <argsstring></argsstring>
+        <name>group1_drive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="112" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="112" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ac1b64d7825d1072468beb430129423ca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group1_schmitt</definition>
+        <argsstring></argsstring>
+        <name>group1_schmitt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="113" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a8f219130bd0ee17c79a8d1ecadae2079" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group1_slew</definition>
+        <argsstring></argsstring>
+        <name>group1_slew</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="114" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a58cb0545a65f6f0bf431e186f1b44f71" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group2_drive</definition>
+        <argsstring></argsstring>
+        <name>group2_drive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="115" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1aa6c5c7b16e649d70e358b021ad0c469e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group2_schmitt</definition>
+        <argsstring></argsstring>
+        <name>group2_schmitt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="116" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ab69800fef64ca3d55449eab4322e5090" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group2_slew</definition>
+        <argsstring></argsstring>
+        <name>group2_slew</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="117" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ae5c54d334e18338296557572deee7433" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group3_drive</definition>
+        <argsstring></argsstring>
+        <name>group3_drive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="118" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a7afc69623874f8b64614f2688f08033e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group3_schmitt</definition>
+        <argsstring></argsstring>
+        <name>group3_schmitt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="119" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a13e5b314e0a2c1e0a67f6bb31ac07f5a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::group3_slew</definition>
+        <argsstring></argsstring>
+        <name>group3_slew</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="120" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1acbaa0dac427977d4f8fcd735a34bf2c3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::powersave</definition>
+        <argsstring></argsstring>
+        <name>powersave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="122" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a55c072e8789a611a3842296ca1ac5171" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::clock_polarity</definition>
+        <argsstring></argsstring>
+        <name>clock_polarity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="124" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a8a1f5de674bbd131e42e924ead65c617" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::data_order</definition>
+        <argsstring></argsstring>
+        <name>data_order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="125" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a85d03dc6aa088d929eea3c7b6b7c5741" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::flow_control</definition>
+        <argsstring></argsstring>
+        <name>flow_control</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="126" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a00b75b1e06473d2e755509758cf5f3a9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::user_data_addr</definition>
+        <argsstring></argsstring>
+        <name>user_data_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>user data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="129" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="129" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a0849034c662e9cd43b8fec1d1b192162" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::user_data_size</definition>
+        <argsstring></argsstring>
+        <name>user_data_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="130" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1ga1af4ea94a0cbe4d4b6364675eee0b4ef" compoundref="ftdi_8c" startline="4057" endline="4065">ftdi_set_eeprom_user_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a68805e2829edda7ed84211c4342d1d59" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ftdi_eeprom::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="131" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1ga1af4ea94a0cbe4d4b6364675eee0b4ef" compoundref="ftdi_8c" startline="4057" endline="4065">ftdi_set_eeprom_user_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a6d45e714bee4069f7f44e184d6f5ce60" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>eeprom size in bytes. This doesn&apos;t get stored in the eeprom but is the only way to pass it to ftdi_eeprom_build. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="135" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="135" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1gac157786fdf2e9c6b51dd9b4ddbb34d5f" compoundref="ftdi_8c" startline="4098" endline="4128">ftdi_read_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga1af4ea94a0cbe4d4b6364675eee0b4ef" compoundref="ftdi_8c" startline="4057" endline="4065">ftdi_set_eeprom_user_data</referencedby>
+        <referencedby refid="group__libftdi_1ga8cc9811660d1adfb4b30157c5ab26d5a" compoundref="ftdi_8c" startline="4251" endline="4289">ftdi_write_eeprom</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a6f88bd208558f9900298fb59fd0ffa39" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::chip</definition>
+        <argsstring></argsstring>
+        <name>chip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="137" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="137" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga25eb9a83a925065b6c3b61b8f0565951" compoundref="ftdi_8c" startline="4306" endline="4359">ftdi_erase_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1a0b1c39033f225c7a2eb2f36b35f1f5d1" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char ftdi_eeprom::buf[FTDI_MAX_EEPROM_SIZE]</definition>
+        <argsstring>[FTDI_MAX_EEPROM_SIZE]</argsstring>
+        <name>buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="138" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga92a449af4a1becc70e80e49f3c937bbd" compoundref="ftdi_8c" startline="4008" endline="4023">ftdi_get_eeprom_buf</referencedby>
+        <referencedby refid="group__libftdi_1gac157786fdf2e9c6b51dd9b4ddbb34d5f" compoundref="ftdi_8c" startline="4098" endline="4128">ftdi_read_eeprom</referencedby>
+        <referencedby refid="group__libftdi_1gaad29bea74f6ae02ed757d2a39c060969" compoundref="ftdi_8c" startline="4034" endline="4046">ftdi_set_eeprom_buf</referencedby>
+        <referencedby refid="group__libftdi_1ga1af4ea94a0cbe4d4b6364675eee0b4ef" compoundref="ftdi_8c" startline="4057" endline="4065">ftdi_set_eeprom_user_data</referencedby>
+        <referencedby refid="group__libftdi_1ga8cc9811660d1adfb4b30157c5ab26d5a" compoundref="ftdi_8c" startline="4251" endline="4289">ftdi_write_eeprom</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__eeprom_1ab1c76bcb3a04e270b2c710da567de7d8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_eeprom::release_number</definition>
+        <argsstring></argsstring>
+        <name>release_number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>device release number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="141" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="141" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" compoundref="ftdi_8c" startline="2561" endline="3139">ftdi_eeprom_build</referencedby>
+        <referencedby refid="group__libftdi_1gac91c95ae42ec1ba885dc54f39709c072" compoundref="ftdi_8c" startline="3189" endline="3607">ftdi_eeprom_decode</referencedby>
+        <referencedby refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" compoundref="ftdi_8c" startline="2294" endline="2440">ftdi_eeprom_initdefaults</referencedby>
+        <referencedby refid="group__libftdi_1ga6213209895e40153d103a72654d53b81" compoundref="ftdi_8c" startline="3619" endline="3798">ftdi_get_eeprom_value</referencedby>
+        <referencedby refid="group__libftdi_1ga8e120f60f65859c1976c2dba99e9d002" compoundref="ftdi_8c" startline="3812" endline="3996">ftdi_set_eeprom_value</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>FTDI eeprom structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" line="31" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_i.h" bodystart="30" bodyend="142"/>
+    <listofallmembers>
+      <member refid="structftdi__eeprom_1a0b1c39033f225c7a2eb2f36b35f1f5d1" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>buf</name></member>
+      <member refid="structftdi__eeprom_1ab32eecde1bd636a290c7f03eb4489b4d" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>cbus_function</name></member>
+      <member refid="structftdi__eeprom_1a67da21be4bf17ee3e0b12a92c3587bb0" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_a_driver</name></member>
+      <member refid="structftdi__eeprom_1ac26b22453035924c2149689b07f8fae8" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_a_rs485enable</name></member>
+      <member refid="structftdi__eeprom_1ae29685074e87375b8d78580f28a06b5e" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_a_type</name></member>
+      <member refid="structftdi__eeprom_1a128def5dc4387fdcdaddaa7c9f460637" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_b_driver</name></member>
+      <member refid="structftdi__eeprom_1aec61d454c0f8bc1c810aa5682e9fe12a" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_b_rs485enable</name></member>
+      <member refid="structftdi__eeprom_1a2da524307ba5904880ba6e2456adc4c1" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_b_type</name></member>
+      <member refid="structftdi__eeprom_1ae08edaf6d0e878a3f9e08e428ac1612d" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_c_driver</name></member>
+      <member refid="structftdi__eeprom_1a2c8f96a24402a0f8b8a4e9b34f137142" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_c_rs485enable</name></member>
+      <member refid="structftdi__eeprom_1aea0a7b1821735930d82f24f5f0b6a006" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_d_driver</name></member>
+      <member refid="structftdi__eeprom_1a6b073acb642e6053c74ec2238942adb4" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>channel_d_rs485enable</name></member>
+      <member refid="structftdi__eeprom_1a6f88bd208558f9900298fb59fd0ffa39" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>chip</name></member>
+      <member refid="structftdi__eeprom_1a55c072e8789a611a3842296ca1ac5171" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>clock_polarity</name></member>
+      <member refid="structftdi__eeprom_1a8a1f5de674bbd131e42e924ead65c617" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>data_order</name></member>
+      <member refid="structftdi__eeprom_1a295d4ef374b36c7441ce9952faa2e036" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>external_oscillator</name></member>
+      <member refid="structftdi__eeprom_1a85d03dc6aa088d929eea3c7b6b7c5741" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>flow_control</name></member>
+      <member refid="structftdi__eeprom_1abb17ef38c4e3b37b404ab2d165c47571" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group0_drive</name></member>
+      <member refid="structftdi__eeprom_1a385c1dc1b3d4a0ca20009a6d86c4ee3f" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group0_schmitt</name></member>
+      <member refid="structftdi__eeprom_1ab796b679fceb9add14021713b0b7b331" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group0_slew</name></member>
+      <member refid="structftdi__eeprom_1a638460da4cad2d7ad472a623e47c53b8" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group1_drive</name></member>
+      <member refid="structftdi__eeprom_1ac1b64d7825d1072468beb430129423ca" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group1_schmitt</name></member>
+      <member refid="structftdi__eeprom_1a8f219130bd0ee17c79a8d1ecadae2079" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group1_slew</name></member>
+      <member refid="structftdi__eeprom_1a58cb0545a65f6f0bf431e186f1b44f71" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group2_drive</name></member>
+      <member refid="structftdi__eeprom_1aa6c5c7b16e649d70e358b021ad0c469e" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group2_schmitt</name></member>
+      <member refid="structftdi__eeprom_1ab69800fef64ca3d55449eab4322e5090" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group2_slew</name></member>
+      <member refid="structftdi__eeprom_1ae5c54d334e18338296557572deee7433" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group3_drive</name></member>
+      <member refid="structftdi__eeprom_1a7afc69623874f8b64614f2688f08033e" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group3_schmitt</name></member>
+      <member refid="structftdi__eeprom_1a13e5b314e0a2c1e0a67f6bb31ac07f5a" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>group3_slew</name></member>
+      <member refid="structftdi__eeprom_1ad377261e985c768c2ca5731e9690efd9" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>high_current</name></member>
+      <member refid="structftdi__eeprom_1a4bf7b50ec4259aa83623bc9ed789c429" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>high_current_a</name></member>
+      <member refid="structftdi__eeprom_1a5016f08e6af06307abe71c15165d24ab" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>high_current_b</name></member>
+      <member refid="structftdi__eeprom_1a5117b50c00668aff73b5df385b0fc5f8" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>in_is_isochronous</name></member>
+      <member refid="structftdi__eeprom_1a7a44fb7a64c3114f33561aa6214e5182" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>initialized_for_connected_device</name></member>
+      <member refid="structftdi__eeprom_1a4876d3d01242d7c3b2961b1a42b35509" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>invert</name></member>
+      <member refid="structftdi__eeprom_1a30dad8c71143befc6f947bcf04e63aa2" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>is_not_pnp</name></member>
+      <member refid="structftdi__eeprom_1ac4656922906039cab49d4c3c52d2916b" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>manufacturer</name></member>
+      <member refid="structftdi__eeprom_1a8aa39af43a6ac5c05b8682d8b3904e3c" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>max_power</name></member>
+      <member refid="structftdi__eeprom_1ab9885ee665c318a8d19c28a9c75b999a" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>out_is_isochronous</name></member>
+      <member refid="structftdi__eeprom_1acbaa0dac427977d4f8fcd735a34bf2c3" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>powersave</name></member>
+      <member refid="structftdi__eeprom_1aa24461721904d41198603dda94e0e8ec" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>product</name></member>
+      <member refid="structftdi__eeprom_1ab273d6fe056b3871824486ad0bfa3a90" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>product_id</name></member>
+      <member refid="structftdi__eeprom_1ab1c76bcb3a04e270b2c710da567de7d8" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>release_number</name></member>
+      <member refid="structftdi__eeprom_1a9b82f88497b432bebfa4dd92c304cb02" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>remote_wakeup</name></member>
+      <member refid="structftdi__eeprom_1a055d6bef2328557e6ac4d2909e42d21b" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>self_powered</name></member>
+      <member refid="structftdi__eeprom_1aadcbc36d5b0569821b66dc0e0b0c61d1" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>serial</name></member>
+      <member refid="structftdi__eeprom_1a6d45e714bee4069f7f44e184d6f5ce60" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>size</name></member>
+      <member refid="structftdi__eeprom_1afc46f39449462d10f9b8992523214136" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>suspend_dbus7</name></member>
+      <member refid="structftdi__eeprom_1a722a630d370318cefa94de1365f98786" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>suspend_pull_downs</name></member>
+      <member refid="structftdi__eeprom_1a7c0093a9bfbdf7a3c89e18228fcaba84" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>usb_version</name></member>
+      <member refid="structftdi__eeprom_1abe250275595d020fd8de3aa61d093d38" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>use_serial</name></member>
+      <member refid="structftdi__eeprom_1a54772c4686e082384adee26eeaa68005" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>use_usb_version</name></member>
+      <member refid="structftdi__eeprom_1a68805e2829edda7ed84211c4342d1d59" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>user_data</name></member>
+      <member refid="structftdi__eeprom_1a00b75b1e06473d2e755509758cf5f3a9" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>user_data_addr</name></member>
+      <member refid="structftdi__eeprom_1a0849034c662e9cd43b8fec1d1b192162" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>user_data_size</name></member>
+      <member refid="structftdi__eeprom_1af591e992b9bd12a484ea9d4d36e92251" prot="public" virt="non-virtual"><scope>ftdi_eeprom</scope><name>vendor_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structftdi__version__info" kind="struct" prot="public">
+    <compoundname>ftdi_version_info</compoundname>
+    <includes refid="ftdi_8h" local="no">ftdi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structftdi__version__info_1a5644a73d7e253c663738d4e705999910" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_version_info::major</definition>
+        <argsstring></argsstring>
+        <name>major</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="455" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="455" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaf4b4d11e33d946568efc64851ee8c7e5" compoundref="ftdi_8c" startline="281" endline="292">ftdi_get_library_version</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__version__info_1a011b5e8cbe4af99afd0a0440e5e75669" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_version_info::minor</definition>
+        <argsstring></argsstring>
+        <name>minor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="456" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="456" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaf4b4d11e33d946568efc64851ee8c7e5" compoundref="ftdi_8c" startline="281" endline="292">ftdi_get_library_version</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__version__info_1ab5dd11d114d02d509e2bf83eea4d180a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ftdi_version_info::micro</definition>
+        <argsstring></argsstring>
+        <name>micro</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="457" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="457" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaf4b4d11e33d946568efc64851ee8c7e5" compoundref="ftdi_8c" startline="281" endline="292">ftdi_get_library_version</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__version__info_1af5581f9a5c2c2d03551bc1d8d0f026a1" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ftdi_version_info::version_str</definition>
+        <argsstring></argsstring>
+        <name>version_str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="458" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="458" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaf4b4d11e33d946568efc64851ee8c7e5" compoundref="ftdi_8c" startline="281" endline="292">ftdi_get_library_version</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__version__info_1ae56ef54eaad3de9ced05282eb3cce62c" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ftdi_version_info::snapshot_str</definition>
+        <argsstring></argsstring>
+        <name>snapshot_str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="459" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="459" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1gaf4b4d11e33d946568efc64851ee8c7e5" compoundref="ftdi_8c" startline="281" endline="292">ftdi_get_library_version</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provide libftdi version information major: Library major version minor: Library minor version micro: Currently unused, ight get used for hotfixes. version_str: Version as (static) string snapshot_str: Git snapshot version if known. Otherwise &quot;unknown&quot; or empty string. </para>    </detaileddescription>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="454" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="453" bodyend="460"/>
+    <listofallmembers>
+      <member refid="structftdi__version__info_1a5644a73d7e253c663738d4e705999910" prot="public" virt="non-virtual"><scope>ftdi_version_info</scope><name>major</name></member>
+      <member refid="structftdi__version__info_1ab5dd11d114d02d509e2bf83eea4d180a" prot="public" virt="non-virtual"><scope>ftdi_version_info</scope><name>micro</name></member>
+      <member refid="structftdi__version__info_1a011b5e8cbe4af99afd0a0440e5e75669" prot="public" virt="non-virtual"><scope>ftdi_version_info</scope><name>minor</name></member>
+      <member refid="structftdi__version__info_1ae56ef54eaad3de9ced05282eb3cce62c" prot="public" virt="non-virtual"><scope>ftdi_version_info</scope><name>snapshot_str</name></member>
+      <member refid="structftdi__version__info_1af5581f9a5c2c2d03551bc1d8d0f026a1" prot="public" virt="non-virtual"><scope>ftdi_version_info</scope><name>version_str</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

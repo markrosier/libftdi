@@ -1,0 +1,532 @@
+.TH "ftdi_eeprom" 3 "Wed Dec 2 2015" "Version 1.2" "libftdi1" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ftdi_eeprom \- 
+.PP
+FTDI eeprom structure\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ftdi_i\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBvendor_id\fP"
+.br
+.ti -1c
+.RI "int \fBproduct_id\fP"
+.br
+.ti -1c
+.RI "int \fBinitialized_for_connected_device\fP"
+.br
+.ti -1c
+.RI "int \fBself_powered\fP"
+.br
+.ti -1c
+.RI "int \fBremote_wakeup\fP"
+.br
+.ti -1c
+.RI "int \fBis_not_pnp\fP"
+.br
+.ti -1c
+.RI "int \fBsuspend_dbus7\fP"
+.br
+.ti -1c
+.RI "int \fBin_is_isochronous\fP"
+.br
+.ti -1c
+.RI "int \fBout_is_isochronous\fP"
+.br
+.ti -1c
+.RI "int \fBsuspend_pull_downs\fP"
+.br
+.ti -1c
+.RI "int \fBuse_serial\fP"
+.br
+.ti -1c
+.RI "int \fBusb_version\fP"
+.br
+.ti -1c
+.RI "int \fBuse_usb_version\fP"
+.br
+.ti -1c
+.RI "int \fBmax_power\fP"
+.br
+.ti -1c
+.RI "char * \fBmanufacturer\fP"
+.br
+.ti -1c
+.RI "char * \fBproduct\fP"
+.br
+.ti -1c
+.RI "char * \fBserial\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_a_type\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_b_type\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_a_driver\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_b_driver\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_c_driver\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_d_driver\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_a_rs485enable\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_b_rs485enable\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_c_rs485enable\fP"
+.br
+.ti -1c
+.RI "int \fBchannel_d_rs485enable\fP"
+.br
+.ti -1c
+.RI "int \fBcbus_function\fP [10]"
+.br
+.ti -1c
+.RI "int \fBhigh_current\fP"
+.br
+.ti -1c
+.RI "int \fBhigh_current_a\fP"
+.br
+.ti -1c
+.RI "int \fBhigh_current_b\fP"
+.br
+.ti -1c
+.RI "int \fBinvert\fP"
+.br
+.ti -1c
+.RI "int \fBexternal_oscillator\fP"
+.br
+.ti -1c
+.RI "int \fBgroup0_drive\fP"
+.br
+.ti -1c
+.RI "int \fBgroup0_schmitt\fP"
+.br
+.ti -1c
+.RI "int \fBgroup0_slew\fP"
+.br
+.ti -1c
+.RI "int \fBgroup1_drive\fP"
+.br
+.ti -1c
+.RI "int \fBgroup1_schmitt\fP"
+.br
+.ti -1c
+.RI "int \fBgroup1_slew\fP"
+.br
+.ti -1c
+.RI "int \fBgroup2_drive\fP"
+.br
+.ti -1c
+.RI "int \fBgroup2_schmitt\fP"
+.br
+.ti -1c
+.RI "int \fBgroup2_slew\fP"
+.br
+.ti -1c
+.RI "int \fBgroup3_drive\fP"
+.br
+.ti -1c
+.RI "int \fBgroup3_schmitt\fP"
+.br
+.ti -1c
+.RI "int \fBgroup3_slew\fP"
+.br
+.ti -1c
+.RI "int \fBpowersave\fP"
+.br
+.ti -1c
+.RI "int \fBclock_polarity\fP"
+.br
+.ti -1c
+.RI "int \fBdata_order\fP"
+.br
+.ti -1c
+.RI "int \fBflow_control\fP"
+.br
+.ti -1c
+.RI "int \fBuser_data_addr\fP"
+.br
+.ti -1c
+.RI "int \fBuser_data_size\fP"
+.br
+.ti -1c
+.RI "const char * \fBuser_data\fP"
+.br
+.ti -1c
+.RI "int \fBsize\fP"
+.br
+.ti -1c
+.RI "int \fBchip\fP"
+.br
+.ti -1c
+.RI "unsigned char \fBbuf\fP [\fBFTDI_MAX_EEPROM_SIZE\fP]"
+.br
+.ti -1c
+.RI "int \fBrelease_number\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+FTDI eeprom structure\&. 
+.PP
+Definition at line 30 of file ftdi_i\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int ftdi_eeprom::vendor_id"
+vendor id 
+.PP
+Definition at line 33 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::product_id"
+product id 
+.PP
+Definition at line 35 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::initialized_for_connected_device"
+Was the eeprom structure initialized for the actual connected device? 
+.PP
+Definition at line 39 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_set_eeprom_value(), and ftdi_write_eeprom()\&.
+.SS "int ftdi_eeprom::self_powered"
+self powered 
+.PP
+Definition at line 42 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::remote_wakeup"
+remote wakeup 
+.PP
+Definition at line 44 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::is_not_pnp"
+
+.PP
+Definition at line 46 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::suspend_dbus7"
+
+.PP
+Definition at line 49 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::in_is_isochronous"
+input in isochronous transfer mode 
+.PP
+Definition at line 52 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::out_is_isochronous"
+output in isochronous transfer mode 
+.PP
+Definition at line 54 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::suspend_pull_downs"
+suspend pull downs 
+.PP
+Definition at line 56 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::use_serial"
+use serial 
+.PP
+Definition at line 59 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_eeprom_set_strings(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::usb_version"
+usb version 
+.PP
+Definition at line 61 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::use_usb_version"
+Use usb version on FT2232 devices 
+.PP
+Definition at line 63 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::max_power"
+maximum power 
+.PP
+Definition at line 65 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "char* ftdi_eeprom::manufacturer"
+manufacturer name 
+.PP
+Definition at line 68 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_deinit(), ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), and ftdi_eeprom_set_strings()\&.
+.SS "char* ftdi_eeprom::product"
+product name 
+.PP
+Definition at line 70 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_deinit(), ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), and ftdi_eeprom_set_strings()\&.
+.SS "char* ftdi_eeprom::serial"
+serial number 
+.PP
+Definition at line 72 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_deinit(), ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), and ftdi_eeprom_set_strings()\&.
+.SS "int ftdi_eeprom::channel_a_type"
+
+.PP
+Definition at line 77 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::channel_b_type"
+
+.PP
+Definition at line 78 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::channel_a_driver"
+
+.PP
+Definition at line 80 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::channel_b_driver"
+
+.PP
+Definition at line 81 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::channel_c_driver"
+
+.PP
+Definition at line 82 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::channel_d_driver"
+
+.PP
+Definition at line 83 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::channel_a_rs485enable"
+
+.PP
+Definition at line 85 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::channel_b_rs485enable"
+
+.PP
+Definition at line 86 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::channel_c_rs485enable"
+
+.PP
+Definition at line 87 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::channel_d_rs485enable"
+
+.PP
+Definition at line 88 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::cbus_function[10]"
+CBUS pin function\&. See CBUS_xxx defines\&. 
+.PP
+Definition at line 92 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_get_eeprom_value(), ftdi_set_eeprom_value(), and set_ft232h_cbus()\&.
+.SS "int ftdi_eeprom::high_current"
+Select hight current drive on R devices\&. 
+.PP
+Definition at line 94 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::high_current_a"
+Select hight current drive on A channel (2232C 
+.PP
+Definition at line 96 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::high_current_b"
+Select hight current drive on B channel (2232C)\&. 
+.PP
+Definition at line 98 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::invert"
+Select inversion of data lines (bitmask)\&. 
+.PP
+Definition at line 100 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::external_oscillator"
+Enable external oscillator\&. 
+.PP
+Definition at line 102 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group0_drive"
+
+.PP
+Definition at line 109 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group0_schmitt"
+
+.PP
+Definition at line 110 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group0_slew"
+
+.PP
+Definition at line 111 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group1_drive"
+
+.PP
+Definition at line 112 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group1_schmitt"
+
+.PP
+Definition at line 113 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group1_slew"
+
+.PP
+Definition at line 114 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group2_drive"
+
+.PP
+Definition at line 115 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group2_schmitt"
+
+.PP
+Definition at line 116 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group2_slew"
+
+.PP
+Definition at line 117 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group3_drive"
+
+.PP
+Definition at line 118 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group3_schmitt"
+
+.PP
+Definition at line 119 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::group3_slew"
+
+.PP
+Definition at line 120 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::powersave"
+
+.PP
+Definition at line 122 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::clock_polarity"
+
+.PP
+Definition at line 124 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::data_order"
+
+.PP
+Definition at line 125 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::flow_control"
+
+.PP
+Definition at line 126 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::user_data_addr"
+user data 
+.PP
+Definition at line 129 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), and ftdi_set_eeprom_value()\&.
+.SS "int ftdi_eeprom::user_data_size"
+
+.PP
+Definition at line 130 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), and ftdi_set_eeprom_user_data()\&.
+.SS "const char* ftdi_eeprom::user_data"
+
+.PP
+Definition at line 131 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), and ftdi_set_eeprom_user_data()\&.
+.SS "int ftdi_eeprom::size"
+eeprom size in bytes\&. This doesn't get stored in the eeprom but is the only way to pass it to ftdi_eeprom_build\&. 
+.PP
+Definition at line 135 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_get_eeprom_value(), ftdi_read_eeprom(), ftdi_set_eeprom_user_data(), and ftdi_write_eeprom()\&.
+.SS "int ftdi_eeprom::chip"
+
+.PP
+Definition at line 137 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_erase_eeprom(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+.SS "unsigned char ftdi_eeprom::buf[\fBFTDI_MAX_EEPROM_SIZE\fP]"
+
+.PP
+Definition at line 138 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_get_eeprom_buf(), ftdi_read_eeprom(), ftdi_set_eeprom_buf(), ftdi_set_eeprom_user_data(), and ftdi_write_eeprom()\&.
+.SS "int ftdi_eeprom::release_number"
+device release number 
+.PP
+Definition at line 141 of file ftdi_i\&.h\&.
+.PP
+Referenced by ftdi_eeprom_build(), ftdi_eeprom_decode(), ftdi_eeprom_initdefaults(), ftdi_get_eeprom_value(), and ftdi_set_eeprom_value()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libftdi1 from the source code\&.

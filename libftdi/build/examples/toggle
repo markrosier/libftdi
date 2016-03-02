@@ -1,0 +1,7 @@
+echo Remember to use sudo ./toggle
+while true; do
+./FTDI-high;
+sleep 1;
+./FTDI-low;
+sleep 1;
+done

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O2 -g -DNDEBUG   -shared -Wl,-soname,libftdipp1.so.2 -o libftdipp1.so.2.2.0 CMakeFiles/ftdipp1.dir/ftdi.cpp.o ../src/libftdi1.so.2.2.0 -lusb-1.0 -Wl,-rpath,/home/mark/testcode/FTDI/libftdi/libftdi/build/src: 

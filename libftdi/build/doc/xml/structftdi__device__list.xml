@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structftdi__device__list" kind="struct" prot="public">
+    <compoundname>ftdi_device_list</compoundname>
+    <includes refid="ftdi_8h" local="no">ftdi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structftdi__device__list_1aa80d0234b1a36e0e9a91605a7c74df37" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structftdi__device__list" kindref="compound">ftdi_device_list</ref> *</type>
+        <definition>struct ftdi_device_list* ftdi_device_list::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to next entry </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="345" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="345" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga35358ea578644aa309300db782415c9f" compoundref="ftdi_8c" startline="358" endline="371">ftdi_list_free</referencedby>
+        <referencedby refid="group__libftdi_1ga2845a0c63809747c9c7b1ea404453bc4" compoundref="ftdi_8c" startline="310" endline="351">ftdi_usb_find_all</referencedby>
+        <referencedby refid="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" compoundref="ftdi_8cpp" startline="476" endline="490">Ftdi::List::List</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structftdi__device__list_1aa8d986c61599a7f52a4d2fa1da434a37" prot="public" static="no" mutable="no">
+        <type>struct libusb_device *</type>
+        <definition>struct libusb_device* ftdi_device_list::dev</definition>
+        <argsstring></argsstring>
+        <name>dev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to libusb&apos;s usb_device </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="347" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="347" bodyend="-1"/>
+        <referencedby refid="group__libftdi_1ga35358ea578644aa309300db782415c9f" compoundref="ftdi_8c" startline="358" endline="371">ftdi_list_free</referencedby>
+        <referencedby refid="group__libftdi_1ga2845a0c63809747c9c7b1ea404453bc4" compoundref="ftdi_8c" startline="310" endline="351">ftdi_usb_find_all</referencedby>
+        <referencedby refid="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" compoundref="ftdi_8cpp" startline="476" endline="490">Ftdi::List::List</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>list of usb devices created by <ref refid="group__libftdi_1ga2845a0c63809747c9c7b1ea404453bc4" kindref="member">ftdi_usb_find_all()</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>ftdi_device_list</label>
+        <link refid="structftdi__device__list"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" line="343" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi.h" bodystart="342" bodyend="348"/>
+    <listofallmembers>
+      <member refid="structftdi__device__list_1aa8d986c61599a7f52a4d2fa1da434a37" prot="public" virt="non-virtual"><scope>ftdi_device_list</scope><name>dev</name></member>
+      <member refid="structftdi__device__list_1aa80d0234b1a36e0e9a91605a7c74df37" prot="public" virt="non-virtual"><scope>ftdi_device_list</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

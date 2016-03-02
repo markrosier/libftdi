@@ -1,0 +1,9 @@
+# Hashes of file build rules.
+89a66b9c2a9a3457779dc7ec40a7b7b3 CMakeFiles/dist
+57e3a5d44aec7d8c21f941441ac1f68b CMakeFiles/docs
+039a6c7f9638801bf854212ae3b1f155 doc/html/index.html
+fb2b65a75cf108a90cd5136cd9cd9d9a doc/xml/ftdi_8c.xml
+03395eb2f8a8299f009d763b47ada8d9 python/CMakeFiles/doc_i
+c65a51dbe6a6e4ed5ae13ae341043c84 python/ftdi1PYTHON_wrap.c
+ae19c26e26d7c65e8cf4a39b75ec8235 python/ftdi1_doc.i
+9a27a213533b7740c2878c401dc902ed test/CMakeFiles/check

@@ -1,0 +1,1 @@
+/usr/bin/c++   -O2 -g -DNDEBUG    CMakeFiles/test_libftdi1.dir/basic.cpp.o CMakeFiles/test_libftdi1.dir/baudrate.cpp.o  -o test_libftdi1 -rdynamic ../src/libftdi1.so.2.2.0 -lboost_unit_test_framework -lusb-1.0 -Wl,-rpath,/home/mark/testcode/FTDI/libftdi/libftdi/build/src 

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classFtdi_1_1List_1_1Private" kind="class" prot="public">
+    <compoundname>Ftdi::List::Private</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classFtdi_1_1List_1_1Private_1ac95ef41346b70deaa321c0fab10f1f3a" prot="public" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="classFtdi_1_1Context" kindref="compound">Context</ref> &gt;</type>
+        <definition>std::list&lt;Context&gt; Ftdi::List::Private::list</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="472" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="472" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFtdi_1_1List_1_1Private_1a71b95c38727b514bcf0ebfb331c00b86" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structftdi__device__list" kindref="compound">ftdi_device_list</ref> *</type>
+        <definition>struct ftdi_device_list* Ftdi::List::Private::devlist</definition>
+        <argsstring></argsstring>
+        <name>devlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="473" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="473" bodyend="-1"/>
+        <referencedby refid="classFtdi_1_1List_1_1Private_1aa5429f4a34d2eb4fc714d45c4fd7bee1" compoundref="ftdi_8cpp" startline="466" endline="470">~Private</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFtdi_1_1List_1_1Private_1a2442797d80d90894573b45273392278c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::List::Private::Private</definition>
+        <argsstring>(struct ftdi_device_list *_devlist)</argsstring>
+        <name>Private</name>
+        <param>
+          <type>struct <ref refid="structftdi__device__list" kindref="compound">ftdi_device_list</ref> *</type>
+          <declname>_devlist</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="462" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="462" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="classFtdi_1_1List_1_1Private_1aa5429f4a34d2eb4fc714d45c4fd7bee1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Ftdi::List::Private::~Private</definition>
+        <argsstring>()</argsstring>
+        <name>~Private</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="466" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="466" bodyend="470"/>
+        <references refid="classFtdi_1_1List_1_1Private_1a71b95c38727b514bcf0ebfb331c00b86" compoundref="ftdi_8cpp" startline="473">devlist</references>
+        <references refid="group__libftdi_1ga35358ea578644aa309300db782415c9f" compoundref="ftdi_8c" startline="358" endline="371">ftdi_list_free</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="35">
+        <label>Ftdi::List::Private</label>
+        <link refid="classFtdi_1_1List_1_1Private"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>devlist</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>ftdi_device_list</label>
+        <link refid="structftdi__device__list"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" line="460" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp" bodystart="459" bodyend="474"/>
+    <listofallmembers>
+      <member refid="classFtdi_1_1List_1_1Private_1a71b95c38727b514bcf0ebfb331c00b86" prot="public" virt="non-virtual"><scope>Ftdi::List::Private</scope><name>devlist</name></member>
+      <member refid="classFtdi_1_1List_1_1Private_1ac95ef41346b70deaa321c0fab10f1f3a" prot="public" virt="non-virtual"><scope>Ftdi::List::Private</scope><name>list</name></member>
+      <member refid="classFtdi_1_1List_1_1Private_1a2442797d80d90894573b45273392278c" prot="public" virt="non-virtual"><scope>Ftdi::List::Private</scope><name>Private</name></member>
+      <member refid="classFtdi_1_1List_1_1Private_1aa5429f4a34d2eb4fc714d45c4fd7bee1" prot="public" virt="non-virtual"><scope>Ftdi::List::Private</scope><name>~Private</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

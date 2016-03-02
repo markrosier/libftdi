@@ -1,0 +1,653 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ftdi_8cpp" kind="file">
+    <compoundname>ftdi.cpp</compoundname>
+    <includes local="no">libusb.h</includes>
+    <includes refid="ftdi_8hpp" local="yes">ftdi.hpp</includes>
+    <includes refid="ftdi__i_8h" local="yes">ftdi_i.h</includes>
+    <includes refid="ftdi_8h" local="yes">ftdi.h</includes>
+    <incdepgraph>
+      <node id="15">
+        <label>list</label>
+      </node>
+      <node id="17">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="14">
+        <label>ftdi.hpp</label>
+        <link refid="ftdi_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="18">
+        <label>ftdi.h</label>
+        <link refid="ftdi_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ftdi.cpp</label>
+        <link refid="ftdi.cpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libusb.h</label>
+      </node>
+      <node id="21">
+        <label>ftdi_i.h</label>
+        <link refid="ftdi__i_8h"/>
+      </node>
+      <node id="20">
+        <label>sys/time.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classFtdi_1_1Context_1_1Private" prot="public">Ftdi::Context::Private</innerclass>
+    <innerclass refid="classFtdi_1_1Eeprom_1_1Private" prot="public">Ftdi::Eeprom::Private</innerclass>
+    <innerclass refid="classFtdi_1_1List_1_1Private" prot="public">Ftdi::List::Private</innerclass>
+    <innernamespace refid="namespaceFtdi">Ftdi</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftdi.cpp<sp/><sp/>-<sp/><sp/>C++<sp/>wraper<sp/>for<sp/>libftdi</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-------------------</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/>begin<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Mon<sp/>Oct<sp/>13<sp/>2008</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>copyright<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>(C)<sp/>2008-2014<sp/>by<sp/>Marek<sp/>Vavruša<sp/>/<sp/>libftdi<sp/>developers</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>email<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>opensource@intra2net.com<sp/>and<sp/>marek@vavrusa.com</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">Copyright<sp/>(C)<sp/>2008-2014<sp/>by<sp/>Marek<sp/>Vavruša<sp/>/<sp/>libftdi<sp/>developers</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">The<sp/>software<sp/>in<sp/>this<sp/>package<sp/>is<sp/>distributed<sp/>under<sp/>the<sp/>GNU<sp/>General</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">Public<sp/>License<sp/>version<sp/>2<sp/>(with<sp/>a<sp/>special<sp/>exception<sp/>described<sp/>below).</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">A<sp/>copy<sp/>of<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>(GPL)<sp/>is<sp/>included<sp/>in<sp/>this<sp/>distribution,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">in<sp/>the<sp/>file<sp/>COPYING.GPL.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">As<sp/>a<sp/>special<sp/>exception,<sp/>if<sp/>other<sp/>files<sp/>instantiate<sp/>templates<sp/>or<sp/>use<sp/>macros</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">or<sp/>inline<sp/>functions<sp/>from<sp/>this<sp/>file,<sp/>or<sp/>you<sp/>compile<sp/>this<sp/>file<sp/>and<sp/>link<sp/>it</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">with<sp/>other<sp/>works<sp/>to<sp/>produce<sp/>a<sp/>work<sp/>based<sp/>on<sp/>this<sp/>file,<sp/>this<sp/>file</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">does<sp/>not<sp/>by<sp/>itself<sp/>cause<sp/>the<sp/>resulting<sp/>work<sp/>to<sp/>be<sp/>covered</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">by<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">However<sp/>the<sp/>source<sp/>code<sp/>for<sp/>this<sp/>file<sp/>must<sp/>still<sp/>be<sp/>made<sp/>available</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">in<sp/>accordance<sp/>with<sp/>section<sp/>(3)<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">This<sp/>exception<sp/>does<sp/>not<sp/>invalidate<sp/>any<sp/>other<sp/>reasons<sp/>why<sp/>a<sp/>work<sp/>based</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">on<sp/>this<sp/>file<sp/>might<sp/>be<sp/>covered<sp/>by<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libusb.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ftdi_8hpp" kindref="compound">ftdi.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ftdi__i_8h" kindref="compound">ftdi_i.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ftdi_8h" kindref="compound">ftdi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="namespaceFtdi" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Ftdi</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classFtdi_1_1Context_1_1Private" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classFtdi_1_1Context_1_1Private" kindref="compound">Context::Private</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40" refid="classFtdi_1_1Context_1_1Private_1a04d13cee8be6a93d1990d4519426e05d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFtdi_1_1Context_1_1Private_1a04d13cee8be6a93d1990d4519426e05d" kindref="member">Private</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classFtdi_1_1Context_1_1Private_1aa5fa397d6e6021093a4f4b39e32523aa" kindref="member">open</ref>(false),<sp/><ref refid="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" kindref="member">ftdi</ref>(0),<sp/><ref refid="classFtdi_1_1Context_1_1Private_1adc445c0f495138d9b38950df3ff9d2cf" kindref="member">dev</ref>(0)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" kindref="member">ftdi</ref><sp/>=<sp/><ref refid="group__libftdi_1gafd46c6784367fd95c5f852d3b38949a8" kindref="member">ftdi_new</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classFtdi_1_1Context_1_1Private_1ac6914d23ec3542ea32c8d2b2ec525e96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFtdi_1_1Context_1_1Private_1ac6914d23ec3542ea32c8d2b2ec525e96" kindref="member">~Private</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classFtdi_1_1Context_1_1Private_1aa5fa397d6e6021093a4f4b39e32523aa" kindref="member">open</ref>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga9536eff48c7ae9313b2a97320743ee3b" kindref="member">ftdi_usb_close</ref>(<ref refid="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" kindref="member">ftdi</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga3cc28e5b7f1f50246861fcb39e7dd291" kindref="member">ftdi_free</ref>(<ref refid="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" kindref="member">ftdi</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classFtdi_1_1Context_1_1Private_1aa5fa397d6e6021093a4f4b39e32523aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1_1Private_1aa5fa397d6e6021093a4f4b39e32523aa" kindref="member">open</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structftdi__context" kindref="compound">ftdi_context</ref>*<sp/><ref refid="classFtdi_1_1Context_1_1Private_1ad7923179c336fca19a5cc3ca19a6a815" kindref="member">ftdi</ref>;</highlight></codeline>
+<codeline lineno="57" refid="classFtdi_1_1Context_1_1Private_1adc445c0f495138d9b38950df3ff9d2cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">libusb_device*<sp/><ref refid="classFtdi_1_1Context_1_1Private_1adc445c0f495138d9b38950df3ff9d2cf" kindref="member">dev</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classFtdi_1_1Context_1_1Private_1a0b0fb0d19d6e4a2f9552211e195f73c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classFtdi_1_1Context_1_1Private_1a0b0fb0d19d6e4a2f9552211e195f73c9" kindref="member">vendor</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classFtdi_1_1Context_1_1Private_1a6c042b17b2e52d060502ad2dc2d786da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classFtdi_1_1Context_1_1Private_1a6c042b17b2e52d060502ad2dc2d786da" kindref="member">description</ref>;</highlight></codeline>
+<codeline lineno="61" refid="classFtdi_1_1Context_1_1Private_1a6efce3ed52f70fb07f7b789ecc412ebe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classFtdi_1_1Context_1_1Private_1a6efce3ed52f70fb07f7b789ecc412ebe" kindref="member">serial</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classFtdi_1_1Context_1a06bd23d6d2d16489cb5abf792f368b8e" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1Context_1a06bd23d6d2d16489cb5abf792f368b8e" kindref="member">Context::Context</ref>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>d(<sp/>new<sp/><ref refid="classFtdi_1_1Context_1_1Private" kindref="compound">Private</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classFtdi_1_1Context_1ad12a84ca44914ae7c90404881c99503e" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1Context_1ad12a84ca44914ae7c90404881c99503e" kindref="member">Context::~Context</ref>()</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classFtdi_1_1Context_1a3a222cbc0ac54ea699474aa48b8d27cd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a3a222cbc0ac54ea699474aa48b8d27cd" kindref="member">Context::is_open</ref>()</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;open;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classFtdi_1_1Context_1a2669ea3eac16289990cd46cd777e295a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a71f952d1778914a33b151d0e0db3f1d6" kindref="member">Context::open</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vendor,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>product)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Open<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/><ref refid="group__libftdi_1ga95d4689db18fc1fd70011f6504ab8c40" kindref="member">ftdi_usb_open</ref>(d-&gt;ftdi,<sp/>vendor,<sp/>product);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" kindref="member">get_strings_and_reopen</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classFtdi_1_1Context_1af6c6f42c9f6c10ff960e5163f0a052c6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a71f952d1778914a33b151d0e0db3f1d6" kindref="member">Context::open</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vendor,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>product,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>serial,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>translate<sp/>empty<sp/>strings<sp/>to<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-&gt;<sp/>do<sp/>not<sp/>use<sp/>them<sp/>to<sp/>find<sp/>the<sp/>device<sp/>(vs.<sp/>require<sp/>an<sp/>empty<sp/>string<sp/>to<sp/>be<sp/>set<sp/>in<sp/>the<sp/>EEPROM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>c_description=NULL;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>c_serial=NULL;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!description.empty())</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c_description=description.c_str();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!serial.empty())</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c_serial=serial.c_str();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/><ref refid="group__libftdi_1ga3c5ccb0678b0e268b4081ea978e8eb78" kindref="member">ftdi_usb_open_desc_index</ref>(d-&gt;ftdi,<sp/>vendor,<sp/>product,<sp/>c_description,<sp/>c_serial,<sp/>index);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" kindref="member">get_strings_and_reopen</ref>();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classFtdi_1_1Context_1a6dc5ad42a05d03cbf5b43365b79a3b62" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a71f952d1778914a33b151d0e0db3f1d6" kindref="member">Context::open</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>description)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/><ref refid="group__libftdi_1gaae805b82251a61dae46b98345cd84d5c" kindref="member">ftdi_usb_open_string</ref>(d-&gt;ftdi,<sp/>description.c_str());</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" kindref="member">get_strings_and_reopen</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classFtdi_1_1Context_1a71f952d1778914a33b151d0e0db3f1d6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a71f952d1778914a33b151d0e0db3f1d6" kindref="member">Context::open</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>libusb_device<sp/>*dev)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dev<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d-&gt;dev<sp/>=<sp/>dev;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d-&gt;dev<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" kindref="member">get_strings_and_reopen</ref>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="classFtdi_1_1Context_1aad96d64cfe28b6085e384acdbcfe43fa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1aad96d64cfe28b6085e384acdbcfe43fa" kindref="member">Context::close</ref>()</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;open<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;dev<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga9536eff48c7ae9313b2a97320743ee3b" kindref="member">ftdi_usb_close</ref>(d-&gt;ftdi);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classFtdi_1_1Context_1a3d318e752b00f0822d6e2c417420afde" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a3d318e752b00f0822d6e2c417420afde" kindref="member">Context::reset</ref>()</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga266ccc351ea31289022063a8ae29edf4" kindref="member">ftdi_usb_reset</ref>(d-&gt;ftdi);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classFtdi_1_1Context_1a36cf5e632dcc34f4ccd37a02eeedcb8d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a36cf5e632dcc34f4ccd37a02eeedcb8d" kindref="member">Context::flush</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mask)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mask<sp/>&amp;<sp/><ref refid="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a087f9b8fee592efb3929c382e0804404" kindref="member">Input</ref>)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>&amp;=<sp/><ref refid="group__libftdi_1ga25a6d4766e30bd47602ed0c0ecf53476" kindref="member">ftdi_usb_purge_rx_buffer</ref>(d-&gt;ftdi);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mask<sp/>&amp;<sp/><ref refid="classFtdi_1_1Context_1a608e9a5f5e023ab5f14ba6d21ce9fed9a5c3962c84bf153b1837ca2ca8ac97886" kindref="member">Output</ref>)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>&amp;=<sp/><ref refid="group__libftdi_1ga1eab1dfd17068c46775a86496fee8bec" kindref="member">ftdi_usb_purge_tx_buffer</ref>(d-&gt;ftdi);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="classFtdi_1_1Context_1a9baf46935760b09ba2f06cd978d83a41" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a9baf46935760b09ba2f06cd978d83a41" kindref="member">Context::set_interface</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="ftdi_8h_1a9c55e66c45a0e4ec5548ee7d6e1a9265" kindref="member">ftdi_interface</ref><sp/>interface)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga6dc886d709eced377a33dc975fa6e771" kindref="member">ftdi_set_interface</ref>(d-&gt;ftdi,<sp/>interface);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="classFtdi_1_1Context_1a3eb0536f23dbd7e2df286ee01ccc03ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a3eb0536f23dbd7e2df286ee01ccc03ad" kindref="member">Context::set_usb_device</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>libusb_device_handle<sp/>*dev)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga1eb46e0bb208b64f88169b5452cf6e94" kindref="member">ftdi_set_usbdev</ref>(d-&gt;ftdi,<sp/>dev);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;dev<sp/>=<sp/>libusb_get_device(dev);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classFtdi_1_1Context_1a12d1736e590aefe7a4a3880d01961a20" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a12d1736e590aefe7a4a3880d01961a20" kindref="member">Context::set_baud_rate</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>baudrate)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1gae80f1dc38f5c80946a56ec34a329e7f5" kindref="member">ftdi_set_baudrate</ref>(d-&gt;ftdi,<sp/>baudrate);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="classFtdi_1_1Context_1acaf9f3ab2dde7b231e26cd35db4a962c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1acaf9f3ab2dde7b231e26cd35db4a962c" kindref="member">Context::set_line_property</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="ftdi_8h_1a8007a7d5e37b76307c341051769e5c6f" kindref="member">ftdi_bits_type</ref><sp/>bits,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="ftdi_8h_1a3977a883c99069e02f97e99d059dc8b8" kindref="member">ftdi_stopbits_type</ref><sp/>sbit,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="ftdi_8h_1ab0a93b5355c5155dd4fbd5beaf5d5e1d" kindref="member">ftdi_parity_type</ref><sp/>parity)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga044fdde91eaa3f557b545172622ee460" kindref="member">ftdi_set_line_property</ref>(d-&gt;ftdi,<sp/>bits,<sp/>sbit,<sp/>parity);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classFtdi_1_1Context_1a2ba24f72d62c853538f0844259a98c4f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1acaf9f3ab2dde7b231e26cd35db4a962c" kindref="member">Context::set_line_property</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="ftdi_8h_1a8007a7d5e37b76307c341051769e5c6f" kindref="member">ftdi_bits_type</ref><sp/>bits,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="ftdi_8h_1a3977a883c99069e02f97e99d059dc8b8" kindref="member">ftdi_stopbits_type</ref><sp/>sbit,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="ftdi_8h_1ab0a93b5355c5155dd4fbd5beaf5d5e1d" kindref="member">ftdi_parity_type</ref><sp/>parity,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="ftdi_8h_1ae1ca6c6246df33380443c4ba6f192025" kindref="member">ftdi_break_type</ref><sp/>break_type)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga481d055a35dd9042c1c23e2214d2655c" kindref="member">ftdi_set_line_property2</ref>(d-&gt;ftdi,<sp/>bits,<sp/>sbit,<sp/>parity,<sp/>break_type);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="classFtdi_1_1Context_1aa2ea2e266c81621ee7403e8f08a0f957" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1aa2ea2e266c81621ee7403e8f08a0f957" kindref="member">Context::get_usb_read_timeout</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="184"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;ftdi-&gt;usb_read_timeout;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="classFtdi_1_1Context_1ab4d7ad20fb8862ae6aefefc91b92e987" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1ab4d7ad20fb8862ae6aefefc91b92e987" kindref="member">Context::set_usb_read_timeout</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>usb_read_timeout)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;ftdi-&gt;usb_read_timeout<sp/>=<sp/>usb_read_timeout;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classFtdi_1_1Context_1a6174ba6d14b967fa5dcad7f3a94fbf12" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a6174ba6d14b967fa5dcad7f3a94fbf12" kindref="member">Context::get_usb_write_timeout</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="194"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;ftdi-&gt;usb_write_timeout;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="classFtdi_1_1Context_1a3f298649f0f9a13262b0ebaf4293a352" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a3f298649f0f9a13262b0ebaf4293a352" kindref="member">Context::set_usb_write_timeout</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>usb_write_timeout)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;ftdi-&gt;usb_write_timeout<sp/>=<sp/>usb_write_timeout;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="classFtdi_1_1Context_1a1858062c4dacda2ab8271cd51550b7ee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a1858062c4dacda2ab8271cd51550b7ee" kindref="member">Context::read</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga72d87e30015c98bd0be22e7c8c873345" kindref="member">ftdi_read_data</ref>(d-&gt;ftdi,<sp/>buf,<sp/>size);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="classFtdi_1_1Context_1a6e4b4df1cd2c0786b94620b4e5b2f80f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a6e4b4df1cd2c0786b94620b4e5b2f80f" kindref="member">Context::set_read_chunk_size</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>chunksize)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga65783703baf0828d519ef597bb2855c1" kindref="member">ftdi_read_data_set_chunksize</ref>(d-&gt;ftdi,<sp/>chunksize);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="classFtdi_1_1Context_1a4c482b031ffe04b12087e573e91e4b79" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a4c482b031ffe04b12087e573e91e4b79" kindref="member">Context::read_chunk_size</ref>()</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>chunk<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libftdi_1gab42b05f26b6a6545ae3ae1b4edc28e5c" kindref="member">ftdi_read_data_get_chunksize</ref>(d-&gt;ftdi,<sp/>&amp;chunk)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>chunk;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="classFtdi_1_1Context_1a5cb1b4266a68f3bd9133e52178042ddf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a5cb1b4266a68f3bd9133e52178042ddf" kindref="member">Context::write</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga01199788c36ba93352f155a79ea295e8" kindref="member">ftdi_write_data</ref>(d-&gt;ftdi,<sp/>buf,<sp/>size);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="classFtdi_1_1Context_1a54859d31d5177488aefa95067c8d4666" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a54859d31d5177488aefa95067c8d4666" kindref="member">Context::set_write_chunk_size</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>chunksize)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga85e22717c3315a09219b03a1862c0c46" kindref="member">ftdi_write_data_set_chunksize</ref>(d-&gt;ftdi,<sp/>chunksize);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="classFtdi_1_1Context_1ad4500d40d2bd07f383724968ffa945a2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1ad4500d40d2bd07f383724968ffa945a2" kindref="member">Context::write_chunk_size</ref>()</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>chunk<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libftdi_1ga5944f14ffd11faa113515ff29dc769ed" kindref="member">ftdi_write_data_get_chunksize</ref>(d-&gt;ftdi,<sp/>&amp;chunk)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>chunk;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="classFtdi_1_1Context_1a0c29fde1904335a1213ce1e1982adc24" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a0c29fde1904335a1213ce1e1982adc24" kindref="member">Context::set_flow_control</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flowctrl)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1gac3b3d2cc69edf567e653340f434c91e0" kindref="member">ftdi_setflowctrl</ref>(d-&gt;ftdi,<sp/>flowctrl);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="classFtdi_1_1Context_1ad1968faa8b41f6c49c70a55872a6bdbc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1ad1968faa8b41f6c49c70a55872a6bdbc" kindref="member">Context::set_modem_control</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mask)</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dtr<sp/>=<sp/>0,<sp/>rts<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mask<sp/>&amp;<sp/><ref refid="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a0ed23ea2a691e4398908cb7442377e37" kindref="member">Dtr</ref>)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtr<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mask<sp/>&amp;<sp/><ref refid="classFtdi_1_1Context_1ab8cd0b1f5a42a3d2517e804bd3d2c8f1a7dda31debfdeaf64b64734b881afe109" kindref="member">Rts</ref>)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rts<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga5a8f23c2e77c8b58c1f44a11e2f52aa9" kindref="member">ftdi_setdtr_rts</ref>(d-&gt;ftdi,<sp/>dtr,<sp/>rts);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="classFtdi_1_1Context_1a5f05bf405868e37d2efe50afaf377706" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a5f05bf405868e37d2efe50afaf377706" kindref="member">Context::set_dtr</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state)</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga47761f16762363288c55f5fff24620d5" kindref="member">ftdi_setdtr</ref>(d-&gt;ftdi,<sp/>state);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="classFtdi_1_1Context_1ae5e60eb0188ba8039ee7b50329779cb0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1ae5e60eb0188ba8039ee7b50329779cb0" kindref="member">Context::set_rts</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga5713ba73288b3e1ac1d45096c917c1ab" kindref="member">ftdi_setrts</ref>(d-&gt;ftdi,<sp/>state);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="classFtdi_1_1Context_1a60ebdaac48d273b925ff35c510f3c19a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a60ebdaac48d273b925ff35c510f3c19a" kindref="member">Context::set_latency</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>latency)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga3e0227b0c7aa859d2d2afb5ffa4c8466" kindref="member">ftdi_set_latency_timer</ref>(d-&gt;ftdi,<sp/>latency);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273" refid="classFtdi_1_1Context_1a7e87873dc7c2987cd588f4f4d72e7732" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a7e87873dc7c2987cd588f4f4d72e7732" kindref="member">Context::latency</ref>()</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a7e87873dc7c2987cd588f4f4d72e7732" kindref="member">latency</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1gacf7b6dcc4de33db2263ce8a421e18bfc" kindref="member">ftdi_get_latency_timer</ref>(d-&gt;ftdi,<sp/>&amp;latency);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a7e87873dc7c2987cd588f4f4d72e7732" kindref="member">latency</ref>;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="classFtdi_1_1Context_1a9204d8315dd586286535da2a68917dad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a9204d8315dd586286535da2a68917dad" kindref="member">Context::poll_modem_status</ref>()</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga396c3bf1435fb3317755868e28c47414" kindref="member">ftdi_poll_modem_status</ref>(d-&gt;ftdi,<sp/>&amp;status);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287" refid="classFtdi_1_1Context_1a7471fc6635a9ff2f98d30c5830eb7593" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a7471fc6635a9ff2f98d30c5830eb7593" kindref="member">Context::set_event_char</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>eventch,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga71eeabe2ee5474d5c0ceddc2e08766cd" kindref="member">ftdi_set_event_char</ref>(d-&gt;ftdi,<sp/>eventch,<sp/>enable);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="classFtdi_1_1Context_1a5b846e30bb38c78fd772281be7fc342b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a5b846e30bb38c78fd772281be7fc342b" kindref="member">Context::set_error_char</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>errorch,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1gaeb9510a61f6648eb1bd57f0f99a390e1" kindref="member">ftdi_set_error_char</ref>(d-&gt;ftdi,<sp/>errorch,<sp/>enable);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="classFtdi_1_1Context_1ad8a0a54d23eb0f6b8b3c77155c1b4487" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1ad8a0a54d23eb0f6b8b3c77155c1b4487" kindref="member">Context::set_bitmode</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>bitmask,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>mode)</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" kindref="member">ftdi_set_bitmode</ref>(d-&gt;ftdi,<sp/>bitmask,<sp/>mode);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="classFtdi_1_1Context_1ab419f56aee86647a9d4bbc7e348960cf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1ad8a0a54d23eb0f6b8b3c77155c1b4487" kindref="member">Context::set_bitmode</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>bitmask,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="ftdi_8h_1a2250f7812c87a96ada7fd4f19b82f666" kindref="member">ftdi_mpsse_mode</ref><sp/>mode)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" kindref="member">ftdi_set_bitmode</ref>(d-&gt;ftdi,<sp/>bitmask,<sp/>mode);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307" refid="classFtdi_1_1Context_1ace0a0738c511bf041a456b94ca096ec9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1ace0a0738c511bf041a456b94ca096ec9" kindref="member">Context::bitbang_disable</ref>()</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga42b4776b91c6b14d2d1008b160b78efa" kindref="member">ftdi_disable_bitbang</ref>(d-&gt;ftdi);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="classFtdi_1_1Context_1aa41e612799358ce70b4a5003ebcfe9ec" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1aa41e612799358ce70b4a5003ebcfe9ec" kindref="member">Context::read_pins</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pins)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1gab823dd90f2359612b1546ef0ceebdc0e" kindref="member">ftdi_read_pins</ref>(d-&gt;ftdi,<sp/>pins);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="classFtdi_1_1Context_1ab4e06e0e4bf156c0c5421ec0bbb4cdd1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classFtdi_1_1Context_1ab4e06e0e4bf156c0c5421ec0bbb4cdd1" kindref="member">Context::error_string</ref>()</highlight></codeline>
+<codeline lineno="318"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga28c84d963760d7396e5a2992e63a9354" kindref="member">ftdi_get_error_string</ref>(d-&gt;ftdi);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" kindref="member">Context::get_strings</ref>()</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Prepare<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1ab1ef11b1851c8234f5305fdfc7421887" kindref="member">vendor</ref>[512],<sp/>desc[512],<sp/><ref refid="classFtdi_1_1Context_1a3d4035444e2f78ff8d7aa37c26236df8" kindref="member">serial</ref>[512];</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/><ref refid="group__libftdi_1ga17e8eae09e58bd3bfeeab8decfce7fd9" kindref="member">ftdi_usb_get_strings</ref>(d-&gt;ftdi,<sp/>d-&gt;dev,<sp/>vendor,<sp/>512,<sp/>desc,<sp/>512,<sp/>serial,<sp/>512);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;vendor<sp/>=<sp/><ref refid="classFtdi_1_1Context_1ab1ef11b1851c8234f5305fdfc7421887" kindref="member">vendor</ref>;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;description<sp/>=<sp/>desc;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;serial<sp/>=<sp/><ref refid="classFtdi_1_1Context_1a3d4035444e2f78ff8d7aa37c26236df8" kindref="member">serial</ref>;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339" refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a6fa719a467db132076e752dd45223dbe" kindref="member">Context::get_strings_and_reopen</ref>()</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>d-&gt;dev<sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d-&gt;dev<sp/>=<sp/>libusb_get_device(d-&gt;ftdi-&gt;usb_dev);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>device<sp/>strings<sp/>(closes<sp/>device)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret=<ref refid="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" kindref="member">get_strings</ref>();</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d-&gt;open<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reattach<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="group__libftdi_1ga07d90df83e677ad08fe551de17fd7a41" kindref="member">ftdi_usb_open_dev</ref>(d-&gt;ftdi,<sp/>d-&gt;dev);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;open<sp/>=<sp/>(ret<sp/>&gt;=<sp/>0);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363" refid="classFtdi_1_1Context_1ab1ef11b1851c8234f5305fdfc7421887" refkind="member"><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classFtdi_1_1Context_1ab1ef11b1851c8234f5305fdfc7421887" kindref="member">Context::vendor</ref>()</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;vendor;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370" refid="classFtdi_1_1Context_1a1851e8cffbb77e7f7ef7adb8fa833962" refkind="member"><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classFtdi_1_1Context_1a1851e8cffbb77e7f7ef7adb8fa833962" kindref="member">Context::description</ref>()</highlight></codeline>
+<codeline lineno="371"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;description;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="classFtdi_1_1Context_1a3d4035444e2f78ff8d7aa37c26236df8" refkind="member"><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classFtdi_1_1Context_1a3d4035444e2f78ff8d7aa37c26236df8" kindref="member">Context::serial</ref>()</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;serial;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382" refid="classFtdi_1_1Context_1aaac96a16870d29bb7f59353a36524a39" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1aaac96a16870d29bb7f59353a36524a39" kindref="member">Context::set_context</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structftdi__context" kindref="compound">ftdi_context</ref>*<sp/>context)</highlight></codeline>
+<codeline lineno="383"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga3cc28e5b7f1f50246861fcb39e7dd291" kindref="member">ftdi_free</ref>(d-&gt;ftdi);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;ftdi<sp/>=<sp/><ref refid="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" kindref="member">context</ref>;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388" refid="classFtdi_1_1Context_1a09b387aa509195f40e0cd62ea626ebec" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context_1a3eb0536f23dbd7e2df286ee01ccc03ad" kindref="member">Context::set_usb_device</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>libusb_device<sp/>*dev)</highlight></codeline>
+<codeline lineno="389"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;dev<sp/>=<sp/>dev;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393" refid="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structftdi__context" kindref="compound">ftdi_context</ref>*<sp/><ref refid="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" kindref="member">Context::context</ref>()</highlight></codeline>
+<codeline lineno="394"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;ftdi;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398" refid="classFtdi_1_1Eeprom_1_1Private" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classFtdi_1_1Eeprom_1_1Private" kindref="compound">Eeprom::Private</ref></highlight></codeline>
+<codeline lineno="399"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="401" refid="classFtdi_1_1Eeprom_1_1Private_1a63564082f5d1703b9c00f261b0e47499" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFtdi_1_1Eeprom_1_1Private_1a63564082f5d1703b9c00f261b0e47499" kindref="member">Private</ref>()</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classFtdi_1_1Eeprom_1_1Private_1a32698304e80aca69bc1412f1a24812ca" kindref="member">context</ref>(0)</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405" refid="classFtdi_1_1Eeprom_1_1Private_1a9c23d26cb036d09954a824526b65777e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structftdi__eeprom" kindref="compound">ftdi_eeprom</ref><sp/><ref refid="classFtdi_1_1Eeprom_1_1Private_1a9c23d26cb036d09954a824526b65777e" kindref="member">eeprom</ref>;</highlight></codeline>
+<codeline lineno="406" refid="classFtdi_1_1Eeprom_1_1Private_1a32698304e80aca69bc1412f1a24812ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structftdi__context" kindref="compound">ftdi_context</ref>*<sp/><ref refid="classFtdi_1_1Eeprom_1_1Private_1a32698304e80aca69bc1412f1a24812ca" kindref="member">context</ref>;</highlight></codeline>
+<codeline lineno="407"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409" refid="classFtdi_1_1Eeprom_1a7ecd3ee3bb235d7d9c32b5287f509edc" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1Eeprom_1a7ecd3ee3bb235d7d9c32b5287f509edc" kindref="member">Eeprom::Eeprom</ref>(<ref refid="classFtdi_1_1Context" kindref="compound">Context</ref>*<sp/>parent)</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>d<sp/>(<sp/>new<sp/><ref refid="classFtdi_1_1Eeprom_1_1Private" kindref="compound">Private</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="411"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;context<sp/>=<sp/>parent-&gt;<ref refid="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" kindref="member">context</ref>();</highlight></codeline>
+<codeline lineno="413"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight></codeline>
+<codeline lineno="415" refid="classFtdi_1_1Eeprom_1ae7945809c4ff06b8bd386472eed26b1e" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1Eeprom_1ae7945809c4ff06b8bd386472eed26b1e" kindref="member">Eeprom::~Eeprom</ref>()</highlight></codeline>
+<codeline lineno="416"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="417"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419" refid="classFtdi_1_1Eeprom_1a6ebc4425bfe250c61cd303078ad92881" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Eeprom_1a6ebc4425bfe250c61cd303078ad92881" kindref="member">Eeprom::init_defaults</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>manufacturer,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*product,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>serial)</highlight></codeline>
+<codeline lineno="420"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga0b04717765deb6706482a3f3124c0b4a" kindref="member">ftdi_eeprom_initdefaults</ref>(d-&gt;context,<sp/>manufacturer,<sp/>product,<sp/>serial);</highlight></codeline>
+<codeline lineno="422"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424" refid="classFtdi_1_1Eeprom_1af7ab5af427de9c7464f11f1ec784c4da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Eeprom_1af7ab5af427de9c7464f11f1ec784c4da" kindref="member">Eeprom::chip_id</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*chipid)</highlight></codeline>
+<codeline lineno="425"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1gab978a76c2cc0dbfbc1fd6350db848300" kindref="member">ftdi_read_chipid</ref>(d-&gt;context,<sp/>chipid);</highlight></codeline>
+<codeline lineno="427"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429" refid="classFtdi_1_1Eeprom_1abddb318d9df2c626fffa09047d5ab549" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Eeprom_1abddb318d9df2c626fffa09047d5ab549" kindref="member">Eeprom::build</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output)</highlight></codeline>
+<codeline lineno="430"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1gaccf7f39923b4a9bbc626cca9f7ac40b1" kindref="member">ftdi_eeprom_build</ref>(d-&gt;context);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434" refid="classFtdi_1_1Eeprom_1a59ef82e22828370274fa7de627eff2e4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Eeprom_1a59ef82e22828370274fa7de627eff2e4" kindref="member">Eeprom::read</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structftdi__context_1a0389f5e2d92fcba8d7ae5beffbf33a1b" kindref="member">eeprom</ref>)</highlight></codeline>
+<codeline lineno="435"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1gac157786fdf2e9c6b51dd9b4ddbb34d5f" kindref="member">ftdi_read_eeprom</ref>(d-&gt;context);</highlight></codeline>
+<codeline lineno="437"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="439" refid="classFtdi_1_1Eeprom_1ac6fb73bd70749209c46bdd9529344392" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Eeprom_1ac6fb73bd70749209c46bdd9529344392" kindref="member">Eeprom::write</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structftdi__context_1a0389f5e2d92fcba8d7ae5beffbf33a1b" kindref="member">eeprom</ref>)</highlight></codeline>
+<codeline lineno="440"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga8cc9811660d1adfb4b30157c5ab26d5a" kindref="member">ftdi_write_eeprom</ref>(d-&gt;context);</highlight></codeline>
+<codeline lineno="442"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444" refid="classFtdi_1_1Eeprom_1aacdb0d74cceaeae77b754232c8b68f9e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Eeprom_1aacdb0d74cceaeae77b754232c8b68f9e" kindref="member">Eeprom::read_location</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eeprom_addr,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>*eeprom_val)</highlight></codeline>
+<codeline lineno="445"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga650df1dc49ec78f0ee58b1c4f2644fd9" kindref="member">ftdi_read_eeprom_location</ref>(d-&gt;context,<sp/>eeprom_addr,<sp/>eeprom_val);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449" refid="classFtdi_1_1Eeprom_1aaa79973c9fa5c44e041ad416860fa1b8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Eeprom_1aaa79973c9fa5c44e041ad416860fa1b8" kindref="member">Eeprom::write_location</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eeprom_addr,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>eeprom_val)</highlight></codeline>
+<codeline lineno="450"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga5f2f678fc05cb8f92708fb1e5eb75100" kindref="member">ftdi_write_eeprom_location</ref>(d-&gt;context,<sp/>eeprom_addr,<sp/>eeprom_val);</highlight></codeline>
+<codeline lineno="452"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="454" refid="classFtdi_1_1Eeprom_1a3044b5cd481ebbefd3c64e4653e8d6f3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Eeprom_1a3044b5cd481ebbefd3c64e4653e8d6f3" kindref="member">Eeprom::erase</ref>()</highlight></codeline>
+<codeline lineno="455"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libftdi_1ga25eb9a83a925065b6c3b61b8f0565951" kindref="member">ftdi_erase_eeprom</ref>(d-&gt;context);</highlight></codeline>
+<codeline lineno="457"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459" refid="classFtdi_1_1List_1_1Private" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classFtdi_1_1List_1_1Private" kindref="compound">List::Private</ref></highlight></codeline>
+<codeline lineno="460"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="462" refid="classFtdi_1_1List_1_1Private_1a2442797d80d90894573b45273392278c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFtdi_1_1List_1_1Private_1a2442797d80d90894573b45273392278c" kindref="member">Private</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structftdi__device__list" kindref="compound">ftdi_device_list</ref>*<sp/>_devlist)</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classFtdi_1_1List_1_1Private_1a71b95c38727b514bcf0ebfb331c00b86" kindref="member">devlist</ref>(_devlist)</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466" refid="classFtdi_1_1List_1_1Private_1aa5429f4a34d2eb4fc714d45c4fd7bee1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFtdi_1_1List_1_1Private_1aa5429f4a34d2eb4fc714d45c4fd7bee1" kindref="member">~Private</ref>()</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classFtdi_1_1List_1_1Private_1a71b95c38727b514bcf0ebfb331c00b86" kindref="member">devlist</ref>)</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga35358ea578644aa309300db782415c9f" kindref="member">ftdi_list_free</ref>(&amp;<ref refid="classFtdi_1_1List_1_1Private_1a71b95c38727b514bcf0ebfb331c00b86" kindref="member">devlist</ref>);</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="472" refid="classFtdi_1_1List_1_1Private_1ac95ef41346b70deaa321c0fab10f1f3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;Context&gt;<sp/><ref refid="classFtdi_1_1List_1_1Private_1ac95ef41346b70deaa321c0fab10f1f3a" kindref="member">list</ref>;</highlight></codeline>
+<codeline lineno="473" refid="classFtdi_1_1List_1_1Private_1a71b95c38727b514bcf0ebfb331c00b86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structftdi__device__list" kindref="compound">ftdi_device_list</ref>*<sp/><ref refid="classFtdi_1_1List_1_1Private_1a71b95c38727b514bcf0ebfb331c00b86" kindref="member">devlist</ref>;</highlight></codeline>
+<codeline lineno="474"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476" refid="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" kindref="member">List::List</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structftdi__device__list" kindref="compound">ftdi_device_list</ref>*<sp/>devlist)</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>d(<sp/>new<sp/><ref refid="classFtdi_1_1List_1_1Private" kindref="compound">Private</ref>(devlist)<sp/>)</highlight></codeline>
+<codeline lineno="478"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(devlist<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>devlist<sp/>!=<sp/>0;<sp/>devlist<sp/>=<sp/>devlist-&gt;<ref refid="structftdi__device__list_1aa80d0234b1a36e0e9a91605a7c74df37" kindref="member">next</ref>)</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classFtdi_1_1Context" kindref="compound">Context</ref><sp/>c;</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.<ref refid="classFtdi_1_1Context_1a3eb0536f23dbd7e2df286ee01ccc03ad" kindref="member">set_usb_device</ref>(devlist-&gt;<ref refid="structftdi__device__list_1aa8d986c61599a7f52a4d2fa1da434a37" kindref="member">dev</ref>);</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.<ref refid="classFtdi_1_1Context_1aaaf4d528fe4d70502b14582702103db8" kindref="member">get_strings</ref>();</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d-&gt;list.push_back(c);</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="490"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492" refid="classFtdi_1_1List_1a0d6814256d82692d46483733c71037d7" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a0d6814256d82692d46483733c71037d7" kindref="member">List::~List</ref>()</highlight></codeline>
+<codeline lineno="493"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="494"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight></codeline>
+<codeline lineno="500" refid="classFtdi_1_1List_1a420ec5202f3c6a12de1b76c4842df42e" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">List::iterator</ref><sp/><ref refid="classFtdi_1_1List_1a420ec5202f3c6a12de1b76c4842df42e" kindref="member">List::begin</ref>()</highlight></codeline>
+<codeline lineno="501"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.begin();</highlight></codeline>
+<codeline lineno="503"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509" refid="classFtdi_1_1List_1aabc5f6a4b69536ca68b7f364ba58d336" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">List::iterator</ref><sp/><ref refid="classFtdi_1_1List_1aabc5f6a4b69536ca68b7f364ba58d336" kindref="member">List::end</ref>()</highlight></codeline>
+<codeline lineno="510"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.end();</highlight></codeline>
+<codeline lineno="512"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518" refid="classFtdi_1_1List_1a44324c9283431e517015f8dcaf79c671" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a89f81377906bec5c14d262a959ac4bb0" kindref="member">List::const_iterator</ref><sp/><ref refid="classFtdi_1_1List_1a420ec5202f3c6a12de1b76c4842df42e" kindref="member">List::begin</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="519"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.begin();</highlight></codeline>
+<codeline lineno="521"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527" refid="classFtdi_1_1List_1a2b9d18da515254078ae0757a568bcbe0" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a89f81377906bec5c14d262a959ac4bb0" kindref="member">List::const_iterator</ref><sp/><ref refid="classFtdi_1_1List_1aabc5f6a4b69536ca68b7f364ba58d336" kindref="member">List::end</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="528"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.end();</highlight></codeline>
+<codeline lineno="530"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536" refid="classFtdi_1_1List_1a691d51ae1d7e04cc7100241fda7226b9" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a5031c32928ad47f6a8c9b425a557c998" kindref="member">List::reverse_iterator</ref><sp/><ref refid="classFtdi_1_1List_1a691d51ae1d7e04cc7100241fda7226b9" kindref="member">List::rbegin</ref>()</highlight></codeline>
+<codeline lineno="537"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.rbegin();</highlight></codeline>
+<codeline lineno="539"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545" refid="classFtdi_1_1List_1aaeae5fdd0a1595cfbca8c558b89d90df" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a5031c32928ad47f6a8c9b425a557c998" kindref="member">List::reverse_iterator</ref><sp/><ref refid="classFtdi_1_1List_1aaeae5fdd0a1595cfbca8c558b89d90df" kindref="member">List::rend</ref>()</highlight></codeline>
+<codeline lineno="546"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.rend();</highlight></codeline>
+<codeline lineno="548"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"></highlight></codeline>
+<codeline lineno="554" refid="classFtdi_1_1List_1a800f8c1061eda755de332f61d53c474d" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a40ba96ede36bc45a2b22e0a9ceba9cc0" kindref="member">List::const_reverse_iterator</ref><sp/><ref refid="classFtdi_1_1List_1a691d51ae1d7e04cc7100241fda7226b9" kindref="member">List::rbegin</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="555"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.rbegin();</highlight></codeline>
+<codeline lineno="557"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight></codeline>
+<codeline lineno="563" refid="classFtdi_1_1List_1a80e0fdf70716da822af2c55e93a855fd" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a40ba96ede36bc45a2b22e0a9ceba9cc0" kindref="member">List::const_reverse_iterator</ref><sp/><ref refid="classFtdi_1_1List_1aaeae5fdd0a1595cfbca8c558b89d90df" kindref="member">List::rend</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="564"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.rend();</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"></highlight></codeline>
+<codeline lineno="573" refid="classFtdi_1_1List_1a2d76af7ee18d62d11f8048df95f05a69" refkind="member"><highlight class="normal">List::ListType::size_type<sp/><ref refid="classFtdi_1_1List_1a2d76af7ee18d62d11f8048df95f05a69" kindref="member">List::size</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="574"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.size();</highlight></codeline>
+<codeline lineno="576"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"></highlight></codeline>
+<codeline lineno="582" refid="classFtdi_1_1List_1a1d7362506f1d331d5ffafb8d68868d07" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1List_1a1d7362506f1d331d5ffafb8d68868d07" kindref="member">List::empty</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="583"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.empty();</highlight></codeline>
+<codeline lineno="585"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592" refid="classFtdi_1_1List_1a3e518597e7e1d8cce072fbf0c75a9d32" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1List_1a3e518597e7e1d8cce072fbf0c75a9d32" kindref="member">List::clear</ref>()</highlight></codeline>
+<codeline lineno="593"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFtdi_1_1List_1a0f7f7fad56e8d14e0b96f9b985a433ad" kindref="member">ListType</ref>().swap(d-&gt;list);</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Free<sp/>device<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d-&gt;devlist)</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga35358ea578644aa309300db782415c9f" kindref="member">ftdi_list_free</ref>(&amp;d-&gt;devlist);</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d-&gt;devlist<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="602"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="608" refid="classFtdi_1_1List_1a280cb7466bcdc7afbcf27893f6bba4df" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1List_1a280cb7466bcdc7afbcf27893f6bba4df" kindref="member">List::push_back</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context" kindref="compound">Context</ref>&amp;<sp/>element)</highlight></codeline>
+<codeline lineno="609"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;list.push_back(element);</highlight></codeline>
+<codeline lineno="611"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617" refid="classFtdi_1_1List_1ae5bbd5d4b9c5c8c159a50a4f25a4c896" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1List_1ae5bbd5d4b9c5c8c159a50a4f25a4c896" kindref="member">List::push_front</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1Context" kindref="compound">Context</ref>&amp;<sp/>element)</highlight></codeline>
+<codeline lineno="618"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/>d-&gt;list.push_front(element);</highlight></codeline>
+<codeline lineno="620"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"></highlight></codeline>
+<codeline lineno="627" refid="classFtdi_1_1List_1a608e4633a7bac3a39ac51fd67f190a89" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">List::iterator</ref><sp/><ref refid="classFtdi_1_1List_1a608e4633a7bac3a39ac51fd67f190a89" kindref="member">List::erase</ref>(<ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref><sp/>pos)</highlight></codeline>
+<codeline lineno="628"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.erase(pos);</highlight></codeline>
+<codeline lineno="630"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"></highlight></codeline>
+<codeline lineno="638" refid="classFtdi_1_1List_1a318bc7283fa5ae8ad4c102a4aec7af27" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">List::iterator</ref><sp/><ref refid="classFtdi_1_1List_1a608e4633a7bac3a39ac51fd67f190a89" kindref="member">List::erase</ref>(<ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref><sp/>beg,<sp/><ref refid="classFtdi_1_1List_1a42dc7256a0cacb1534388b272d71a6e1" kindref="member">iterator</ref><sp/>end)</highlight></codeline>
+<codeline lineno="639"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d-&gt;list.erase(beg,<sp/>end);</highlight></codeline>
+<codeline lineno="641"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"></highlight></codeline>
+<codeline lineno="643" refid="classFtdi_1_1List_1ab7f76e262b065f3b1d36a51c20fa0feb" refkind="member"><highlight class="normal"><ref refid="classFtdi_1_1List" kindref="compound">List</ref>*<sp/><ref refid="classFtdi_1_1List_1ab7f76e262b065f3b1d36a51c20fa0feb" kindref="member">List::find_all</ref>(<ref refid="classFtdi_1_1Context" kindref="compound">Context</ref><sp/>&amp;context,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vendor,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>product)</highlight></codeline>
+<codeline lineno="644"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="645"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structftdi__device__list" kindref="compound">ftdi_device_list</ref>*<sp/>dlist<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga2845a0c63809747c9c7b1ea404453bc4" kindref="member">ftdi_usb_find_all</ref>(context.<ref refid="classFtdi_1_1Context_1ae7cb8331c5eab1d7aa4ade40a1bd5b9e" kindref="member">context</ref>(),<sp/>&amp;dlist,<sp/>vendor,<sp/>product);</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classFtdi_1_1List_1a9f005b9f8886ab85e43a2ea5b019b72d" kindref="member">List</ref>(dlist);</highlight></codeline>
+<codeline lineno="648"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"></highlight></codeline>
+<codeline lineno="650"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/ftdipp/ftdi.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ftdi__stream_8c" kind="file">
+    <compoundname>ftdi_stream.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">libusb.h</includes>
+    <includes refid="ftdi_8h" local="yes">ftdi.h</includes>
+    <incdepgraph>
+      <node id="49">
+        <label>stdint.h</label>
+      </node>
+      <node id="45">
+        <label>stdlib.h</label>
+      </node>
+      <node id="44">
+        <label>ftdi_stream.c</label>
+        <link refid="ftdi_stream.c"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>ftdi.h</label>
+        <link refid="ftdi_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>libusb.h</label>
+      </node>
+      <node id="50">
+        <label>sys/time.h</label>
+      </node>
+      <node id="46">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structFTDIStreamState" prot="public">FTDIStreamState</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ftdi__stream_8c_1aa61c68294fe4060ed44602c492bd2f95" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void LIBUSB_CALL</type>
+        <definition>static void LIBUSB_CALL ftdi_readstream_cb</definition>
+        <argsstring>(struct libusb_transfer *transfer)</argsstring>
+        <name>ftdi_readstream_cb</name>
+        <param>
+          <type>struct libusb_transfer *</type>
+          <declname>transfer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_stream.c" line="65" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_stream.c" bodystart="65" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="ftdi__stream_8c_1ae32766212b0bee6078d58a29037d4c68" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double TimevalDiff</definition>
+        <argsstring>(const struct timeval *a, const struct timeval *b)</argsstring>
+        <name>TimevalDiff</name>
+        <param>
+          <type>const struct timeval *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const struct timeval *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function to calculate (unix) time differences</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timeval </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timeval </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_stream.c" line="121" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_stream.c" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ftdi_readstream</definition>
+        <argsstring>(struct ftdi_context *ftdi, FTDIStreamCallback *callback, void *userdata, int packetsPerTransfer, int numTransfers)</argsstring>
+        <name>ftdi_readstream</name>
+        <param>
+          <type>struct <ref refid="structftdi__context" kindref="compound">ftdi_context</ref> *</type>
+          <declname>ftdi</declname>
+        </param>
+        <param>
+          <type><ref refid="ftdi_8h_1aaebecac513598988595fe3fbbbdd3776" kindref="member">FTDIStreamCallback</ref> *</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>packetsPerTransfer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numTransfers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Streaming reading of data from the device</para><para>Use asynchronous transfers in libusb-1.0 for high-performance streaming of data from a device interface back to the PC. This function continuously transfers data until either an error occurs or the callback returns a nonzero value. This function returns a libusb error code or the callback&apos;s return value.</para><para>For every contiguous block of received data, the callback will be invoked.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ftdi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to <ref refid="structftdi__context" kindref="compound">ftdi_context</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to user supplied function for one block of data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packetsPerTransfer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of packets per transfer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numTransfers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of transfers per callback </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_stream.c" line="147" column="1" bodyfile="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_stream.c" bodystart="147" bodyend="298"/>
+        <references refid="structFTDIStreamState_1af3e8d999a90427f8118de502bf09e9ef" compoundref="ftdi__stream_8c" startline="53">FTDIStreamState::activity</references>
+        <references refid="ftdi_8h_1a2250f7812c87a96ada7fd4f19b82f666a9a39449cbe4c114e1e6bfa7d699470d0" compoundref="ftdi_8h" startline="59">BITMODE_RESET</references>
+        <references refid="ftdi_8h_1a2250f7812c87a96ada7fd4f19b82f666a4fe662925e32ff8144d116c244a384e0" compoundref="ftdi_8h" startline="67">BITMODE_SYNCFF</references>
+        <references refid="structFTDIStreamState_1ad7deafbf03aa81c36dfd1fe72e1be26a" compoundref="ftdi__stream_8c" startline="50">FTDIStreamState::callback</references>
+        <references refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" compoundref="ftdi_8h" startline="436">FTDIProgressInfo::current</references>
+        <references refid="structFTDIProgressInfo_1a9bd1dfc76038bd295a1b470150c6a4a7" compoundref="ftdi_8h" startline="439">FTDIProgressInfo::currentRate</references>
+        <references refid="structFTDIProgressInfo_1a8f6fb0a969b2e347555cb543dfb25df6" compoundref="ftdi_8h" startline="434">FTDIProgressInfo::first</references>
+        <references refid="group__libftdi_1ga28c84d963760d7396e5a2992e63a9354" compoundref="ftdi_8c" startline="4368" endline="4374">ftdi_get_error_string</references>
+        <references refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" compoundref="ftdi_8c" startline="1933" endline="1948">ftdi_set_bitmode</references>
+        <references refid="group__libftdi_1ga3089d7ceafad896c007111b8e5c02906" compoundref="ftdi_8c" startline="958" endline="974">ftdi_usb_purge_buffers</references>
+        <references refid="structftdi__context_1a7ca2f7e68cd28e1c3079d029fd6129c0" compoundref="ftdi_8h" startline="249">ftdi_context::max_packet_size</references>
+        <references refid="structftdi__context_1a079427d8f2c09102bcadb9118e60c0ec" compoundref="ftdi_8h" startline="259">ftdi_context::out_ep</references>
+        <references refid="structFTDIProgressInfo_1aa52b1270a1672175823f96841cbfa90b" compoundref="ftdi_8h" startline="435">FTDIProgressInfo::prev</references>
+        <references refid="structFTDIStreamState_1af171d0f207896b44eafda991654d1f81" compoundref="ftdi__stream_8c" startline="55">FTDIStreamState::progress</references>
+        <references refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" compoundref="ftdi__stream_8c" startline="54">FTDIStreamState::result</references>
+        <references refid="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" compoundref="ftdi_8h" startline="429">size_and_time::time</references>
+        <references refid="structsize__and__time_1aabc8d7998efabbe4b2807fe47c3320cf" compoundref="ftdi_8h" startline="428">size_and_time::totalBytes</references>
+        <references refid="structFTDIProgressInfo_1a93d286aab4f3eb6ebe74607e4ff7ffb2" compoundref="ftdi_8h" startline="438">FTDIProgressInfo::totalRate</references>
+        <references refid="structFTDIProgressInfo_1a95057afd13aaa69e72e14dd00c810e9d" compoundref="ftdi_8h" startline="437">FTDIProgressInfo::totalTime</references>
+        <references refid="structftdi__context_1a2e565f92e6a559d75cf4828ed46d0109" compoundref="ftdi_8h" startline="233">ftdi_context::type</references>
+        <references refid="ftdi_8h_1a026dc3f26fbc7f5ef67c75f0739385cea1beb33ef9cca96d6a05f8fd7f1fdb92f" compoundref="ftdi_8h" startline="42">TYPE_2232H</references>
+        <references refid="ftdi_8h_1a026dc3f26fbc7f5ef67c75f0739385ceae4ab54d4dadd460324ae2417b50bcb8f" compoundref="ftdi_8h" startline="44">TYPE_232H</references>
+        <references refid="structftdi__context_1a05bd064e6608ee91b641eff379455e9f" compoundref="ftdi_8h" startline="223">ftdi_context::usb_ctx</references>
+        <references refid="structftdi__context_1a1ea9e9fd3211a568779022befc0b3af8" compoundref="ftdi_8h" startline="225">ftdi_context::usb_dev</references>
+        <references refid="structftdi__context_1afa159483bb1153259ee7ceb3b45a2c9f" compoundref="ftdi_8h" startline="227">ftdi_context::usb_read_timeout</references>
+        <references refid="structFTDIStreamState_1aed6ab260ee8a0882d5ac8c94e4f2192b" compoundref="ftdi__stream_8c" startline="51">FTDIStreamState::userdata</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftdi_stream.c<sp/><sp/>-<sp/><sp/>description</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-------------------</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/>copyright<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>(C)<sp/>2009<sp/>Micah<sp/>Dowty<sp/>2010<sp/>Uwe<sp/>Bonnes</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>email<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>opensource@intra2net.com</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>version<sp/>2.1<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Adapted<sp/>from</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>fastftdi.c<sp/>-<sp/>A<sp/>minimal<sp/>FTDI<sp/>FT232H<sp/>interface<sp/>for<sp/>which<sp/>supports<sp/>bit-bang</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode,<sp/>but<sp/>focuses<sp/>on<sp/>very<sp/>high-performance<sp/>support<sp/>for</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>synchronous<sp/>FIFO<sp/>mode.<sp/>Requires<sp/>libusb-1.0</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2009<sp/>Micah<sp/>Dowty</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libusb.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ftdi_8h" kindref="compound">ftdi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structFTDIStreamState" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50" refid="structFTDIStreamState_1ad7deafbf03aa81c36dfd1fe72e1be26a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ftdi_8h_1aaebecac513598988595fe3fbbbdd3776" kindref="member">FTDIStreamCallback</ref><sp/>*<ref refid="structFTDIStreamState_1ad7deafbf03aa81c36dfd1fe72e1be26a" kindref="member">callback</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structFTDIStreamState_1aed6ab260ee8a0882d5ac8c94e4f2192b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structFTDIStreamState_1aed6ab260ee8a0882d5ac8c94e4f2192b" kindref="member">userdata</ref>;</highlight></codeline>
+<codeline lineno="52" refid="structFTDIStreamState_1aa8a00a2459dbb9bfa6947ce5b824b610" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFTDIStreamState_1aa8a00a2459dbb9bfa6947ce5b824b610" kindref="member">packetsize</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structFTDIStreamState_1af3e8d999a90427f8118de502bf09e9ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFTDIStreamState_1af3e8d999a90427f8118de502bf09e9ef" kindref="member">activity</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" kindref="member">result</ref>;</highlight></codeline>
+<codeline lineno="55" refid="structFTDIStreamState_1af171d0f207896b44eafda991654d1f81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structFTDIProgressInfo" kindref="compound">FTDIProgressInfo</ref><sp/><ref refid="structFTDIStreamState_1af171d0f207896b44eafda991654d1f81" kindref="member">progress</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/><ref refid="structFTDIStreamState" kindref="compound">FTDIStreamState</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Handle<sp/>callbacks</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*<sp/>With<sp/>Exit<sp/>request,<sp/>free<sp/>memory<sp/>and<sp/>release<sp/>the<sp/>transfer</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*<sp/>state-&gt;result<sp/>is<sp/>only<sp/>set<sp/>when<sp/>some<sp/>error<sp/>happens</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LIBUSB_CALL</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">ftdi_readstream_cb(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>libusb_transfer<sp/>*transfer)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structFTDIStreamState" kindref="compound">FTDIStreamState</ref><sp/>*state<sp/>=<sp/>transfer-&gt;user_data;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>packet_size<sp/>=<sp/>state-&gt;<ref refid="structFTDIStreamState_1aa8a00a2459dbb9bfa6947ce5b824b610" kindref="member">packetsize</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structFTDIStreamState_1af3e8d999a90427f8118de502bf09e9ef" kindref="member">activity</ref>++;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(transfer-&gt;status<sp/>==<sp/>LIBUSB_TRANSFER_COMPLETED)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*ptr<sp/>=<sp/>transfer-&gt;buffer;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>transfer-&gt;actual_length;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPackets<sp/>=<sp/>(length<sp/>+<sp/>packet_size<sp/>-<sp/>1)<sp/>/<sp/>packet_size;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numPackets;<sp/>i++)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>payloadLen;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>packetLen<sp/>=<sp/>length;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(packetLen<sp/>&gt;<sp/>packet_size)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>packetLen<sp/>=<sp/>packet_size;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>payloadLen<sp/>=<sp/>packetLen<sp/>-<sp/>2;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structFTDIStreamState_1af171d0f207896b44eafda991654d1f81" kindref="member">progress</ref>.<ref refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" kindref="member">current</ref>.<ref refid="structsize__and__time_1aabc8d7998efabbe4b2807fe47c3320cf" kindref="member">totalBytes</ref><sp/>+=<sp/>payloadLen;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/>state-&gt;<ref refid="structFTDIStreamState_1ad7deafbf03aa81c36dfd1fe72e1be26a" kindref="member">callback</ref>(ptr<sp/>+<sp/>2,<sp/>payloadLen,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/>state-&gt;<ref refid="structFTDIStreamState_1aed6ab260ee8a0882d5ac8c94e4f2192b" kindref="member">userdata</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>+=<sp/>packetLen;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length<sp/>-=<sp/>packetLen;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(res)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(transfer-&gt;buffer);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>libusb_free_transfer(transfer);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transfer-&gt;status<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" kindref="member">result</ref><sp/>=<sp/>libusb_submit_transfer(transfer);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;unknown<sp/>status<sp/>%d\n&quot;</highlight><highlight class="normal">,transfer-&gt;status);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" kindref="member">result</ref><sp/>=<sp/>LIBUSB_ERROR_IO;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">TimevalDiff(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timeval<sp/>*a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timeval<sp/>*b)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(a-&gt;tv_sec<sp/>-<sp/>b-&gt;tv_sec)<sp/>+<sp/>1e-6<sp/>*<sp/>(a-&gt;tv_usec<sp/>-<sp/>b-&gt;tv_usec);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" refkind="member"><highlight class="normal"><ref refid="ftdi__stream_8c_1abffdbbc8e303b2e4e85551734682a0b4" kindref="member">ftdi_readstream</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structftdi__context" kindref="compound">ftdi_context</ref><sp/>*ftdi,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ftdi_8h_1aaebecac513598988595fe3fbbbdd3776" kindref="member">FTDIStreamCallback</ref><sp/>*callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>packetsPerTransfer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numTransfers)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">libusb_transfer<sp/>**transfers;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structFTDIStreamState" kindref="compound">FTDIStreamState</ref><sp/>state<sp/>=<sp/>{<sp/>callback,<sp/>userdata,<sp/>ftdi-&gt;<ref refid="structftdi__context_1a7ca2f7e68cd28e1c3079d029fd6129c0" kindref="member">max_packet_size</ref>,<sp/>1<sp/>};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bufferSize<sp/>=<sp/>packetsPerTransfer<sp/>*<sp/>ftdi-&gt;<ref refid="structftdi__context_1a7ca2f7e68cd28e1c3079d029fd6129c0" kindref="member">max_packet_size</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xferIndex;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Only<sp/>FT2232H<sp/>and<sp/>FT232H<sp/>know<sp/>about<sp/>the<sp/>synchronous<sp/>FIFO<sp/>Mode*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ftdi-&gt;<ref refid="structftdi__context_1a2e565f92e6a559d75cf4828ed46d0109" kindref="member">type</ref><sp/>!=<sp/><ref refid="ftdi_8h_1a026dc3f26fbc7f5ef67c75f0739385cea1beb33ef9cca96d6a05f8fd7f1fdb92f" kindref="member">TYPE_2232H</ref>)<sp/>&amp;&amp;<sp/>(ftdi-&gt;<ref refid="structftdi__context_1a2e565f92e6a559d75cf4828ed46d0109" kindref="member">type</ref><sp/>!=<sp/><ref refid="ftdi_8h_1a026dc3f26fbc7f5ef67c75f0739385ceae4ab54d4dadd460324ae2417b50bcb8f" kindref="member">TYPE_232H</ref>))</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Device<sp/>doesn&apos;t<sp/>support<sp/>synchronous<sp/>FIFO<sp/>mode\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>don&apos;t<sp/>know<sp/>in<sp/>what<sp/>state<sp/>we<sp/>are,<sp/>switch<sp/>to<sp/>reset*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" kindref="member">ftdi_set_bitmode</ref>(ftdi,<sp/><sp/>0xff,<sp/><ref refid="ftdi_8h_1a2250f7812c87a96ada7fd4f19b82f666a9a39449cbe4c114e1e6bfa7d699470d0" kindref="member">BITMODE_RESET</ref>)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>reset<sp/>mode\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Purge<sp/>anything<sp/>remaining<sp/>in<sp/>the<sp/>buffers*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libftdi_1ga3089d7ceafad896c007111b8e5c02906" kindref="member">ftdi_usb_purge_buffers</ref>(ftdi)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>Purge\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Set<sp/>up<sp/>all<sp/>transfers</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>transfers<sp/>=<sp/>calloc(numTransfers,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*transfers);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!transfers)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>LIBUSB_ERROR_NO_MEM;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>cleanup;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(xferIndex<sp/>=<sp/>0;<sp/>xferIndex<sp/>&lt;<sp/>numTransfers;<sp/>xferIndex++)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">libusb_transfer<sp/>*transfer;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transfer<sp/>=<sp/>libusb_alloc_transfer(0);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transfers[xferIndex]<sp/>=<sp/>transfer;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!transfer)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>LIBUSB_ERROR_NO_MEM;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>cleanup;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>libusb_fill_bulk_transfer(transfer,<sp/>ftdi-&gt;<ref refid="structftdi__context_1a1ea9e9fd3211a568779022befc0b3af8" kindref="member">usb_dev</ref>,<sp/>ftdi-&gt;<ref refid="structftdi__context_1a079427d8f2c09102bcadb9118e60c0ec" kindref="member">out_ep</ref>,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>malloc(bufferSize),<sp/>bufferSize,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ftdi_readstream_cb,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;state,<sp/>0);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!transfer-&gt;buffer)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>LIBUSB_ERROR_NO_MEM;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>cleanup;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transfer-&gt;status<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>libusb_submit_transfer(transfer);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>cleanup;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Start<sp/>the<sp/>transfers<sp/>only<sp/>when<sp/>everything<sp/>has<sp/>been<sp/>set<sp/>up.</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Otherwise<sp/>the<sp/>transfers<sp/>start<sp/>stuttering<sp/>and<sp/>the<sp/>PC<sp/>not</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>fetching<sp/>data<sp/>for<sp/>several<sp/>to<sp/>several<sp/>ten<sp/>milliseconds</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>we<sp/>skip<sp/>blocks</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libftdi_1ga83b41e900a1faf2ecc0546ce48ec7e70" kindref="member">ftdi_set_bitmode</ref>(ftdi,<sp/><sp/>0xff,<sp/><ref refid="ftdi_8h_1a2250f7812c87a96ada7fd4f19b82f666a4fe662925e32ff8144d116c244a384e0" kindref="member">BITMODE_SYNCFF</ref>)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>set<sp/>synchronous<sp/>fifo<sp/>mode:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libftdi_1ga28c84d963760d7396e5a2992e63a9354" kindref="member">ftdi_get_error_string</ref>(ftdi));</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>cleanup;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="231"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Run<sp/>the<sp/>transfers,<sp/>and<sp/>periodically<sp/>assess<sp/>progress.</highlight></codeline>
+<codeline lineno="232"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>gettimeofday(&amp;state.<ref refid="structFTDIStreamState_1af171d0f207896b44eafda991654d1f81" kindref="member">progress</ref>.<ref refid="structFTDIProgressInfo_1a8f6fb0a969b2e347555cb543dfb25df6" kindref="member">first</ref>.<ref refid="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" kindref="member">time</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structFTDIProgressInfo" kindref="compound">FTDIProgressInfo</ref><sp/><sp/>*progress<sp/>=<sp/>&amp;state.<ref refid="structFTDIStreamState_1af171d0f207896b44eafda991654d1f81" kindref="member">progress</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>progressInterval<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>timeout<sp/>=<sp/>{<sp/>0,<sp/>ftdi-&gt;<ref refid="structftdi__context_1afa159483bb1153259ee7ceb3b45a2c9f" kindref="member">usb_read_timeout</ref><sp/>};</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>now;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>libusb_handle_events_timeout(ftdi-&gt;<ref refid="structftdi__context_1a05bd064e6608ee91b641eff379455e9f" kindref="member">usb_ctx</ref>,<sp/>&amp;timeout);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/><sp/>LIBUSB_ERROR_INTERRUPTED)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>restart<sp/>interrupted<sp/>events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>libusb_handle_events_timeout(ftdi-&gt;<ref refid="structftdi__context_1a05bd064e6608ee91b641eff379455e9f" kindref="member">usb_ctx</ref>,<sp/>&amp;timeout);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!state.<ref refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" kindref="member">result</ref>)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" kindref="member">result</ref><sp/>=<sp/>err;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state.<ref refid="structFTDIStreamState_1af3e8d999a90427f8118de502bf09e9ef" kindref="member">activity</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" kindref="member">result</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="structFTDIStreamState_1af3e8d999a90427f8118de502bf09e9ef" kindref="member">activity</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>enough<sp/>time<sp/>has<sp/>elapsed,<sp/>update<sp/>the<sp/>progress</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gettimeofday(&amp;now,<sp/>NULL);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(TimevalDiff(&amp;now,<sp/>&amp;progress-&gt;<ref refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" kindref="member">current</ref>.<ref refid="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" kindref="member">time</ref>)<sp/>&gt;=<sp/>progressInterval)</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progress-&gt;<ref refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" kindref="member">current</ref>.<ref refid="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" kindref="member">time</ref><sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progress-&gt;<ref refid="structFTDIProgressInfo_1a95057afd13aaa69e72e14dd00c810e9d" kindref="member">totalTime</ref><sp/>=<sp/>TimevalDiff(&amp;progress-&gt;<ref refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" kindref="member">current</ref>.<ref refid="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" kindref="member">time</ref>,</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;progress-&gt;<ref refid="structFTDIProgressInfo_1a8f6fb0a969b2e347555cb543dfb25df6" kindref="member">first</ref>.<ref refid="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" kindref="member">time</ref>);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(progress-&gt;<ref refid="structFTDIProgressInfo_1aa52b1270a1672175823f96841cbfa90b" kindref="member">prev</ref>.<ref refid="structsize__and__time_1aabc8d7998efabbe4b2807fe47c3320cf" kindref="member">totalBytes</ref>)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>have<sp/>enough<sp/>information<sp/>to<sp/>calculate<sp/>rates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>currentTime;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentTime<sp/>=<sp/>TimevalDiff(&amp;progress-&gt;<ref refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" kindref="member">current</ref>.<ref refid="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" kindref="member">time</ref>,</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;progress-&gt;<ref refid="structFTDIProgressInfo_1aa52b1270a1672175823f96841cbfa90b" kindref="member">prev</ref>.<ref refid="structsize__and__time_1abbce72027653d30f547cdb00a18cb57c" kindref="member">time</ref>);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progress-&gt;<ref refid="structFTDIProgressInfo_1a93d286aab4f3eb6ebe74607e4ff7ffb2" kindref="member">totalRate</ref><sp/>=</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progress-&gt;<ref refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" kindref="member">current</ref>.<ref refid="structsize__and__time_1aabc8d7998efabbe4b2807fe47c3320cf" kindref="member">totalBytes</ref><sp/>/progress-&gt;<ref refid="structFTDIProgressInfo_1a95057afd13aaa69e72e14dd00c810e9d" kindref="member">totalTime</ref>;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progress-&gt;<ref refid="structFTDIProgressInfo_1a9bd1dfc76038bd295a1b470150c6a4a7" kindref="member">currentRate</ref><sp/>=</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(progress-&gt;<ref refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" kindref="member">current</ref>.<ref refid="structsize__and__time_1aabc8d7998efabbe4b2807fe47c3320cf" kindref="member">totalBytes</ref><sp/>-</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progress-&gt;<ref refid="structFTDIProgressInfo_1aa52b1270a1672175823f96841cbfa90b" kindref="member">prev</ref>.<ref refid="structsize__and__time_1aabc8d7998efabbe4b2807fe47c3320cf" kindref="member">totalBytes</ref>)<sp/>/<sp/>currentTime;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="structFTDIStreamState_1ad7deafbf03aa81c36dfd1fe72e1be26a" kindref="member">callback</ref>(NULL,<sp/>0,<sp/>progress,<sp/>state.<ref refid="structFTDIStreamState_1aed6ab260ee8a0882d5ac8c94e4f2192b" kindref="member">userdata</ref>);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progress-&gt;<ref refid="structFTDIProgressInfo_1aa52b1270a1672175823f96841cbfa90b" kindref="member">prev</ref><sp/>=<sp/>progress-&gt;<ref refid="structFTDIProgressInfo_1ab250ef1fc6f8d3d42d7ce428a2f1e5f2" kindref="member">current</ref>;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!state.<ref refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" kindref="member">result</ref>);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="287"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Cancel<sp/>any<sp/>outstanding<sp/>transfers,<sp/>and<sp/>free<sp/>memory.</highlight></codeline>
+<codeline lineno="288"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">cleanup:</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;cleanup\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(transfers)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(transfers);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state.<ref refid="structFTDIStreamState_1af28e11102a214cbd87760577a7c2668d" kindref="member">result</ref>;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/mark/testcode/FTDI/libftdi/libftdi/src/ftdi_stream.c"/>
+  </compounddef>
+</doxygen>
