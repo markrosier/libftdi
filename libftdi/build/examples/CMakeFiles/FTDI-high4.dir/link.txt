@@ -1,0 +1,1 @@
+/usr/bin/cc  -O2 -g -DNDEBUG    CMakeFiles/FTDI-high4.dir/FTDI-high4.c.o  -o FTDI-high4 -rdynamic ../src/libftdi1.so.2.2.0 -lusb-1.0 -Wl,-rpath,/home/mark/testcode/FTDI/libftdi/libftdi/build/src 

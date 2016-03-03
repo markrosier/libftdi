@@ -6,6 +6,6 @@
 #define FTDI_MICRO_VERSION 0
 
 const char FTDI_VERSION_STRING[] = "1.2";
-const char FTDI_SNAPSHOT_VERSION[] = "v1.2-23-gc4c9f0a";
+const char FTDI_SNAPSHOT_VERSION[] = "unknown";
 
 #endif

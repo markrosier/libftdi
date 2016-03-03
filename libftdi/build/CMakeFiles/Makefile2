@@ -90,7 +90,7 @@ clean: CMakeFiles/dist.dir/clean
 CMakeFiles/docs.dir/all:
 	$(MAKE) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/depend
 	$(MAKE) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  12
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  20
 	@echo "Built target docs"
 .PHONY : CMakeFiles/docs.dir/all
 
@@ -142,7 +142,7 @@ src/preinstall:
 src/CMakeFiles/ftdi1.dir/all:
 	$(MAKE) -f src/CMakeFiles/ftdi1.dir/build.make src/CMakeFiles/ftdi1.dir/depend
 	$(MAKE) -f src/CMakeFiles/ftdi1.dir/build.make src/CMakeFiles/ftdi1.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  16 17
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  24 25
 	@echo "Built target ftdi1"
 .PHONY : src/CMakeFiles/ftdi1.dir/all
 
@@ -177,7 +177,7 @@ clean: src/CMakeFiles/ftdi1.dir/clean
 src/CMakeFiles/ftdi1-static.dir/all:
 	$(MAKE) -f src/CMakeFiles/ftdi1-static.dir/build.make src/CMakeFiles/ftdi1-static.dir/depend
 	$(MAKE) -f src/CMakeFiles/ftdi1-static.dir/build.make src/CMakeFiles/ftdi1-static.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  18 19
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  26 27
 	@echo "Built target ftdi1-static"
 .PHONY : src/CMakeFiles/ftdi1-static.dir/all
 
@@ -229,7 +229,7 @@ ftdipp/preinstall:
 ftdipp/CMakeFiles/ftdipp1.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f ftdipp/CMakeFiles/ftdipp1.dir/build.make ftdipp/CMakeFiles/ftdipp1.dir/depend
 	$(MAKE) -f ftdipp/CMakeFiles/ftdipp1.dir/build.make ftdipp/CMakeFiles/ftdipp1.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  21
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  29
 	@echo "Built target ftdipp1"
 .PHONY : ftdipp/CMakeFiles/ftdipp1.dir/all
 
@@ -264,7 +264,7 @@ clean: ftdipp/CMakeFiles/ftdipp1.dir/clean
 ftdipp/CMakeFiles/ftdipp1-static.dir/all:
 	$(MAKE) -f ftdipp/CMakeFiles/ftdipp1-static.dir/build.make ftdipp/CMakeFiles/ftdipp1-static.dir/depend
 	$(MAKE) -f ftdipp/CMakeFiles/ftdipp1-static.dir/build.make ftdipp/CMakeFiles/ftdipp1-static.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  22
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  30
 	@echo "Built target ftdipp1-static"
 .PHONY : ftdipp/CMakeFiles/ftdipp1-static.dir/all
 
@@ -318,7 +318,7 @@ python/CMakeFiles/_ftdi1.dir/all: src/CMakeFiles/ftdi1.dir/all
 python/CMakeFiles/_ftdi1.dir/all: python/CMakeFiles/doc_i.dir/all
 	$(MAKE) -f python/CMakeFiles/_ftdi1.dir/build.make python/CMakeFiles/_ftdi1.dir/depend
 	$(MAKE) -f python/CMakeFiles/_ftdi1.dir/build.make python/CMakeFiles/_ftdi1.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  11 12
 	@echo "Built target _ftdi1"
 .PHONY : python/CMakeFiles/_ftdi1.dir/all
 
@@ -353,7 +353,7 @@ clean: python/CMakeFiles/_ftdi1.dir/clean
 python/CMakeFiles/doc_i.dir/all:
 	$(MAKE) -f python/CMakeFiles/doc_i.dir/build.make python/CMakeFiles/doc_i.dir/depend
 	$(MAKE) -f python/CMakeFiles/doc_i.dir/build.make python/CMakeFiles/doc_i.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  10 11
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  18 19
 	@echo "Built target doc_i"
 .PHONY : python/CMakeFiles/doc_i.dir/all
 
@@ -414,7 +414,7 @@ ftdi_eeprom/preinstall:
 ftdi_eeprom/CMakeFiles/ftdi_eeprom.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f ftdi_eeprom/CMakeFiles/ftdi_eeprom.dir/build.make ftdi_eeprom/CMakeFiles/ftdi_eeprom.dir/depend
 	$(MAKE) -f ftdi_eeprom/CMakeFiles/ftdi_eeprom.dir/build.make ftdi_eeprom/CMakeFiles/ftdi_eeprom.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  20
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  28
 	@echo "Built target ftdi_eeprom"
 .PHONY : ftdi_eeprom/CMakeFiles/ftdi_eeprom.dir/all
 
@@ -447,7 +447,15 @@ clean: ftdi_eeprom/CMakeFiles/ftdi_eeprom.dir/clean
 
 # Convenience name for "all" pass in the directory.
 examples/all: examples/CMakeFiles/FTDI-high.dir/all
+examples/all: examples/CMakeFiles/FTDI-high1.dir/all
+examples/all: examples/CMakeFiles/FTDI-high2.dir/all
+examples/all: examples/CMakeFiles/FTDI-high3.dir/all
+examples/all: examples/CMakeFiles/FTDI-high4.dir/all
 examples/all: examples/CMakeFiles/FTDI-low.dir/all
+examples/all: examples/CMakeFiles/FTDI-low1.dir/all
+examples/all: examples/CMakeFiles/FTDI-low2.dir/all
+examples/all: examples/CMakeFiles/FTDI-low3.dir/all
+examples/all: examples/CMakeFiles/FTDI-low4.dir/all
 examples/all: examples/CMakeFiles/baud_test.dir/all
 examples/all: examples/CMakeFiles/bitbang.dir/all
 examples/all: examples/CMakeFiles/bitbang2.dir/all
@@ -463,7 +471,15 @@ examples/all: examples/CMakeFiles/stream_test.dir/all
 
 # Convenience name for "clean" pass in the directory.
 examples/clean: examples/CMakeFiles/FTDI-high.dir/clean
+examples/clean: examples/CMakeFiles/FTDI-high1.dir/clean
+examples/clean: examples/CMakeFiles/FTDI-high2.dir/clean
+examples/clean: examples/CMakeFiles/FTDI-high3.dir/clean
+examples/clean: examples/CMakeFiles/FTDI-high4.dir/clean
 examples/clean: examples/CMakeFiles/FTDI-low.dir/clean
+examples/clean: examples/CMakeFiles/FTDI-low1.dir/clean
+examples/clean: examples/CMakeFiles/FTDI-low2.dir/clean
+examples/clean: examples/CMakeFiles/FTDI-low3.dir/clean
+examples/clean: examples/CMakeFiles/FTDI-low4.dir/clean
 examples/clean: examples/CMakeFiles/baud_test.dir/clean
 examples/clean: examples/CMakeFiles/bitbang.dir/clean
 examples/clean: examples/CMakeFiles/bitbang2.dir/clean
@@ -517,13 +533,153 @@ clean: examples/CMakeFiles/FTDI-high.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target examples/CMakeFiles/FTDI-high1.dir
+
+# All Build rule for target.
+examples/CMakeFiles/FTDI-high1.dir/all: src/CMakeFiles/ftdi1.dir/all
+	$(MAKE) -f examples/CMakeFiles/FTDI-high1.dir/build.make examples/CMakeFiles/FTDI-high1.dir/depend
+	$(MAKE) -f examples/CMakeFiles/FTDI-high1.dir/build.make examples/CMakeFiles/FTDI-high1.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  2
+	@echo "Built target FTDI-high1"
+.PHONY : examples/CMakeFiles/FTDI-high1.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/FTDI-high1.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/FTDI-high1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-high1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/FTDI-high1.dir/rule
+
+# Convenience name for target.
+FTDI-high1: examples/CMakeFiles/FTDI-high1.dir/rule
+.PHONY : FTDI-high1
+
+# clean rule for target.
+examples/CMakeFiles/FTDI-high1.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/FTDI-high1.dir/build.make examples/CMakeFiles/FTDI-high1.dir/clean
+.PHONY : examples/CMakeFiles/FTDI-high1.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/FTDI-high1.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/FTDI-high2.dir
+
+# All Build rule for target.
+examples/CMakeFiles/FTDI-high2.dir/all: src/CMakeFiles/ftdi1.dir/all
+	$(MAKE) -f examples/CMakeFiles/FTDI-high2.dir/build.make examples/CMakeFiles/FTDI-high2.dir/depend
+	$(MAKE) -f examples/CMakeFiles/FTDI-high2.dir/build.make examples/CMakeFiles/FTDI-high2.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  3
+	@echo "Built target FTDI-high2"
+.PHONY : examples/CMakeFiles/FTDI-high2.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/FTDI-high2.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/FTDI-high2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-high2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/FTDI-high2.dir/rule
+
+# Convenience name for target.
+FTDI-high2: examples/CMakeFiles/FTDI-high2.dir/rule
+.PHONY : FTDI-high2
+
+# clean rule for target.
+examples/CMakeFiles/FTDI-high2.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/FTDI-high2.dir/build.make examples/CMakeFiles/FTDI-high2.dir/clean
+.PHONY : examples/CMakeFiles/FTDI-high2.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/FTDI-high2.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/FTDI-high3.dir
+
+# All Build rule for target.
+examples/CMakeFiles/FTDI-high3.dir/all: src/CMakeFiles/ftdi1.dir/all
+	$(MAKE) -f examples/CMakeFiles/FTDI-high3.dir/build.make examples/CMakeFiles/FTDI-high3.dir/depend
+	$(MAKE) -f examples/CMakeFiles/FTDI-high3.dir/build.make examples/CMakeFiles/FTDI-high3.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  4
+	@echo "Built target FTDI-high3"
+.PHONY : examples/CMakeFiles/FTDI-high3.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/FTDI-high3.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/FTDI-high3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-high3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/FTDI-high3.dir/rule
+
+# Convenience name for target.
+FTDI-high3: examples/CMakeFiles/FTDI-high3.dir/rule
+.PHONY : FTDI-high3
+
+# clean rule for target.
+examples/CMakeFiles/FTDI-high3.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/FTDI-high3.dir/build.make examples/CMakeFiles/FTDI-high3.dir/clean
+.PHONY : examples/CMakeFiles/FTDI-high3.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/FTDI-high3.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/FTDI-high4.dir
+
+# All Build rule for target.
+examples/CMakeFiles/FTDI-high4.dir/all: src/CMakeFiles/ftdi1.dir/all
+	$(MAKE) -f examples/CMakeFiles/FTDI-high4.dir/build.make examples/CMakeFiles/FTDI-high4.dir/depend
+	$(MAKE) -f examples/CMakeFiles/FTDI-high4.dir/build.make examples/CMakeFiles/FTDI-high4.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  5
+	@echo "Built target FTDI-high4"
+.PHONY : examples/CMakeFiles/FTDI-high4.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/FTDI-high4.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/FTDI-high4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-high4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/FTDI-high4.dir/rule
+
+# Convenience name for target.
+FTDI-high4: examples/CMakeFiles/FTDI-high4.dir/rule
+.PHONY : FTDI-high4
+
+# clean rule for target.
+examples/CMakeFiles/FTDI-high4.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/FTDI-high4.dir/build.make examples/CMakeFiles/FTDI-high4.dir/clean
+.PHONY : examples/CMakeFiles/FTDI-high4.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/FTDI-high4.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target examples/CMakeFiles/FTDI-low.dir
 
 # All Build rule for target.
 examples/CMakeFiles/FTDI-low.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/FTDI-low.dir/build.make examples/CMakeFiles/FTDI-low.dir/depend
 	$(MAKE) -f examples/CMakeFiles/FTDI-low.dir/build.make examples/CMakeFiles/FTDI-low.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  6
 	@echo "Built target FTDI-low"
 .PHONY : examples/CMakeFiles/FTDI-low.dir/all
 
@@ -552,13 +708,153 @@ clean: examples/CMakeFiles/FTDI-low.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target examples/CMakeFiles/FTDI-low1.dir
+
+# All Build rule for target.
+examples/CMakeFiles/FTDI-low1.dir/all: src/CMakeFiles/ftdi1.dir/all
+	$(MAKE) -f examples/CMakeFiles/FTDI-low1.dir/build.make examples/CMakeFiles/FTDI-low1.dir/depend
+	$(MAKE) -f examples/CMakeFiles/FTDI-low1.dir/build.make examples/CMakeFiles/FTDI-low1.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  7
+	@echo "Built target FTDI-low1"
+.PHONY : examples/CMakeFiles/FTDI-low1.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/FTDI-low1.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/FTDI-low1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-low1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/FTDI-low1.dir/rule
+
+# Convenience name for target.
+FTDI-low1: examples/CMakeFiles/FTDI-low1.dir/rule
+.PHONY : FTDI-low1
+
+# clean rule for target.
+examples/CMakeFiles/FTDI-low1.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/FTDI-low1.dir/build.make examples/CMakeFiles/FTDI-low1.dir/clean
+.PHONY : examples/CMakeFiles/FTDI-low1.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/FTDI-low1.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/FTDI-low2.dir
+
+# All Build rule for target.
+examples/CMakeFiles/FTDI-low2.dir/all: src/CMakeFiles/ftdi1.dir/all
+	$(MAKE) -f examples/CMakeFiles/FTDI-low2.dir/build.make examples/CMakeFiles/FTDI-low2.dir/depend
+	$(MAKE) -f examples/CMakeFiles/FTDI-low2.dir/build.make examples/CMakeFiles/FTDI-low2.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  8
+	@echo "Built target FTDI-low2"
+.PHONY : examples/CMakeFiles/FTDI-low2.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/FTDI-low2.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/FTDI-low2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-low2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/FTDI-low2.dir/rule
+
+# Convenience name for target.
+FTDI-low2: examples/CMakeFiles/FTDI-low2.dir/rule
+.PHONY : FTDI-low2
+
+# clean rule for target.
+examples/CMakeFiles/FTDI-low2.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/FTDI-low2.dir/build.make examples/CMakeFiles/FTDI-low2.dir/clean
+.PHONY : examples/CMakeFiles/FTDI-low2.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/FTDI-low2.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/FTDI-low3.dir
+
+# All Build rule for target.
+examples/CMakeFiles/FTDI-low3.dir/all: src/CMakeFiles/ftdi1.dir/all
+	$(MAKE) -f examples/CMakeFiles/FTDI-low3.dir/build.make examples/CMakeFiles/FTDI-low3.dir/depend
+	$(MAKE) -f examples/CMakeFiles/FTDI-low3.dir/build.make examples/CMakeFiles/FTDI-low3.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  9
+	@echo "Built target FTDI-low3"
+.PHONY : examples/CMakeFiles/FTDI-low3.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/FTDI-low3.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/FTDI-low3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-low3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/FTDI-low3.dir/rule
+
+# Convenience name for target.
+FTDI-low3: examples/CMakeFiles/FTDI-low3.dir/rule
+.PHONY : FTDI-low3
+
+# clean rule for target.
+examples/CMakeFiles/FTDI-low3.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/FTDI-low3.dir/build.make examples/CMakeFiles/FTDI-low3.dir/clean
+.PHONY : examples/CMakeFiles/FTDI-low3.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/FTDI-low3.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/FTDI-low4.dir
+
+# All Build rule for target.
+examples/CMakeFiles/FTDI-low4.dir/all: src/CMakeFiles/ftdi1.dir/all
+	$(MAKE) -f examples/CMakeFiles/FTDI-low4.dir/build.make examples/CMakeFiles/FTDI-low4.dir/depend
+	$(MAKE) -f examples/CMakeFiles/FTDI-low4.dir/build.make examples/CMakeFiles/FTDI-low4.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  10
+	@echo "Built target FTDI-low4"
+.PHONY : examples/CMakeFiles/FTDI-low4.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/FTDI-low4.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/FTDI-low4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-low4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/FTDI-low4.dir/rule
+
+# Convenience name for target.
+FTDI-low4: examples/CMakeFiles/FTDI-low4.dir/rule
+.PHONY : FTDI-low4
+
+# clean rule for target.
+examples/CMakeFiles/FTDI-low4.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/FTDI-low4.dir/build.make examples/CMakeFiles/FTDI-low4.dir/clean
+.PHONY : examples/CMakeFiles/FTDI-low4.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/FTDI-low4.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target examples/CMakeFiles/baud_test.dir
 
 # All Build rule for target.
 examples/CMakeFiles/baud_test.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/baud_test.dir/build.make examples/CMakeFiles/baud_test.dir/depend
 	$(MAKE) -f examples/CMakeFiles/baud_test.dir/build.make examples/CMakeFiles/baud_test.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  13
 	@echo "Built target baud_test"
 .PHONY : examples/CMakeFiles/baud_test.dir/all
 
@@ -593,7 +889,7 @@ clean: examples/CMakeFiles/baud_test.dir/clean
 examples/CMakeFiles/bitbang.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/bitbang.dir/build.make examples/CMakeFiles/bitbang.dir/depend
 	$(MAKE) -f examples/CMakeFiles/bitbang.dir/build.make examples/CMakeFiles/bitbang.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  14
 	@echo "Built target bitbang"
 .PHONY : examples/CMakeFiles/bitbang.dir/all
 
@@ -628,7 +924,7 @@ clean: examples/CMakeFiles/bitbang.dir/clean
 examples/CMakeFiles/bitbang2.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/bitbang2.dir/build.make examples/CMakeFiles/bitbang2.dir/depend
 	$(MAKE) -f examples/CMakeFiles/bitbang2.dir/build.make examples/CMakeFiles/bitbang2.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  15
 	@echo "Built target bitbang2"
 .PHONY : examples/CMakeFiles/bitbang2.dir/all
 
@@ -663,7 +959,7 @@ clean: examples/CMakeFiles/bitbang2.dir/clean
 examples/CMakeFiles/bitbang_cbus.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/bitbang_cbus.dir/build.make examples/CMakeFiles/bitbang_cbus.dir/depend
 	$(MAKE) -f examples/CMakeFiles/bitbang_cbus.dir/build.make examples/CMakeFiles/bitbang_cbus.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  8
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  16
 	@echo "Built target bitbang_cbus"
 .PHONY : examples/CMakeFiles/bitbang_cbus.dir/all
 
@@ -698,7 +994,7 @@ clean: examples/CMakeFiles/bitbang_cbus.dir/clean
 examples/CMakeFiles/bitbang_ft2232.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/bitbang_ft2232.dir/build.make examples/CMakeFiles/bitbang_ft2232.dir/depend
 	$(MAKE) -f examples/CMakeFiles/bitbang_ft2232.dir/build.make examples/CMakeFiles/bitbang_ft2232.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  9
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  17
 	@echo "Built target bitbang_ft2232"
 .PHONY : examples/CMakeFiles/bitbang_ft2232.dir/all
 
@@ -733,7 +1029,7 @@ clean: examples/CMakeFiles/bitbang_ft2232.dir/clean
 examples/CMakeFiles/eeprom.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/eeprom.dir/build.make examples/CMakeFiles/eeprom.dir/depend
 	$(MAKE) -f examples/CMakeFiles/eeprom.dir/build.make examples/CMakeFiles/eeprom.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  13
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  21
 	@echo "Built target eeprom"
 .PHONY : examples/CMakeFiles/eeprom.dir/all
 
@@ -768,7 +1064,7 @@ clean: examples/CMakeFiles/eeprom.dir/clean
 examples/CMakeFiles/find_all.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/find_all.dir/build.make examples/CMakeFiles/find_all.dir/depend
 	$(MAKE) -f examples/CMakeFiles/find_all.dir/build.make examples/CMakeFiles/find_all.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  14
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  22
 	@echo "Built target find_all"
 .PHONY : examples/CMakeFiles/find_all.dir/all
 
@@ -804,7 +1100,7 @@ examples/CMakeFiles/find_all_pp.dir/all: src/CMakeFiles/ftdi1.dir/all
 examples/CMakeFiles/find_all_pp.dir/all: ftdipp/CMakeFiles/ftdipp1.dir/all
 	$(MAKE) -f examples/CMakeFiles/find_all_pp.dir/build.make examples/CMakeFiles/find_all_pp.dir/depend
 	$(MAKE) -f examples/CMakeFiles/find_all_pp.dir/build.make examples/CMakeFiles/find_all_pp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  15
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  23
 	@echo "Built target find_all_pp"
 .PHONY : examples/CMakeFiles/find_all_pp.dir/all
 
@@ -839,7 +1135,7 @@ clean: examples/CMakeFiles/find_all_pp.dir/clean
 examples/CMakeFiles/serial_test.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/serial_test.dir/build.make examples/CMakeFiles/serial_test.dir/depend
 	$(MAKE) -f examples/CMakeFiles/serial_test.dir/build.make examples/CMakeFiles/serial_test.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  23
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  31
 	@echo "Built target serial_test"
 .PHONY : examples/CMakeFiles/serial_test.dir/all
 
@@ -874,7 +1170,7 @@ clean: examples/CMakeFiles/serial_test.dir/clean
 examples/CMakeFiles/simple.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/depend
 	$(MAKE) -f examples/CMakeFiles/simple.dir/build.make examples/CMakeFiles/simple.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  24
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  32
 	@echo "Built target simple"
 .PHONY : examples/CMakeFiles/simple.dir/all
 
@@ -909,7 +1205,7 @@ clean: examples/CMakeFiles/simple.dir/clean
 examples/CMakeFiles/stream_test.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f examples/CMakeFiles/stream_test.dir/build.make examples/CMakeFiles/stream_test.dir/depend
 	$(MAKE) -f examples/CMakeFiles/stream_test.dir/build.make examples/CMakeFiles/stream_test.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  25
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  33
 	@echo "Built target stream_test"
 .PHONY : examples/CMakeFiles/stream_test.dir/all
 
@@ -1006,7 +1302,7 @@ clean: test/CMakeFiles/check.dir/clean
 test/CMakeFiles/test_libftdi1.dir/all: src/CMakeFiles/ftdi1.dir/all
 	$(MAKE) -f test/CMakeFiles/test_libftdi1.dir/build.make test/CMakeFiles/test_libftdi1.dir/depend
 	$(MAKE) -f test/CMakeFiles/test_libftdi1.dir/build.make test/CMakeFiles/test_libftdi1.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  26 27
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mark/testcode/FTDI/libftdi/libftdi/build/CMakeFiles  34 35
 	@echo "Built target test_libftdi1"
 .PHONY : test/CMakeFiles/test_libftdi1.dir/all
 

@@ -290,6 +290,58 @@ FTDI-high/fast:
 .PHONY : FTDI-high/fast
 
 #=============================================================================
+# Target rules for targets named FTDI-high1
+
+# Build rule for target.
+FTDI-high1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FTDI-high1
+.PHONY : FTDI-high1
+
+# fast build rule for target.
+FTDI-high1/fast:
+	$(MAKE) -f examples/CMakeFiles/FTDI-high1.dir/build.make examples/CMakeFiles/FTDI-high1.dir/build
+.PHONY : FTDI-high1/fast
+
+#=============================================================================
+# Target rules for targets named FTDI-high2
+
+# Build rule for target.
+FTDI-high2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FTDI-high2
+.PHONY : FTDI-high2
+
+# fast build rule for target.
+FTDI-high2/fast:
+	$(MAKE) -f examples/CMakeFiles/FTDI-high2.dir/build.make examples/CMakeFiles/FTDI-high2.dir/build
+.PHONY : FTDI-high2/fast
+
+#=============================================================================
+# Target rules for targets named FTDI-high3
+
+# Build rule for target.
+FTDI-high3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FTDI-high3
+.PHONY : FTDI-high3
+
+# fast build rule for target.
+FTDI-high3/fast:
+	$(MAKE) -f examples/CMakeFiles/FTDI-high3.dir/build.make examples/CMakeFiles/FTDI-high3.dir/build
+.PHONY : FTDI-high3/fast
+
+#=============================================================================
+# Target rules for targets named FTDI-high4
+
+# Build rule for target.
+FTDI-high4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FTDI-high4
+.PHONY : FTDI-high4
+
+# fast build rule for target.
+FTDI-high4/fast:
+	$(MAKE) -f examples/CMakeFiles/FTDI-high4.dir/build.make examples/CMakeFiles/FTDI-high4.dir/build
+.PHONY : FTDI-high4/fast
+
+#=============================================================================
 # Target rules for targets named FTDI-low
 
 # Build rule for target.
@@ -301,6 +353,58 @@ FTDI-low: cmake_check_build_system
 FTDI-low/fast:
 	$(MAKE) -f examples/CMakeFiles/FTDI-low.dir/build.make examples/CMakeFiles/FTDI-low.dir/build
 .PHONY : FTDI-low/fast
+
+#=============================================================================
+# Target rules for targets named FTDI-low1
+
+# Build rule for target.
+FTDI-low1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FTDI-low1
+.PHONY : FTDI-low1
+
+# fast build rule for target.
+FTDI-low1/fast:
+	$(MAKE) -f examples/CMakeFiles/FTDI-low1.dir/build.make examples/CMakeFiles/FTDI-low1.dir/build
+.PHONY : FTDI-low1/fast
+
+#=============================================================================
+# Target rules for targets named FTDI-low2
+
+# Build rule for target.
+FTDI-low2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FTDI-low2
+.PHONY : FTDI-low2
+
+# fast build rule for target.
+FTDI-low2/fast:
+	$(MAKE) -f examples/CMakeFiles/FTDI-low2.dir/build.make examples/CMakeFiles/FTDI-low2.dir/build
+.PHONY : FTDI-low2/fast
+
+#=============================================================================
+# Target rules for targets named FTDI-low3
+
+# Build rule for target.
+FTDI-low3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FTDI-low3
+.PHONY : FTDI-low3
+
+# fast build rule for target.
+FTDI-low3/fast:
+	$(MAKE) -f examples/CMakeFiles/FTDI-low3.dir/build.make examples/CMakeFiles/FTDI-low3.dir/build
+.PHONY : FTDI-low3/fast
+
+#=============================================================================
+# Target rules for targets named FTDI-low4
+
+# Build rule for target.
+FTDI-low4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FTDI-low4
+.PHONY : FTDI-low4
+
+# fast build rule for target.
+FTDI-low4/fast:
+	$(MAKE) -f examples/CMakeFiles/FTDI-low4.dir/build.make examples/CMakeFiles/FTDI-low4.dir/build
+.PHONY : FTDI-low4/fast
 
 #=============================================================================
 # Target rules for targets named baud_test
@@ -495,7 +599,15 @@ help:
 	@echo "... doc_i"
 	@echo "... ftdi_eeprom"
 	@echo "... FTDI-high"
+	@echo "... FTDI-high1"
+	@echo "... FTDI-high2"
+	@echo "... FTDI-high3"
+	@echo "... FTDI-high4"
 	@echo "... FTDI-low"
+	@echo "... FTDI-low1"
+	@echo "... FTDI-low2"
+	@echo "... FTDI-low3"
+	@echo "... FTDI-low4"
 	@echo "... baud_test"
 	@echo "... bitbang"
 	@echo "... bitbang2"

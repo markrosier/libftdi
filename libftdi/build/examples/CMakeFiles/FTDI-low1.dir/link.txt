@@ -1,0 +1,1 @@
+/usr/bin/cc  -O2 -g -DNDEBUG    CMakeFiles/FTDI-low1.dir/FTDI-low1.c.o  -o FTDI-low1 -rdynamic ../src/libftdi1.so.2.2.0 -lusb-1.0 -Wl,-rpath,/home/mark/testcode/FTDI/libftdi/libftdi/build/src 

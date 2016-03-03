@@ -1,5 +1,13 @@
 /home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-high.dir
+/home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-high1.dir
+/home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-high2.dir
+/home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-high3.dir
+/home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-high4.dir
 /home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-low.dir
+/home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-low1.dir
+/home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-low2.dir
+/home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-low3.dir
+/home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/FTDI-low4.dir
 /home/mark/testcode/FTDI/libftdi/libftdi/build/python/CMakeFiles/_ftdi1.dir
 /home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/baud_test.dir
 /home/mark/testcode/FTDI/libftdi/libftdi/build/examples/CMakeFiles/bitbang.dir

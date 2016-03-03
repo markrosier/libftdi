@@ -1,0 +1,49 @@
+#!/bin/bash
+
+echo Remember to use sudo ./error
+echo IO-Line $1 Error $2
+
+
+
+while true; do
+
+	if [ $1 -eq 1 ]; then
+		for (( i = 0; i < $2; i++)); do
+			./FTDI-low1;
+			sleep 0.25;
+			./FTDI-high1;
+			sleep 0.25;
+		done
+		sleep 2.25;
+	else 
+		if [ $1 -eq 2 ]; then
+			for (( i = 0; i < $2; i++)); do
+				./FTDI-low2;
+				sleep 0.25;
+				./FTDI-high2;
+				sleep 0.25;
+			done
+			sleep 2.25;
+		else 
+			if [ $1 -eq 3 ]; then
+				for (( i = 0; i < $2; i++)); do
+					./FTDI-low3;
+					sleep 0.25;
+					./FTDI-high3;
+					sleep 0.25;
+				done
+				sleep 2.25;
+			else 
+				if [ $1 -eq 4 ]; then
+					for (( i = 0; i < $2; i++)); do
+						./FTDI-low4;
+						sleep 0.25;
+						./FTDI-high4;
+						sleep 0.25;
+					done
+					sleep 2.25;
+				fi
+			fi
+		fi
+	fi
+done

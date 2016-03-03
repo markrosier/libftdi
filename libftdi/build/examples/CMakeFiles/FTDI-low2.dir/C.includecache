@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/ftdi.h
+stdint.h
+-
+sys/time.h
+-
+windows.h
+-
+
+/home/mark/testcode/FTDI/libftdi/libftdi/examples/FTDI-low2.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+ftdi.h
+-
+

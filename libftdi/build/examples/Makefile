@@ -174,6 +174,62 @@ FTDI-high/fast:
 .PHONY : FTDI-high/fast
 
 # Convenience name for target.
+examples/CMakeFiles/FTDI-high1.dir/rule:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-high1.dir/rule
+.PHONY : examples/CMakeFiles/FTDI-high1.dir/rule
+
+# Convenience name for target.
+FTDI-high1: examples/CMakeFiles/FTDI-high1.dir/rule
+.PHONY : FTDI-high1
+
+# fast build rule for target.
+FTDI-high1/fast:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high1.dir/build.make examples/CMakeFiles/FTDI-high1.dir/build
+.PHONY : FTDI-high1/fast
+
+# Convenience name for target.
+examples/CMakeFiles/FTDI-high2.dir/rule:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-high2.dir/rule
+.PHONY : examples/CMakeFiles/FTDI-high2.dir/rule
+
+# Convenience name for target.
+FTDI-high2: examples/CMakeFiles/FTDI-high2.dir/rule
+.PHONY : FTDI-high2
+
+# fast build rule for target.
+FTDI-high2/fast:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high2.dir/build.make examples/CMakeFiles/FTDI-high2.dir/build
+.PHONY : FTDI-high2/fast
+
+# Convenience name for target.
+examples/CMakeFiles/FTDI-high3.dir/rule:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-high3.dir/rule
+.PHONY : examples/CMakeFiles/FTDI-high3.dir/rule
+
+# Convenience name for target.
+FTDI-high3: examples/CMakeFiles/FTDI-high3.dir/rule
+.PHONY : FTDI-high3
+
+# fast build rule for target.
+FTDI-high3/fast:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high3.dir/build.make examples/CMakeFiles/FTDI-high3.dir/build
+.PHONY : FTDI-high3/fast
+
+# Convenience name for target.
+examples/CMakeFiles/FTDI-high4.dir/rule:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-high4.dir/rule
+.PHONY : examples/CMakeFiles/FTDI-high4.dir/rule
+
+# Convenience name for target.
+FTDI-high4: examples/CMakeFiles/FTDI-high4.dir/rule
+.PHONY : FTDI-high4
+
+# fast build rule for target.
+FTDI-high4/fast:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high4.dir/build.make examples/CMakeFiles/FTDI-high4.dir/build
+.PHONY : FTDI-high4/fast
+
+# Convenience name for target.
 examples/CMakeFiles/FTDI-low.dir/rule:
 	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-low.dir/rule
 .PHONY : examples/CMakeFiles/FTDI-low.dir/rule
@@ -186,6 +242,62 @@ FTDI-low: examples/CMakeFiles/FTDI-low.dir/rule
 FTDI-low/fast:
 	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low.dir/build.make examples/CMakeFiles/FTDI-low.dir/build
 .PHONY : FTDI-low/fast
+
+# Convenience name for target.
+examples/CMakeFiles/FTDI-low1.dir/rule:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-low1.dir/rule
+.PHONY : examples/CMakeFiles/FTDI-low1.dir/rule
+
+# Convenience name for target.
+FTDI-low1: examples/CMakeFiles/FTDI-low1.dir/rule
+.PHONY : FTDI-low1
+
+# fast build rule for target.
+FTDI-low1/fast:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low1.dir/build.make examples/CMakeFiles/FTDI-low1.dir/build
+.PHONY : FTDI-low1/fast
+
+# Convenience name for target.
+examples/CMakeFiles/FTDI-low2.dir/rule:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-low2.dir/rule
+.PHONY : examples/CMakeFiles/FTDI-low2.dir/rule
+
+# Convenience name for target.
+FTDI-low2: examples/CMakeFiles/FTDI-low2.dir/rule
+.PHONY : FTDI-low2
+
+# fast build rule for target.
+FTDI-low2/fast:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low2.dir/build.make examples/CMakeFiles/FTDI-low2.dir/build
+.PHONY : FTDI-low2/fast
+
+# Convenience name for target.
+examples/CMakeFiles/FTDI-low3.dir/rule:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-low3.dir/rule
+.PHONY : examples/CMakeFiles/FTDI-low3.dir/rule
+
+# Convenience name for target.
+FTDI-low3: examples/CMakeFiles/FTDI-low3.dir/rule
+.PHONY : FTDI-low3
+
+# fast build rule for target.
+FTDI-low3/fast:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low3.dir/build.make examples/CMakeFiles/FTDI-low3.dir/build
+.PHONY : FTDI-low3/fast
+
+# Convenience name for target.
+examples/CMakeFiles/FTDI-low4.dir/rule:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/FTDI-low4.dir/rule
+.PHONY : examples/CMakeFiles/FTDI-low4.dir/rule
+
+# Convenience name for target.
+FTDI-low4: examples/CMakeFiles/FTDI-low4.dir/rule
+.PHONY : FTDI-low4
+
+# fast build rule for target.
+FTDI-low4/fast:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low4.dir/build.make examples/CMakeFiles/FTDI-low4.dir/build
+.PHONY : FTDI-low4/fast
 
 # Convenience name for target.
 examples/CMakeFiles/baud_test.dir/rule:
@@ -365,6 +477,102 @@ FTDI-high.c.s:
 	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high.dir/build.make examples/CMakeFiles/FTDI-high.dir/FTDI-high.c.s
 .PHONY : FTDI-high.c.s
 
+FTDI-high1.o: FTDI-high1.c.o
+.PHONY : FTDI-high1.o
+
+# target to build an object file
+FTDI-high1.c.o:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high1.dir/build.make examples/CMakeFiles/FTDI-high1.dir/FTDI-high1.c.o
+.PHONY : FTDI-high1.c.o
+
+FTDI-high1.i: FTDI-high1.c.i
+.PHONY : FTDI-high1.i
+
+# target to preprocess a source file
+FTDI-high1.c.i:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high1.dir/build.make examples/CMakeFiles/FTDI-high1.dir/FTDI-high1.c.i
+.PHONY : FTDI-high1.c.i
+
+FTDI-high1.s: FTDI-high1.c.s
+.PHONY : FTDI-high1.s
+
+# target to generate assembly for a file
+FTDI-high1.c.s:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high1.dir/build.make examples/CMakeFiles/FTDI-high1.dir/FTDI-high1.c.s
+.PHONY : FTDI-high1.c.s
+
+FTDI-high2.o: FTDI-high2.c.o
+.PHONY : FTDI-high2.o
+
+# target to build an object file
+FTDI-high2.c.o:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high2.dir/build.make examples/CMakeFiles/FTDI-high2.dir/FTDI-high2.c.o
+.PHONY : FTDI-high2.c.o
+
+FTDI-high2.i: FTDI-high2.c.i
+.PHONY : FTDI-high2.i
+
+# target to preprocess a source file
+FTDI-high2.c.i:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high2.dir/build.make examples/CMakeFiles/FTDI-high2.dir/FTDI-high2.c.i
+.PHONY : FTDI-high2.c.i
+
+FTDI-high2.s: FTDI-high2.c.s
+.PHONY : FTDI-high2.s
+
+# target to generate assembly for a file
+FTDI-high2.c.s:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high2.dir/build.make examples/CMakeFiles/FTDI-high2.dir/FTDI-high2.c.s
+.PHONY : FTDI-high2.c.s
+
+FTDI-high3.o: FTDI-high3.c.o
+.PHONY : FTDI-high3.o
+
+# target to build an object file
+FTDI-high3.c.o:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high3.dir/build.make examples/CMakeFiles/FTDI-high3.dir/FTDI-high3.c.o
+.PHONY : FTDI-high3.c.o
+
+FTDI-high3.i: FTDI-high3.c.i
+.PHONY : FTDI-high3.i
+
+# target to preprocess a source file
+FTDI-high3.c.i:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high3.dir/build.make examples/CMakeFiles/FTDI-high3.dir/FTDI-high3.c.i
+.PHONY : FTDI-high3.c.i
+
+FTDI-high3.s: FTDI-high3.c.s
+.PHONY : FTDI-high3.s
+
+# target to generate assembly for a file
+FTDI-high3.c.s:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high3.dir/build.make examples/CMakeFiles/FTDI-high3.dir/FTDI-high3.c.s
+.PHONY : FTDI-high3.c.s
+
+FTDI-high4.o: FTDI-high4.c.o
+.PHONY : FTDI-high4.o
+
+# target to build an object file
+FTDI-high4.c.o:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high4.dir/build.make examples/CMakeFiles/FTDI-high4.dir/FTDI-high4.c.o
+.PHONY : FTDI-high4.c.o
+
+FTDI-high4.i: FTDI-high4.c.i
+.PHONY : FTDI-high4.i
+
+# target to preprocess a source file
+FTDI-high4.c.i:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high4.dir/build.make examples/CMakeFiles/FTDI-high4.dir/FTDI-high4.c.i
+.PHONY : FTDI-high4.c.i
+
+FTDI-high4.s: FTDI-high4.c.s
+.PHONY : FTDI-high4.s
+
+# target to generate assembly for a file
+FTDI-high4.c.s:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-high4.dir/build.make examples/CMakeFiles/FTDI-high4.dir/FTDI-high4.c.s
+.PHONY : FTDI-high4.c.s
+
 FTDI-low.o: FTDI-low.c.o
 .PHONY : FTDI-low.o
 
@@ -388,6 +596,102 @@ FTDI-low.s: FTDI-low.c.s
 FTDI-low.c.s:
 	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low.dir/build.make examples/CMakeFiles/FTDI-low.dir/FTDI-low.c.s
 .PHONY : FTDI-low.c.s
+
+FTDI-low1.o: FTDI-low1.c.o
+.PHONY : FTDI-low1.o
+
+# target to build an object file
+FTDI-low1.c.o:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low1.dir/build.make examples/CMakeFiles/FTDI-low1.dir/FTDI-low1.c.o
+.PHONY : FTDI-low1.c.o
+
+FTDI-low1.i: FTDI-low1.c.i
+.PHONY : FTDI-low1.i
+
+# target to preprocess a source file
+FTDI-low1.c.i:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low1.dir/build.make examples/CMakeFiles/FTDI-low1.dir/FTDI-low1.c.i
+.PHONY : FTDI-low1.c.i
+
+FTDI-low1.s: FTDI-low1.c.s
+.PHONY : FTDI-low1.s
+
+# target to generate assembly for a file
+FTDI-low1.c.s:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low1.dir/build.make examples/CMakeFiles/FTDI-low1.dir/FTDI-low1.c.s
+.PHONY : FTDI-low1.c.s
+
+FTDI-low2.o: FTDI-low2.c.o
+.PHONY : FTDI-low2.o
+
+# target to build an object file
+FTDI-low2.c.o:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low2.dir/build.make examples/CMakeFiles/FTDI-low2.dir/FTDI-low2.c.o
+.PHONY : FTDI-low2.c.o
+
+FTDI-low2.i: FTDI-low2.c.i
+.PHONY : FTDI-low2.i
+
+# target to preprocess a source file
+FTDI-low2.c.i:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low2.dir/build.make examples/CMakeFiles/FTDI-low2.dir/FTDI-low2.c.i
+.PHONY : FTDI-low2.c.i
+
+FTDI-low2.s: FTDI-low2.c.s
+.PHONY : FTDI-low2.s
+
+# target to generate assembly for a file
+FTDI-low2.c.s:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low2.dir/build.make examples/CMakeFiles/FTDI-low2.dir/FTDI-low2.c.s
+.PHONY : FTDI-low2.c.s
+
+FTDI-low3.o: FTDI-low3.c.o
+.PHONY : FTDI-low3.o
+
+# target to build an object file
+FTDI-low3.c.o:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low3.dir/build.make examples/CMakeFiles/FTDI-low3.dir/FTDI-low3.c.o
+.PHONY : FTDI-low3.c.o
+
+FTDI-low3.i: FTDI-low3.c.i
+.PHONY : FTDI-low3.i
+
+# target to preprocess a source file
+FTDI-low3.c.i:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low3.dir/build.make examples/CMakeFiles/FTDI-low3.dir/FTDI-low3.c.i
+.PHONY : FTDI-low3.c.i
+
+FTDI-low3.s: FTDI-low3.c.s
+.PHONY : FTDI-low3.s
+
+# target to generate assembly for a file
+FTDI-low3.c.s:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low3.dir/build.make examples/CMakeFiles/FTDI-low3.dir/FTDI-low3.c.s
+.PHONY : FTDI-low3.c.s
+
+FTDI-low4.o: FTDI-low4.c.o
+.PHONY : FTDI-low4.o
+
+# target to build an object file
+FTDI-low4.c.o:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low4.dir/build.make examples/CMakeFiles/FTDI-low4.dir/FTDI-low4.c.o
+.PHONY : FTDI-low4.c.o
+
+FTDI-low4.i: FTDI-low4.c.i
+.PHONY : FTDI-low4.i
+
+# target to preprocess a source file
+FTDI-low4.c.i:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low4.dir/build.make examples/CMakeFiles/FTDI-low4.dir/FTDI-low4.c.i
+.PHONY : FTDI-low4.c.i
+
+FTDI-low4.s: FTDI-low4.c.s
+.PHONY : FTDI-low4.s
+
+# target to generate assembly for a file
+FTDI-low4.c.s:
+	cd /home/mark/testcode/FTDI/libftdi/libftdi/build && $(MAKE) -f examples/CMakeFiles/FTDI-low4.dir/build.make examples/CMakeFiles/FTDI-low4.dir/FTDI-low4.c.s
+.PHONY : FTDI-low4.c.s
 
 baud_test.o: baud_test.c.o
 .PHONY : baud_test.o
@@ -660,7 +964,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... FTDI-high"
+	@echo "... FTDI-high1"
+	@echo "... FTDI-high2"
+	@echo "... FTDI-high3"
+	@echo "... FTDI-high4"
 	@echo "... FTDI-low"
+	@echo "... FTDI-low1"
+	@echo "... FTDI-low2"
+	@echo "... FTDI-low3"
+	@echo "... FTDI-low4"
 	@echo "... baud_test"
 	@echo "... bitbang"
 	@echo "... bitbang2"
@@ -683,9 +995,33 @@ help:
 	@echo "... FTDI-high.o"
 	@echo "... FTDI-high.i"
 	@echo "... FTDI-high.s"
+	@echo "... FTDI-high1.o"
+	@echo "... FTDI-high1.i"
+	@echo "... FTDI-high1.s"
+	@echo "... FTDI-high2.o"
+	@echo "... FTDI-high2.i"
+	@echo "... FTDI-high2.s"
+	@echo "... FTDI-high3.o"
+	@echo "... FTDI-high3.i"
+	@echo "... FTDI-high3.s"
+	@echo "... FTDI-high4.o"
+	@echo "... FTDI-high4.i"
+	@echo "... FTDI-high4.s"
 	@echo "... FTDI-low.o"
 	@echo "... FTDI-low.i"
 	@echo "... FTDI-low.s"
+	@echo "... FTDI-low1.o"
+	@echo "... FTDI-low1.i"
+	@echo "... FTDI-low1.s"
+	@echo "... FTDI-low2.o"
+	@echo "... FTDI-low2.i"
+	@echo "... FTDI-low2.s"
+	@echo "... FTDI-low3.o"
+	@echo "... FTDI-low3.i"
+	@echo "... FTDI-low3.s"
+	@echo "... FTDI-low4.o"
+	@echo "... FTDI-low4.i"
+	@echo "... FTDI-low4.s"
 	@echo "... baud_test.o"
 	@echo "... baud_test.i"
 	@echo "... baud_test.s"
